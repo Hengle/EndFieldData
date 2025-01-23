@@ -1,0 +1,273 @@
+{
+  "skillId": "wpn_passive_combo_03",
+  "level": 1,
+  "skillName": "",
+  "iconId": "",
+  "iconBgType": 0,
+  "attackRangeType": 0,
+  "castType": 1,
+  "passiveSkillType": 0,
+  "castData": {
+    "checkCastDistanceType": 0,
+    "useCustomCastDistance": false,
+    "castDistance": {
+      "useBlackboardKey": false,
+      "value": 0.0,
+      "blackboardKey": ""
+    },
+    "checkHeightDiff": false,
+    "heightDiffLimit": {
+      "useBlackboardKey": false,
+      "value": 0.0,
+      "blackboardKey": ""
+    },
+    "rotateType": 1,
+    "castAngle": 360.0,
+    "cooldownTime": 0.0,
+    "startCdFrame": 0,
+    "maxChargeTime": 1,
+    "costData": {
+      "costType": 0,
+      "costValue": 0.0,
+      "atbValueThreshold": 0.0
+    }
+  },
+  "durationFrame": 0,
+  "exclusiveFrame": 0,
+  "cacheComboFrame": 0,
+  "startComboFrame": 0,
+  "latestComboFrame": 0,
+  "selectStrategy": 0,
+  "smartTargetSelectStrategy": 0,
+  "smartTargetBuffIds": [],
+  "smartTargetTagQuery": {
+    "queryType": 0,
+    "tags": []
+  },
+  "canDummyCast": true,
+  "dummyPositionOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "canMove": false,
+  "canCastInAir": false,
+  "rootMotionCliffCheck": true,
+  "switchToCenterBeforeCast": false,
+  "skillTags": {
+    "predefinedTag": []
+  },
+  "tagDuringAttach": {
+    "predefinedTag": []
+  },
+  "actionGroupData": {
+    "timelineActions": [],
+    "passiveEventActions": [
+      {
+        "abilityEvent": 13,
+        "actions": [
+          {
+            "actionData": [
+              {
+                "$type": "Beyond.Gameplay.Core.Conditions.CheckDamageDecorateMask+Data, Gameplay.Beyond",
+                "isEnable": true,
+                "priorityLevel": 0,
+                "priorityOffset": 0,
+                "serverActionIndex": 0,
+                "checkType": 2,
+                "mask": 8192
+              },
+              {
+                "$type": "Beyond.Gameplay.Core.FindTargetAction+FindTargetActionData, Gameplay.Beyond",
+                "isEnable": true,
+                "priorityLevel": 0,
+                "priorityOffset": 0,
+                "serverActionIndex": 1,
+                "targetGroupKey": "team",
+                "center": 0,
+                "centerContextKey": "",
+                "centerToGround": false,
+                "selectorOwner": 1,
+                "selectorOwnerContextKey": "",
+                "selectorData": {
+                  "finderData": {
+                    "$type": "Beyond.Gameplay.Core.Selector+CharacterTeamFinder+Data, Gameplay.Beyond"
+                  },
+                  "validatorData": [],
+                  "postProcessorData": []
+                },
+                "selectorDirection": 0,
+                "target": 0,
+                "contextKey": ""
+              },
+              {
+                "$type": "Beyond.Gameplay.Core.HealAction+Data, Gameplay.Beyond",
+                "isEnable": true,
+                "priorityLevel": 0,
+                "priorityOffset": 0,
+                "serverActionIndex": 2,
+                "alwaysNext": true,
+                "healType": 0,
+                "healer": 0,
+                "target": {
+                  "targetSource": 2,
+                  "targetGroupKey": "team",
+                  "selectorOwner": 1,
+                  "ownerContextKey": "",
+                  "centerType": 0,
+                  "centerContextKey": "",
+                  "centerToGround": false,
+                  "selectorData": {
+                    "validatorData": [],
+                    "postProcessorData": []
+                  },
+                  "enableAdvancedDirection": false,
+                  "advancedDirection": {
+                    "directionType": 0,
+                    "mountPoint": 0,
+                    "customSourceAndTarget": false,
+                    "clampToXZ": true,
+                    "invertDirection": false
+                  },
+                  "selectorDirection": 0,
+                  "target": 0,
+                  "targetContextKey": ""
+                },
+                "healCalculation": {
+                  "$type": "Beyond.Gameplay.Core.MultiplyAttributeCalculation, Gameplay.Beyond",
+                  "valueSource": 0,
+                  "attributeType": 42,
+                  "multiplier": {
+                    "useBlackboardKey": true,
+                    "value": 1.0,
+                    "blackboardKey": "hp_will_ratio"
+                  },
+                  "addition": {
+                    "useBlackboardKey": true,
+                    "value": 0.0,
+                    "blackboardKey": "hp_will_add"
+                  }
+                },
+                "showHealText": true,
+                "playHealEffect": true,
+                "effectData": {
+                  "fxType": 0,
+                  "effectName": "P_common_heal_01_start",
+                  "guardEffect": false,
+                  "guardEffectAlpha": 1.0,
+                  "isCenterChangeLod": false,
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  },
+                  "releaseByAction": false,
+                  "ignoreOwnerTimeScale": false,
+                  "interruptTime": 0.0,
+                  "terrainPrefab": false,
+                  "effectPosData": [],
+                  "moveType": 0,
+                  "positionRef": 0,
+                  "grounded": false,
+                  "followHideTarget": false,
+                  "visibleWhenHideTarget": false,
+                  "slotIndex": 0,
+                  "useWeaponMountPoint": false,
+                  "mountPoint": 0,
+                  "weaponIndex": 0,
+                  "weaponMountPoint": 0,
+                  "offsetDir": 0,
+                  "offsetDirRevert": false,
+                  "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "useTargetRotation": false,
+                  "scaleWithTargetSize": false,
+                  "fxSize": 0.0,
+                  "unpackPosDelayFrame": 0,
+                  "unpackFollowTargetOnRelease": false,
+                  "rotType": 0,
+                  "rotRef": 0,
+                  "directionRef": 0,
+                  "rotUseWeaponMountPoint": false,
+                  "rotMountPoint": 0,
+                  "rotWeaponIndex": 0,
+                  "rotWeaponMountPoint": 0,
+                  "revertDir": false,
+                  "selfRotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "lockYRotation": true,
+                  "unpackRotDelayFrame": 0,
+                  "unpackFollowTargetRotOnRelease": false,
+                  "weaponVfxKey": "",
+                  "weaponVfxIndex": -1,
+                  "alertType": 0,
+                  "animateAlert": false,
+                  "alertAnimateDuration": 0.0,
+                  "angle": 0.0,
+                  "modifyType": 0,
+                  "value": 0.0
+                },
+                "useHealTags": false,
+                "healTags": {
+                  "predefinedTag": []
+                }
+              }
+            ],
+            "onlyExecuteWhenSourceIsMainChar": false
+          }
+        ]
+      }
+    ]
+  },
+  "uiRangeHints": [],
+  "buffs": [],
+  "toggleBuffs": [
+    {
+      "conditions": [],
+      "buffs": [
+        {
+          "buffId": "buff_wpn_passive_spirit_01",
+          "assignBlackboard": true,
+          "assignItems": [
+            {
+              "targetKey": "atk_up",
+              "inputValueKey": "atk_up",
+              "useDirectValue": false,
+              "numericValue": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cardAttributeModifier": {
+    "isConvertedAttribute": false,
+    "attributeModifiers": []
+  },
+  "blackboard": [
+    {
+      "key": "hp_will_ratio",
+      "valueFloat": 0.5,
+      "valueStr": "",
+      "isDynamic": false
+    },
+    {
+      "key": "hp_will_add",
+      "valueFloat": 30.0,
+      "valueStr": "",
+      "isDynamic": false
+    }
+  ],
+  "getBlackboardItemFromOtherSkill": false,
+  "skillBlackboardItemRefs": [],
+  "skillHighlightCondition": {
+    "actionData": [],
+    "onlyExecuteWhenSourceIsMainChar": false
+  }
+}

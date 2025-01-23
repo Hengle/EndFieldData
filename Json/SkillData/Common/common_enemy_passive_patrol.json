@@ -1,0 +1,152 @@
+{
+  "skillId": "common_enemy_passive_patrol",
+  "level": 1,
+  "skillName": "",
+  "iconId": "",
+  "iconBgType": 0,
+  "attackRangeType": 0,
+  "castType": 1,
+  "passiveSkillType": 0,
+  "castData": {
+    "checkCastDistanceType": 0,
+    "useCustomCastDistance": false,
+    "castDistance": {
+      "useBlackboardKey": false,
+      "value": 0.0,
+      "blackboardKey": ""
+    },
+    "checkHeightDiff": false,
+    "heightDiffLimit": {
+      "useBlackboardKey": false,
+      "value": 0.0,
+      "blackboardKey": ""
+    },
+    "rotateType": 1,
+    "castAngle": 360.0,
+    "cooldownTime": 0.0,
+    "startCdFrame": 0,
+    "maxChargeTime": 1,
+    "costData": {
+      "costType": 0,
+      "costValue": 0.0,
+      "atbValueThreshold": 0.0
+    }
+  },
+  "durationFrame": 0,
+  "exclusiveFrame": 0,
+  "cacheComboFrame": 0,
+  "startComboFrame": 0,
+  "latestComboFrame": 0,
+  "selectStrategy": 0,
+  "smartTargetSelectStrategy": 0,
+  "smartTargetBuffIds": [],
+  "smartTargetTagQuery": {
+    "queryType": 0,
+    "tags": []
+  },
+  "canDummyCast": true,
+  "dummyPositionOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "canMove": false,
+  "canCastInAir": false,
+  "rootMotionCliffCheck": true,
+  "switchToCenterBeforeCast": false,
+  "skillTags": {
+    "predefinedTag": []
+  },
+  "tagDuringAttach": {
+    "predefinedTag": []
+  },
+  "actionGroupData": {
+    "timelineActions": [],
+    "passiveEventActions": [
+      {
+        "abilityEvent": 12,
+        "actions": [
+          {
+            "actionData": [
+              {
+                "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
+                "isEnable": true,
+                "priorityLevel": 0,
+                "priorityOffset": 0,
+                "serverActionIndex": 0,
+                "buffs": [
+                  {
+                    "buffId": "buff_common_enemy_patrolregen_cd",
+                    "assignBlackboard": false,
+                    "assignItems": [],
+                    "readIdFromBlackboard": false,
+                    "buffIdKey": ""
+                  }
+                ],
+                "count": {
+                  "useBlackboardKey": false,
+                  "value": 1.0,
+                  "blackboardKey": ""
+                },
+                "targetSettings": {
+                  "targetSource": 1,
+                  "targetGroupKey": "",
+                  "selectorOwner": 1,
+                  "ownerContextKey": "",
+                  "centerType": 0,
+                  "centerContextKey": "",
+                  "centerToGround": false,
+                  "selectorData": {
+                    "validatorData": [],
+                    "postProcessorData": []
+                  },
+                  "enableAdvancedDirection": false,
+                  "advancedDirection": {
+                    "directionType": 0,
+                    "mountPoint": 0,
+                    "customSourceAndTarget": false,
+                    "clampToXZ": true,
+                    "invertDirection": false
+                  },
+                  "selectorDirection": 0,
+                  "target": 0,
+                  "targetContextKey": ""
+                },
+                "buffSource": 1,
+                "autoFinishByAction": false
+              }
+            ],
+            "onlyExecuteWhenSourceIsMainChar": false
+          }
+        ]
+      }
+    ]
+  },
+  "uiRangeHints": [],
+  "buffs": [
+    {
+      "buffId": "buff_common_enemy_patrolregen_delay",
+      "assignBlackboard": false,
+      "assignItems": []
+    }
+  ],
+  "toggleBuffs": [],
+  "cardAttributeModifier": {
+    "isConvertedAttribute": false,
+    "attributeModifiers": []
+  },
+  "blackboard": [
+    {
+      "key": "duration",
+      "valueFloat": 2.0,
+      "valueStr": "",
+      "isDynamic": false
+    }
+  ],
+  "getBlackboardItemFromOtherSkill": false,
+  "skillBlackboardItemRefs": [],
+  "skillHighlightCondition": {
+    "actionData": [],
+    "onlyExecuteWhenSourceIsMainChar": false
+  }
+}
