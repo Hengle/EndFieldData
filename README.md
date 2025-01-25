@@ -5,7 +5,6 @@
 - Json/LevelData/*.json \
 (as a team, we decided to not upload this data because it contains sensitive info like spawn infos)\
 (we will upload them as soon as the beta test ends)
-- Json/Interactive/InteractiveData/*.json (will be added soon)
 
 ## Credits (TableCfg):
 - [BeyondTools](https://git.crepe.moe/rfi/BeyondTools)
