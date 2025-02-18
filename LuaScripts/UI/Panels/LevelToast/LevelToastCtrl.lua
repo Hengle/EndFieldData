@@ -31,8 +31,8 @@ LevelToastCtrl._ShowLevelCollectionToastSimple = HL.Method(HL.Any) << function(s
     self.view.labelTotal.text = string.format("%d/%d", data.itemCnt, data.itemMaxCnt)
     local sceneMsg = FactoryUtils.getCurSceneHandler()
     if sceneMsg then
-        self:_ShowLevelCollectionToastInfo({ infoNode = self.view.bandwidthNode, infoVal = itemData.extraBandwidthCapacity, infoTotalVal = sceneMsg.bandwidth.max })
-        self:_ShowLevelCollectionToastInfo({ infoNode = self.view.buildingNumLimitNode, infoVal = itemData.extraBuildingNumLimit, infoTotalVal = sceneMsg.bandwidth.spMax })
+        self:_ShowLevelCollectionToastInfo({ infoNode = self.view.bandwidthNode, infoTotalVal = sceneMsg.bandwidth.max })
+        self:_ShowLevelCollectionToastInfo({ infoNode = self.view.buildingNumLimitNode, infoTotalVal = sceneMsg.bandwidth.spMax })
     end
     self.view.levelCollection.gameObject:SetActive(true)
     self.view.levelCollection:Stop()

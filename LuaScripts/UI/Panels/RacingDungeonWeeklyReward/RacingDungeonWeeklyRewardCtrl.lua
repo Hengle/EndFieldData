@@ -35,8 +35,27 @@ RacingDungeonWeeklyRewardCtrl.OnCreate = HL.Override(HL.Any) << function(self, a
     end
     self:UpdateView()
 end
+RacingDungeonWeeklyRewardCtrl.OnWeeklyRefresh = HL.StaticMethod() << function(arg)
+    xlua.private_accessible(CS.Beyond.Gameplay.RacingDungeonSystem)
+    local arg = unpack(arg)
+    if arg.Count == 0 then
+        for k, v in cs_pairs(GameInstance.player.racingDungeonSystem.m_racingDungeonWeeklyRewardInfo) do
+            if v.exp == 0 then
+                v.haveGetRewardNodes:Clear()
+            end
+        end
+        local isOpen, ctrl = UIManager:IsOpen(PANEL_ID)
+        if isOpen then
+            ctrl:UpdateView()
+        end
+    end
+end
 RacingDungeonWeeklyRewardCtrl.OnGetReward = HL.Method(HL.Any) << function(self, arg)
     local arg = unpack(arg)
+    if arg.Count == 0 then
+        self:UpdateView()
+        return
+    end
     local items = {}
     for i = 0, arg.Count - 1 do
         local nodeId = arg[i]

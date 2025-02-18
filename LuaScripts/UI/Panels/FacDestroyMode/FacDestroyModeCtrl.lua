@@ -37,7 +37,11 @@ FacDestroyModeCtrl._ToggleExitBinding = HL.Method(HL.Boolean) << function(self, 
     end
 end
 FacDestroyModeCtrl.OnClose = HL.Override() << function(self)
-    self:_ClearOnExit()
+    if LuaSystemManager.facSystem.inDestroyMode then
+        self:_RealExitMode()
+    else
+        self:_ClearOnExit()
+    end
 end
 FacDestroyModeCtrl.EnterMode = HL.StaticMethod() << function()
     local self = UIManager:AutoOpen(PANEL_ID)

@@ -75,7 +75,6 @@ AdventureDungeonCtrl.OnHide = HL.Override() << function(self)
     if self.m_forbidResetTabIndex then
         return
     end
-    self.m_curTabIndex = 1
     local count = self.m_genTabCells:GetCount()
     if count > 0 then
         local cell = self.m_genTabCells:Get(1)

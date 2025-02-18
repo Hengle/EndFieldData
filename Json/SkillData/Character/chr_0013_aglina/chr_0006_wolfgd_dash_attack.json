@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 1,
-  "castType": 0,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Ranged",
+  "castType": "Active",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 1,
+    "checkCastDistanceType": "FromLeader",
     "useCustomCastDistance": true,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 360.0,
     "cooldownTime": 0.0,
     "startCdFrame": 8,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,10 +37,10 @@
   "cacheComboFrame": 11,
   "startComboFrame": 19,
   "latestComboFrame": 33,
-  "selectStrategy": 0,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "SelectObject",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetTagQuery": {
-    "queryType": 0
+    "queryType": "HasAny"
   },
   "canDummyCast": true,
   "dummyPositionOffset": {
@@ -68,7 +68,7 @@
             {
               "$type": "Beyond.Gameplay.Core.PlayAnimationAction+PlayAnimationActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 0,
               "animName": "DashAttack",
@@ -90,16 +90,16 @@
             {
               "$type": "Beyond.Gameplay.Core.SelfRotateAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 1,
-              "rotateType": 0,
+              "rotateType": "ToTarget",
               "targetSettings": {
-                "targetSource": 0,
+                "targetSource": "Target",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -107,14 +107,14 @@
                   "postProcessorData": []
                 },
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "immediateRotate": true,
               "overrideRotateRate": false,
               "rotateRate": 1080.0,
-              "rotateDirType": 0
+              "rotateDirType": "Free"
             }
           ],
           "onlyExecuteWhenSourceIsMainChar": false
@@ -128,15 +128,15 @@
             {
               "$type": "Beyond.Gameplay.Core.CustomRootMotionAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 2,
               "moveTo": {
-                "targetSource": 0,
+                "targetSource": "Target",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -144,12 +144,12 @@
                   "postProcessorData": []
                 },
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "animKey": "DashAttack",
-              "rootMotionCurveMask": 4,
+              "rootMotionCurveMask": "PosZ",
               "scaleX": {
                 "useBlackboardKey": false,
                 "value": 1.0,
@@ -192,15 +192,15 @@
             {
               "$type": "Beyond.Gameplay.Core.AbilityActions.FinishBuffAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 3,
               "buffOwner": {
-                "targetSource": 1,
+                "targetSource": "Source",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -208,8 +208,8 @@
                   "postProcessorData": []
                 },
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "buffIds": [],
@@ -232,16 +232,16 @@
             {
               "$type": "Beyond.Gameplay.Core.SelfRotateAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 4,
-              "rotateType": 0,
+              "rotateType": "ToTarget",
               "targetSettings": {
-                "targetSource": 0,
+                "targetSource": "Target",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -249,14 +249,14 @@
                   "postProcessorData": []
                 },
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "immediateRotate": false,
               "overrideRotateRate": true,
               "rotateRate": 1080.0,
-              "rotateDirType": 0
+              "rotateDirType": "Free"
             }
           ],
           "onlyExecuteWhenSourceIsMainChar": false
@@ -270,37 +270,37 @@
             {
               "$type": "Beyond.Gameplay.Core.LaunchProjectile+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 5,
               "projectileId": "projectile_chr_0013_aglina_dash_attack_edit",
               "setSelfAsProjectileSource": true,
               "projectileSource": {
-                "targetSource": 1,
-                "selectorOwner": 1,
-                "centerType": 0,
+                "targetSource": "Source",
+                "selectorOwner": "ActionOwner",
+                "centerType": "ActionSource",
                 "centerToGround": false,
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource"
               },
               "syncTimeScale": false,
               "assignBlackboard": true,
               "targetSettings": {
-                "targetSource": 0,
-                "selectorOwner": 1,
-                "centerType": 0,
+                "targetSource": "Target",
+                "selectorOwner": "ActionOwner",
+                "centerType": "ActionSource",
                 "centerToGround": false,
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource"
               },
               "castSkillOnHit": true,
               "projectileSkillId": "chr_0013_aglina_dash_attack_projhit",
               "castSkillOnBlock": false,
               "castSkillOnReach": false,
               "castSkillOnFinish": false,
-              "hitBoneOffsetForward": 1,
+              "hitBoneOffsetForward": "TargetForward",
               "revertDir": false,
               "hitBoneFixedOffset": {
                 "x": 0.0,
@@ -313,30 +313,30 @@
                 "z": 0.0
               },
               "emitter": {
-                "targetSource": 4,
-                "selectorOwner": 1,
-                "centerType": 0,
+                "targetSource": "Owner",
+                "selectorOwner": "ActionOwner",
+                "centerType": "ActionSource",
                 "centerToGround": false,
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource"
               },
               "emitPos": {
-                "targetSource": 4,
-                "selectorOwner": 1,
-                "centerType": 0,
+                "targetSource": "Owner",
+                "selectorOwner": "ActionOwner",
+                "centerType": "ActionSource",
                 "centerToGround": false,
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource"
               },
               "overrideEmitBone": true,
               "useWeaponMp": false,
-              "emitMountPoint": 153,
+              "emitMountPoint": "Custom3",
               "weaponIndex": 0,
-              "weaponMp": 0,
+              "weaponMp": "Root",
               "overrideHitBone": false,
-              "hitMountPoint": 0
+              "hitMountPoint": "None"
             }
           ],
           "onlyExecuteWhenSourceIsMainChar": false
@@ -350,15 +350,15 @@
             {
               "$type": "Beyond.Gameplay.Core.SetSuperArmorAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 6,
               "targetSettings": {
-                "targetSource": 1,
+                "targetSource": "Source",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -366,8 +366,8 @@
                   "postProcessorData": []
                 },
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "superArmorValue": {
@@ -389,7 +389,7 @@
             {
               "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 7,
               "_soundEvent": "au_chr_0013_aglina_dash_attack",
@@ -398,11 +398,11 @@
               "_canInterruptTimeMs": 0,
               "_intrptFadeDurationMs": 100,
               "targetSettings": {
-                "targetSource": 4,
+                "targetSource": "Owner",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -410,15 +410,15 @@
                   "postProcessorData": []
                 },
                 "enableAdvancedDirection": false,
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
-              "mountPoint": 0,
+              "mountPoint": "None",
               "followMountPoint": false,
               "useWeaponMountPoint": false,
               "weaponIndex": 0,
-              "weaponMountPoint": 0
+              "weaponMountPoint": "Root"
             }
           ],
           "onlyExecuteWhenSourceIsMainChar": false

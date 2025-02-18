@@ -3,7 +3,14 @@ local PHASE_ID = PhaseId.SNS
 PhaseSNS = HL.Class('PhaseSNS', phaseBase.PhaseBase)
 local SNS_MAIN_PANEL_ID = PanelId.SNSMain
 PhaseSNS.m_snsPanelItem = HL.Field(HL.Forward("PhasePanelItem"))
-PhaseSNS.s_messages = HL.StaticField(HL.Table) << {}
+PhaseSNS.s_messages = HL.StaticField(HL.Table) << { [MessageConst.TRY_OPEN_PHASE_SNS] = { 'TryOpenPhaseSNS', false }, }
+PhaseSNS.TryOpenPhaseSNS = HL.StaticMethod(HL.Any) << function(arg)
+    local dialogId = unpack(arg or {})
+    if not string.isEmpty(dialogId) and not GameInstance.player.sns.dialogInfoDic:ContainsKey(dialogId) then
+        return
+    end
+    PhaseManager:OpenPhase(PHASE_ID, arg)
+end
 PhaseSNS._OnInit = HL.Override() << function(self)
     PhaseSNS.Super._OnInit(self)
 end

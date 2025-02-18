@@ -624,7 +624,7 @@ PhaseManager.ExitAllPhase = HL.Method() << function(self)
     self:_ClearTransCor()
     local count = self.m_phaseStack:Count()
     for _ = 1, count do
-        local phase = self.m_phaseStack:Peek()
+        local phase = self.m_phaseStack:Pop()
         self:_DoFinishPhase(phase, true)
     end
     for phase, active in pairs(self.m_waitingDestroyList) do

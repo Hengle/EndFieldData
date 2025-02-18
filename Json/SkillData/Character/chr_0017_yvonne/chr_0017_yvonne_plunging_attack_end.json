@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 0,
-  "castType": 0,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Melee",
+  "castType": "Active",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 0,
+    "checkCastDistanceType": "NotCheck",
     "useCustomCastDistance": false,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 360.0,
     "cooldownTime": 0.0,
     "startCdFrame": 0,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,11 +37,11 @@
   "cacheComboFrame": 0,
   "startComboFrame": 0,
   "latestComboFrame": 12,
-  "selectStrategy": 0,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "SelectObject",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetBuffIds": [],
   "smartTargetTagQuery": {
-    "queryType": 0,
+    "queryType": "HasAny",
     "tags": []
   },
   "canDummyCast": true,
@@ -70,7 +70,7 @@
             {
               "$type": "Beyond.Gameplay.Core.PlayAnimationAction+PlayAnimationActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 0,
               "animName": "PlungingAttackEnd",
@@ -92,15 +92,15 @@
             {
               "$type": "Beyond.Gameplay.Core.CustomRootMotionAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 1,
               "moveTo": {
-                "targetSource": 3,
+                "targetSource": "InstantSearch",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -129,18 +129,18 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "animKey": "PlungingAttackEnd",
-              "rootMotionCurveMask": 4,
+              "rootMotionCurveMask": "PosZ",
               "scaleX": {
                 "useBlackboardKey": false,
                 "value": 1.0,
@@ -183,15 +183,15 @@
             {
               "$type": "Beyond.Gameplay.Core.EffectAction+EffectActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 2,
               "targetSettings": {
-                "targetSource": 1,
+                "targetSource": "Source",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -200,22 +200,22 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "effectSource": {
-                "targetSource": 4,
+                "targetSource": "Owner",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -224,19 +224,19 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "isMainCharacterActive": false,
               "effectActionCfg": {
-                "fxType": 0,
+                "fxType": "Normal",
                 "effectName": "P_yvonne_air_atk_start_atk",
                 "guardEffect": false,
                 "guardEffectAlpha": 1.0,
@@ -251,17 +251,17 @@
                 "interruptTime": 0.0,
                 "terrainPrefab": false,
                 "effectPosData": [],
-                "moveType": 0,
-                "positionRef": 0,
+                "moveType": "Stationary",
+                "positionRef": "Target",
                 "grounded": true,
                 "followHideTarget": false,
                 "visibleWhenHideTarget": false,
                 "slotIndex": 0,
                 "useWeaponMountPoint": false,
-                "mountPoint": 0,
+                "mountPoint": "None",
                 "weaponIndex": 0,
-                "weaponMountPoint": 0,
-                "offsetDir": 0,
+                "weaponMountPoint": "Root",
+                "offsetDir": "Self",
                 "offsetDirRevert": false,
                 "positionOffset": {
                   "x": 0.0,
@@ -273,13 +273,13 @@
                 "fxSize": 0.0,
                 "unpackPosDelayFrame": 0,
                 "unpackFollowTargetOnRelease": false,
-                "rotType": 0,
-                "rotRef": 0,
-                "directionRef": 0,
+                "rotType": "Stationary",
+                "rotRef": "Target",
+                "directionRef": "Target",
                 "rotUseWeaponMountPoint": false,
-                "rotMountPoint": 0,
+                "rotMountPoint": "None",
                 "rotWeaponIndex": 0,
-                "rotWeaponMountPoint": 0,
+                "rotWeaponMountPoint": "Root",
                 "revertDir": false,
                 "selfRotation": {
                   "x": 0.0,
@@ -291,11 +291,11 @@
                 "unpackFollowTargetRotOnRelease": false,
                 "weaponVfxKey": "",
                 "weaponVfxIndex": -1,
-                "alertType": 0,
+                "alertType": "Decal",
                 "animateAlert": false,
                 "alertAnimateDuration": 0.0,
                 "angle": 0.0,
-                "modifyType": 0,
+                "modifyType": "StartLifeTime",
                 "value": 0.0
               }
             }
@@ -311,14 +311,14 @@
             {
               "$type": "Beyond.Gameplay.Core.FindTargetAction+FindTargetActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 3,
               "targetGroupKey": "tar",
-              "center": 0,
+              "center": "ActionSource",
               "centerContextKey": "",
               "centerToGround": false,
-              "selectorOwner": 1,
+              "selectorOwner": "ActionOwner",
               "selectorOwnerContextKey": "",
               "selectorData": {
                 "finderData": {
@@ -326,15 +326,15 @@
                   "checkAlive": true,
                   "autoSetTargetFaction": true,
                   "containsUnMarkable": false,
-                  "factionTarget": 1,
+                  "factionTarget": "Anti",
                   "targetFactionType": 0,
                   "shapeList": [
                     {
-                      "shapeType": 0,
-                      "positionRef": 0,
-                      "posRefMP": 0,
-                      "directionRef": 0,
-                      "dirRefMountPoint": 0,
+                      "shapeType": "Box",
+                      "positionRef": "OwnerMountPoint",
+                      "posRefMP": "None",
+                      "directionRef": "OwnerForward",
+                      "dirRefMountPoint": "None",
                       "centerOffset": {
                         "x": {
                           "useBlackboardKey": false,
@@ -397,7 +397,7 @@
                         "blackboardKey": ""
                       },
                       "useDirection": true,
-                      "castDirection": 0,
+                      "castDirection": "ZForward",
                       "enablePreview": true
                     }
                   ]
@@ -405,8 +405,8 @@
                 "validatorData": [],
                 "postProcessorData": []
               },
-              "selectorDirection": 0,
-              "target": 0,
+              "selectorDirection": "SourceForward",
+              "target": "ActionSource",
               "contextKey": ""
             }
           ],
@@ -421,7 +421,7 @@
             {
               "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 4,
               "conditionAction": {
@@ -429,15 +429,15 @@
                   {
                     "$type": "Beyond.Gameplay.Core.Conditions.CheckBuffStackNum+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 5,
                     "checkTarget": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -446,20 +446,20 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "buffId": {
                       "buffId": "buff_chr_0017_yvonne_potential_5"
                     },
-                    "compareType": 3,
+                    "compareType": "GE",
                     "value": {
                       "useBlackboardKey": false,
                       "value": 1.0,
@@ -474,7 +474,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 6,
                     "conditionAction": {
@@ -482,7 +482,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.Conditions.Probablity+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 7,
                           "prob": {
@@ -499,7 +499,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 8,
                           "conditionAction": {
@@ -507,15 +507,15 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.Conditions.CheckBuffStackNum+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 9,
                                 "checkTarget": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -524,20 +524,20 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "buffId": {
                                   "buffId": "buff_chr_0017_yvonne_potential_5_cd"
                                 },
-                                "compareType": 4,
+                                "compareType": "Equals",
                                 "value": {
                                   "useBlackboardKey": false,
                                   "value": 0.0,
@@ -552,7 +552,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 10,
                                 "conditionAction": {
@@ -560,15 +560,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.Conditions.CheckEntityNum+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 11,
                                       "checkTarget": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -577,19 +577,19 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "minNum": 1,
                                       "containsHittableTarget": false,
-                                      "compareType": 3
+                                      "compareType": "GE"
                                     }
                                   ],
                                   "onlyExecuteWhenSourceIsMainChar": false
@@ -599,11 +599,11 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.ModifyDynamicBlackboard+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 12,
                                       "key": "atk_scale",
-                                      "operation": 2,
+                                      "operation": "Multiply",
                                       "directValue": true,
                                       "value": {
                                         "useBlackboardKey": true,
@@ -611,11 +611,11 @@
                                         "blackboardKey": "dmg_scale"
                                       },
                                       "calculationTarget": {
-                                        "targetSource": 4,
+                                        "targetSource": "Owner",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -624,22 +624,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "calculateType": 0
+                                      "calculateType": "HpRatio"
                                     },
                                     {
                                       "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 13,
                                       "buffs": [
@@ -664,11 +664,11 @@
                                         "blackboardKey": ""
                                       },
                                       "targetSettings": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -677,33 +677,33 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "buffSource": 0,
+                                      "buffSource": "ActionSource",
                                       "autoFinishByAction": false
                                     },
                                     {
                                       "$type": "Beyond.Gameplay.Core.DamageAction+DamageActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 14,
                                       "alwaysNext": true,
-                                      "attacker": 0,
+                                      "attacker": "ActionSource",
                                       "targetSettings": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -712,22 +712,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "effectSource": {
-                                        "targetSource": 4,
+                                        "targetSource": "Owner",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -736,22 +736,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "damageUnits": [
                                         {
-                                          "damageType": 4,
-                                          "damageAttributeType": 0,
+                                          "damageType": "Cryst",
+                                          "damageAttributeType": "Hp",
                                           "onlyEnableForMainChar": false,
-                                          "damageVisualImportance": 1,
+                                          "damageVisualImportance": "Level1",
                                           "enableDamageVisualCoalition": false,
                                           "damageVisualCoalitionGroupKey": "",
                                           "alwaysStartNewCoalition": false,
@@ -762,8 +762,8 @@
                                           "alwaysEndCoalitionGuard": false,
                                           "hidePoiseUIEffect": false,
                                           "hideMainCharHpScreenEffect": false,
-                                          "damageDecorateMask": 1152,
-                                          "ignoreDamageImmuneLevel": -1,
+                                          "damageDecorateMask": "NormalAttack, PlungingAttack",
+                                          "ignoreDamageImmuneLevel": "None",
                                           "simpleCalculation": true,
                                           "atkScale": {
                                             "useBlackboardKey": true,
@@ -781,7 +781,7 @@
                                           "damageProcessors": [],
                                           "playHitEffect": true,
                                           "effectData": {
-                                            "fxType": 0,
+                                            "fxType": "Normal",
                                             "effectName": "P_yvonne_attack_05_hit",
                                             "guardEffect": false,
                                             "guardEffectAlpha": 1.0,
@@ -796,17 +796,17 @@
                                             "interruptTime": 0.0,
                                             "terrainPrefab": false,
                                             "effectPosData": [],
-                                            "moveType": 0,
-                                            "positionRef": 0,
+                                            "moveType": "Stationary",
+                                            "positionRef": "Target",
                                             "grounded": false,
                                             "followHideTarget": false,
                                             "visibleWhenHideTarget": false,
                                             "slotIndex": 0,
                                             "useWeaponMountPoint": false,
-                                            "mountPoint": 52,
+                                            "mountPoint": "VBHit",
                                             "weaponIndex": 0,
-                                            "weaponMountPoint": 0,
-                                            "offsetDir": 0,
+                                            "weaponMountPoint": "Root",
+                                            "offsetDir": "Self",
                                             "offsetDirRevert": false,
                                             "positionOffset": {
                                               "x": 0.0,
@@ -818,13 +818,13 @@
                                             "fxSize": 0.0,
                                             "unpackPosDelayFrame": 0,
                                             "unpackFollowTargetOnRelease": false,
-                                            "rotType": 0,
-                                            "rotRef": 0,
-                                            "directionRef": 2,
+                                            "rotType": "Stationary",
+                                            "rotRef": "Target",
+                                            "directionRef": "SourceToTarget",
                                             "rotUseWeaponMountPoint": false,
-                                            "rotMountPoint": 0,
+                                            "rotMountPoint": "None",
                                             "rotWeaponIndex": 0,
-                                            "rotWeaponMountPoint": 0,
+                                            "rotWeaponMountPoint": "Root",
                                             "revertDir": false,
                                             "selfRotation": {
                                               "x": 0.0,
@@ -836,11 +836,11 @@
                                             "unpackFollowTargetRotOnRelease": false,
                                             "weaponVfxKey": "",
                                             "weaponVfxIndex": -1,
-                                            "alertType": 0,
+                                            "alertType": "Decal",
                                             "animateAlert": false,
                                             "alertAnimateDuration": 0.0,
                                             "angle": 0.0,
-                                            "modifyType": 0,
+                                            "modifyType": "StartLifeTime",
                                             "value": 0.0
                                           },
                                           "guardOverrideHitEffect": true,
@@ -854,7 +854,7 @@
                                           "gainCost": false,
                                           "costDataList": [
                                             {
-                                              "costType": 0,
+                                              "costType": "UltimateSp",
                                               "costValue": 1.0,
                                               "atbValueThreshold": 0.0
                                             }
@@ -863,10 +863,10 @@
                                           "reduceDamageForGuardRatio": 1.0
                                         },
                                         {
-                                          "damageType": 4,
-                                          "damageAttributeType": 1,
+                                          "damageType": "Cryst",
+                                          "damageAttributeType": "Poise",
                                           "onlyEnableForMainChar": false,
-                                          "damageVisualImportance": 0,
+                                          "damageVisualImportance": "Level0",
                                           "enableDamageVisualCoalition": false,
                                           "damageVisualCoalitionGroupKey": "",
                                           "alwaysStartNewCoalition": false,
@@ -877,8 +877,8 @@
                                           "alwaysEndCoalitionGuard": false,
                                           "hidePoiseUIEffect": false,
                                           "hideMainCharHpScreenEffect": false,
-                                          "damageDecorateMask": 0,
-                                          "ignoreDamageImmuneLevel": -1,
+                                          "damageDecorateMask": "None",
+                                          "ignoreDamageImmuneLevel": "None",
                                           "simpleCalculation": true,
                                           "atkScale": {
                                             "useBlackboardKey": false,
@@ -902,7 +902,7 @@
                                           },
                                           "playHitEffect": false,
                                           "effectData": {
-                                            "fxType": 0,
+                                            "fxType": "Normal",
                                             "effectName": "",
                                             "guardEffect": false,
                                             "guardEffectAlpha": 1.0,
@@ -917,17 +917,17 @@
                                             "interruptTime": 0.0,
                                             "terrainPrefab": false,
                                             "effectPosData": [],
-                                            "moveType": 0,
-                                            "positionRef": 0,
+                                            "moveType": "Stationary",
+                                            "positionRef": "Target",
                                             "grounded": false,
                                             "followHideTarget": false,
                                             "visibleWhenHideTarget": false,
                                             "slotIndex": 0,
                                             "useWeaponMountPoint": false,
-                                            "mountPoint": 0,
+                                            "mountPoint": "None",
                                             "weaponIndex": 0,
-                                            "weaponMountPoint": 0,
-                                            "offsetDir": 0,
+                                            "weaponMountPoint": "Root",
+                                            "offsetDir": "Self",
                                             "offsetDirRevert": false,
                                             "positionOffset": {
                                               "x": 0.0,
@@ -939,13 +939,13 @@
                                             "fxSize": 0.0,
                                             "unpackPosDelayFrame": 0,
                                             "unpackFollowTargetOnRelease": false,
-                                            "rotType": 0,
-                                            "rotRef": 0,
-                                            "directionRef": 0,
+                                            "rotType": "Stationary",
+                                            "rotRef": "Target",
+                                            "directionRef": "Target",
                                             "rotUseWeaponMountPoint": false,
-                                            "rotMountPoint": 0,
+                                            "rotMountPoint": "None",
                                             "rotWeaponIndex": 0,
-                                            "rotWeaponMountPoint": 0,
+                                            "rotWeaponMountPoint": "Root",
                                             "revertDir": false,
                                             "selfRotation": {
                                               "x": 0.0,
@@ -957,11 +957,11 @@
                                             "unpackFollowTargetRotOnRelease": false,
                                             "weaponVfxKey": "",
                                             "weaponVfxIndex": -1,
-                                            "alertType": 0,
+                                            "alertType": "Decal",
                                             "animateAlert": false,
                                             "alertAnimateDuration": 0.0,
                                             "angle": 0.0,
-                                            "modifyType": 0,
+                                            "modifyType": "StartLifeTime",
                                             "value": 0.0
                                           },
                                           "guardOverrideHitEffect": false,
@@ -1000,15 +1000,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.CameraImpulseAction+CameraImpulseActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 15,
                                       "targetSettings": {
-                                        "targetSource": 4,
+                                        "targetSource": "Owner",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1017,18 +1017,18 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "releaseWhenActionEnds": false,
-                                      "_mountPoint": 0,
+                                      "_mountPoint": "None",
                                       "_boneNode": "",
                                       "_positionOffset": {
                                         "x": 0.0,
@@ -1039,15 +1039,15 @@
                                       "_impulseDefinitionData": {
                                         "cameraShake2D": false,
                                         "impulseChannel": 1,
-                                        "impulseShape": 0,
+                                        "impulseShape": "Custom",
                                         "customImpulseShape": {},
                                         "impulseDuration": 0.2,
-                                        "impulseType": 3,
+                                        "impulseType": "Legacy",
                                         "dissipationRate": 0.0,
                                         "rawSignalPath": "Assets/Beyond/DynamicAssets/Gameplay/Cameras/CameraNoiseSettings/NoiseSettings_Level_3D_LargeY.asset",
                                         "amplitudeGain": 0.35,
                                         "frequencyGain": 5.0,
-                                        "repeatMode": 1,
+                                        "repeatMode": "Loop",
                                         "randomize": true,
                                         "timeEnvelope": {
                                           "m_AttackShape": {},
@@ -1059,8 +1059,8 @@
                                           "m_HoldForever": false
                                         },
                                         "impactRadius": 100.0,
-                                        "directionMode": 0,
-                                        "dissipationMode": 2,
+                                        "directionMode": "Fixed",
+                                        "dissipationMode": "ExponentialDecay",
                                         "dissipationDistance": 100.0,
                                         "propagationSpeed": 343.0
                                       }
@@ -1068,15 +1068,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.EnemyHurtAnimAction+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 16,
                                       "attacker": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1085,22 +1085,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "defender": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1109,21 +1109,21 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "hurtAnim": 13,
+                                      "hurtAnim": "BigStagger",
                                       "additiveShaking": true,
-                                      "shakeIntensity": 0,
+                                      "shakeIntensity": "Mild",
                                       "faceToAttacker": true,
-                                      "faceDirection": 3,
+                                      "faceDirection": "TargetToSource",
                                       "teammateUseWeakenEffect": true,
                                       "weakImmobilizedTime": {
                                         "useBlackboardKey": false,
@@ -1152,10 +1152,10 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.HitStopAction+Data, Gameplay.Beyond",
                                       "isEnable": false,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 17,
-                                      "affectType": 1,
+                                      "affectType": "OnlyTarget",
                                       "curveKey": "char_hard_stop",
                                       "duration": 0.3,
                                       "timeDilationPriority": {
@@ -1163,11 +1163,11 @@
                                         "tagId": -2059842104
                                       },
                                       "target": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1176,29 +1176,29 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       }
                                     },
                                     {
                                       "$type": "Beyond.Gameplay.Core.PushBackAction+Data, Gameplay.Beyond",
                                       "isEnable": false,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 18,
                                       "attackerTargetSettings": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1207,22 +1207,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "sourcePointSettings": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1231,22 +1231,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "targetSettings": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1255,17 +1255,17 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "pushBackDirection": 2,
+                                      "pushBackDirection": "SourceToTarget",
                                       "pushBackDistance": {
                                         "useBlackboardKey": false,
                                         "value": 2.0,
@@ -1294,7 +1294,7 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 19,
                                       "conditionAction": {
@@ -1302,15 +1302,15 @@
                                           {
                                             "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                                             "isEnable": true,
-                                            "priorityLevel": 0,
+                                            "priorityLevel": "Default",
                                             "priorityOffset": 0,
                                             "serverActionIndex": 52,
                                             "checkTarget": {
-                                              "targetSource": 1,
+                                              "targetSource": "Source",
                                               "targetGroupKey": "tar",
-                                              "selectorOwner": 1,
+                                              "selectorOwner": "ActionOwner",
                                               "ownerContextKey": "",
-                                              "centerType": 0,
+                                              "centerType": "ActionSource",
                                               "centerContextKey": "",
                                               "centerToGround": false,
                                               "selectorData": {
@@ -1319,14 +1319,14 @@
                                               },
                                               "enableAdvancedDirection": false,
                                               "advancedDirection": {
-                                                "directionType": 0,
-                                                "mountPoint": 0,
+                                                "directionType": "SourceForward",
+                                                "mountPoint": "None",
                                                 "customSourceAndTarget": false,
                                                 "clampToXZ": true,
                                                 "invertDirection": false
                                               },
-                                              "selectorDirection": 0,
-                                              "target": 0,
+                                              "selectorDirection": "SourceForward",
+                                              "target": "ActionSource",
                                               "targetContextKey": ""
                                             }
                                           }
@@ -1346,7 +1346,7 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 21,
                                       "conditionAction": {
@@ -1354,15 +1354,15 @@
                                           {
                                             "$type": "Beyond.Gameplay.Core.Conditions.CheckEntityNum+Data, Gameplay.Beyond",
                                             "isEnable": true,
-                                            "priorityLevel": 0,
+                                            "priorityLevel": "Default",
                                             "priorityOffset": 0,
                                             "serverActionIndex": 54,
                                             "checkTarget": {
-                                              "targetSource": 2,
+                                              "targetSource": "Context",
                                               "targetGroupKey": "tar",
-                                              "selectorOwner": 1,
+                                              "selectorOwner": "ActionOwner",
                                               "ownerContextKey": "",
-                                              "centerType": 0,
+                                              "centerType": "ActionSource",
                                               "centerContextKey": "",
                                               "centerToGround": false,
                                               "selectorData": {
@@ -1371,19 +1371,19 @@
                                               },
                                               "enableAdvancedDirection": false,
                                               "advancedDirection": {
-                                                "directionType": 0,
-                                                "mountPoint": 0,
+                                                "directionType": "SourceForward",
+                                                "mountPoint": "None",
                                                 "customSourceAndTarget": false,
                                                 "clampToXZ": true,
                                                 "invertDirection": false
                                               },
-                                              "selectorDirection": 0,
-                                              "target": 0,
+                                              "selectorDirection": "SourceForward",
+                                              "target": "ActionSource",
                                               "targetContextKey": ""
                                             },
                                             "minNum": 1,
                                             "containsHittableTarget": false,
-                                            "compareType": 3
+                                            "compareType": "GE"
                                           }
                                         ],
                                         "onlyExecuteWhenSourceIsMainChar": false
@@ -1393,7 +1393,7 @@
                                           {
                                             "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
                                             "isEnable": false,
-                                            "priorityLevel": 0,
+                                            "priorityLevel": "Default",
                                             "priorityOffset": 0,
                                             "serverActionIndex": 23,
                                             "_soundEvent": "au_chr_0003_endmin_plunging_attack_hit",
@@ -1402,11 +1402,11 @@
                                             "_canInterruptTimeMs": 0,
                                             "_intrptFadeDurationMs": 100,
                                             "targetSettings": {
-                                              "targetSource": 2,
+                                              "targetSource": "Context",
                                               "targetGroupKey": "tar",
-                                              "selectorOwner": 1,
+                                              "selectorOwner": "ActionOwner",
                                               "ownerContextKey": "",
-                                              "centerType": 0,
+                                              "centerType": "ActionSource",
                                               "centerContextKey": "",
                                               "centerToGround": false,
                                               "selectorData": {
@@ -1415,21 +1415,21 @@
                                               },
                                               "enableAdvancedDirection": false,
                                               "advancedDirection": {
-                                                "directionType": 0,
-                                                "mountPoint": 0,
+                                                "directionType": "SourceForward",
+                                                "mountPoint": "None",
                                                 "customSourceAndTarget": false,
                                                 "clampToXZ": true,
                                                 "invertDirection": false
                                               },
-                                              "selectorDirection": 0,
-                                              "target": 0,
+                                              "selectorDirection": "SourceForward",
+                                              "target": "ActionSource",
                                               "targetContextKey": ""
                                             },
-                                            "mountPoint": 0,
+                                            "mountPoint": "None",
                                             "followMountPoint": false,
                                             "useWeaponMountPoint": false,
                                             "weaponIndex": 0,
-                                            "weaponMountPoint": 0
+                                            "weaponMountPoint": "Root"
                                           }
                                         ],
                                         "onlyExecuteWhenSourceIsMainChar": false
@@ -1448,17 +1448,17 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.DamageAction+DamageActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 24,
                                       "alwaysNext": true,
-                                      "attacker": 0,
+                                      "attacker": "ActionSource",
                                       "targetSettings": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1467,22 +1467,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "effectSource": {
-                                        "targetSource": 4,
+                                        "targetSource": "Owner",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1491,22 +1491,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "damageUnits": [
                                         {
-                                          "damageType": 4,
-                                          "damageAttributeType": 0,
+                                          "damageType": "Cryst",
+                                          "damageAttributeType": "Hp",
                                           "onlyEnableForMainChar": false,
-                                          "damageVisualImportance": 0,
+                                          "damageVisualImportance": "Level0",
                                           "enableDamageVisualCoalition": false,
                                           "damageVisualCoalitionGroupKey": "",
                                           "alwaysStartNewCoalition": false,
@@ -1517,8 +1517,8 @@
                                           "alwaysEndCoalitionGuard": false,
                                           "hidePoiseUIEffect": false,
                                           "hideMainCharHpScreenEffect": false,
-                                          "damageDecorateMask": 1152,
-                                          "ignoreDamageImmuneLevel": -1,
+                                          "damageDecorateMask": "NormalAttack, PlungingAttack",
+                                          "ignoreDamageImmuneLevel": "None",
                                           "simpleCalculation": true,
                                           "atkScale": {
                                             "useBlackboardKey": true,
@@ -1536,7 +1536,7 @@
                                           "damageProcessors": [],
                                           "playHitEffect": true,
                                           "effectData": {
-                                            "fxType": 0,
+                                            "fxType": "Normal",
                                             "effectName": "P_yvonne_attack_05_hit",
                                             "guardEffect": false,
                                             "guardEffectAlpha": 1.0,
@@ -1551,17 +1551,17 @@
                                             "interruptTime": 0.0,
                                             "terrainPrefab": false,
                                             "effectPosData": [],
-                                            "moveType": 0,
-                                            "positionRef": 0,
+                                            "moveType": "Stationary",
+                                            "positionRef": "Target",
                                             "grounded": false,
                                             "followHideTarget": false,
                                             "visibleWhenHideTarget": false,
                                             "slotIndex": 0,
                                             "useWeaponMountPoint": false,
-                                            "mountPoint": 52,
+                                            "mountPoint": "VBHit",
                                             "weaponIndex": 0,
-                                            "weaponMountPoint": 0,
-                                            "offsetDir": 0,
+                                            "weaponMountPoint": "Root",
+                                            "offsetDir": "Self",
                                             "offsetDirRevert": false,
                                             "positionOffset": {
                                               "x": 0.0,
@@ -1573,13 +1573,13 @@
                                             "fxSize": 0.0,
                                             "unpackPosDelayFrame": 0,
                                             "unpackFollowTargetOnRelease": false,
-                                            "rotType": 0,
-                                            "rotRef": 0,
-                                            "directionRef": 2,
+                                            "rotType": "Stationary",
+                                            "rotRef": "Target",
+                                            "directionRef": "SourceToTarget",
                                             "rotUseWeaponMountPoint": false,
-                                            "rotMountPoint": 0,
+                                            "rotMountPoint": "None",
                                             "rotWeaponIndex": 0,
-                                            "rotWeaponMountPoint": 0,
+                                            "rotWeaponMountPoint": "Root",
                                             "revertDir": false,
                                             "selfRotation": {
                                               "x": 0.0,
@@ -1591,11 +1591,11 @@
                                             "unpackFollowTargetRotOnRelease": false,
                                             "weaponVfxKey": "",
                                             "weaponVfxIndex": -1,
-                                            "alertType": 0,
+                                            "alertType": "Decal",
                                             "animateAlert": false,
                                             "alertAnimateDuration": 0.0,
                                             "angle": 0.0,
-                                            "modifyType": 0,
+                                            "modifyType": "StartLifeTime",
                                             "value": 0.0
                                           },
                                           "guardOverrideHitEffect": true,
@@ -1609,7 +1609,7 @@
                                           "gainCost": false,
                                           "costDataList": [
                                             {
-                                              "costType": 0,
+                                              "costType": "UltimateSp",
                                               "costValue": 1.0,
                                               "atbValueThreshold": 0.0
                                             }
@@ -1640,15 +1640,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.EnemyHurtAnimAction+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 25,
                                       "attacker": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1657,22 +1657,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "defender": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1681,21 +1681,21 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "hurtAnim": 15,
+                                      "hurtAnim": "StaggerTurn",
                                       "additiveShaking": true,
-                                      "shakeIntensity": 0,
+                                      "shakeIntensity": "Mild",
                                       "faceToAttacker": true,
-                                      "faceDirection": 3,
+                                      "faceDirection": "TargetToSource",
                                       "teammateUseWeakenEffect": true,
                                       "weakImmobilizedTime": {
                                         "useBlackboardKey": false,
@@ -1724,15 +1724,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.PushBackAction+Data, Gameplay.Beyond",
                                       "isEnable": false,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 26,
                                       "attackerTargetSettings": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1741,22 +1741,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "sourcePointSettings": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1765,22 +1765,22 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "targetSettings": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -1789,17 +1789,17 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "pushBackDirection": 2,
+                                      "pushBackDirection": "SourceToTarget",
                                       "pushBackDistance": {
                                         "useBlackboardKey": false,
                                         "value": 2.0,
@@ -1828,7 +1828,7 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 27,
                                       "conditionAction": {
@@ -1836,15 +1836,15 @@
                                           {
                                             "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                                             "isEnable": true,
-                                            "priorityLevel": 0,
+                                            "priorityLevel": "Default",
                                             "priorityOffset": 0,
                                             "serverActionIndex": 52,
                                             "checkTarget": {
-                                              "targetSource": 1,
+                                              "targetSource": "Source",
                                               "targetGroupKey": "tar",
-                                              "selectorOwner": 1,
+                                              "selectorOwner": "ActionOwner",
                                               "ownerContextKey": "",
-                                              "centerType": 0,
+                                              "centerType": "ActionSource",
                                               "centerContextKey": "",
                                               "centerToGround": false,
                                               "selectorData": {
@@ -1853,14 +1853,14 @@
                                               },
                                               "enableAdvancedDirection": false,
                                               "advancedDirection": {
-                                                "directionType": 0,
-                                                "mountPoint": 0,
+                                                "directionType": "SourceForward",
+                                                "mountPoint": "None",
                                                 "customSourceAndTarget": false,
                                                 "clampToXZ": true,
                                                 "invertDirection": false
                                               },
-                                              "selectorDirection": 0,
-                                              "target": 0,
+                                              "selectorDirection": "SourceForward",
+                                              "target": "ActionSource",
                                               "targetContextKey": ""
                                             }
                                           }
@@ -1880,7 +1880,7 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 29,
                                       "conditionAction": {
@@ -1888,15 +1888,15 @@
                                           {
                                             "$type": "Beyond.Gameplay.Core.Conditions.CheckEntityNum+Data, Gameplay.Beyond",
                                             "isEnable": true,
-                                            "priorityLevel": 0,
+                                            "priorityLevel": "Default",
                                             "priorityOffset": 0,
                                             "serverActionIndex": 54,
                                             "checkTarget": {
-                                              "targetSource": 2,
+                                              "targetSource": "Context",
                                               "targetGroupKey": "tar",
-                                              "selectorOwner": 1,
+                                              "selectorOwner": "ActionOwner",
                                               "ownerContextKey": "",
-                                              "centerType": 0,
+                                              "centerType": "ActionSource",
                                               "centerContextKey": "",
                                               "centerToGround": false,
                                               "selectorData": {
@@ -1905,19 +1905,19 @@
                                               },
                                               "enableAdvancedDirection": false,
                                               "advancedDirection": {
-                                                "directionType": 0,
-                                                "mountPoint": 0,
+                                                "directionType": "SourceForward",
+                                                "mountPoint": "None",
                                                 "customSourceAndTarget": false,
                                                 "clampToXZ": true,
                                                 "invertDirection": false
                                               },
-                                              "selectorDirection": 0,
-                                              "target": 0,
+                                              "selectorDirection": "SourceForward",
+                                              "target": "ActionSource",
                                               "targetContextKey": ""
                                             },
                                             "minNum": 1,
                                             "containsHittableTarget": false,
-                                            "compareType": 3
+                                            "compareType": "GE"
                                           }
                                         ],
                                         "onlyExecuteWhenSourceIsMainChar": false
@@ -1927,7 +1927,7 @@
                                           {
                                             "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
                                             "isEnable": false,
-                                            "priorityLevel": 0,
+                                            "priorityLevel": "Default",
                                             "priorityOffset": 0,
                                             "serverActionIndex": 31,
                                             "_soundEvent": "au_chr_0003_endmin_plunging_attack_hit",
@@ -1936,11 +1936,11 @@
                                             "_canInterruptTimeMs": 0,
                                             "_intrptFadeDurationMs": 100,
                                             "targetSettings": {
-                                              "targetSource": 2,
+                                              "targetSource": "Context",
                                               "targetGroupKey": "tar",
-                                              "selectorOwner": 1,
+                                              "selectorOwner": "ActionOwner",
                                               "ownerContextKey": "",
-                                              "centerType": 0,
+                                              "centerType": "ActionSource",
                                               "centerContextKey": "",
                                               "centerToGround": false,
                                               "selectorData": {
@@ -1949,21 +1949,21 @@
                                               },
                                               "enableAdvancedDirection": false,
                                               "advancedDirection": {
-                                                "directionType": 0,
-                                                "mountPoint": 0,
+                                                "directionType": "SourceForward",
+                                                "mountPoint": "None",
                                                 "customSourceAndTarget": false,
                                                 "clampToXZ": true,
                                                 "invertDirection": false
                                               },
-                                              "selectorDirection": 0,
-                                              "target": 0,
+                                              "selectorDirection": "SourceForward",
+                                              "target": "ActionSource",
                                               "targetContextKey": ""
                                             },
-                                            "mountPoint": 0,
+                                            "mountPoint": "None",
                                             "followMountPoint": false,
                                             "useWeaponMountPoint": false,
                                             "weaponIndex": 0,
-                                            "weaponMountPoint": 0
+                                            "weaponMountPoint": "Root"
                                           }
                                         ],
                                         "onlyExecuteWhenSourceIsMainChar": false
@@ -1987,17 +1987,17 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.DamageAction+DamageActionData, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 32,
                                 "alwaysNext": true,
-                                "attacker": 0,
+                                "attacker": "ActionSource",
                                 "targetSettings": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "tar",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2006,22 +2006,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "effectSource": {
-                                  "targetSource": 4,
+                                  "targetSource": "Owner",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2030,22 +2030,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "damageUnits": [
                                   {
-                                    "damageType": 4,
-                                    "damageAttributeType": 0,
+                                    "damageType": "Cryst",
+                                    "damageAttributeType": "Hp",
                                     "onlyEnableForMainChar": false,
-                                    "damageVisualImportance": 0,
+                                    "damageVisualImportance": "Level0",
                                     "enableDamageVisualCoalition": false,
                                     "damageVisualCoalitionGroupKey": "",
                                     "alwaysStartNewCoalition": false,
@@ -2056,8 +2056,8 @@
                                     "alwaysEndCoalitionGuard": false,
                                     "hidePoiseUIEffect": false,
                                     "hideMainCharHpScreenEffect": false,
-                                    "damageDecorateMask": 1152,
-                                    "ignoreDamageImmuneLevel": -1,
+                                    "damageDecorateMask": "NormalAttack, PlungingAttack",
+                                    "ignoreDamageImmuneLevel": "None",
                                     "simpleCalculation": true,
                                     "atkScale": {
                                       "useBlackboardKey": true,
@@ -2075,7 +2075,7 @@
                                     "damageProcessors": [],
                                     "playHitEffect": true,
                                     "effectData": {
-                                      "fxType": 0,
+                                      "fxType": "Normal",
                                       "effectName": "P_yvonne_attack_05_hit",
                                       "guardEffect": false,
                                       "guardEffectAlpha": 1.0,
@@ -2090,17 +2090,17 @@
                                       "interruptTime": 0.0,
                                       "terrainPrefab": false,
                                       "effectPosData": [],
-                                      "moveType": 0,
-                                      "positionRef": 0,
+                                      "moveType": "Stationary",
+                                      "positionRef": "Target",
                                       "grounded": false,
                                       "followHideTarget": false,
                                       "visibleWhenHideTarget": false,
                                       "slotIndex": 0,
                                       "useWeaponMountPoint": false,
-                                      "mountPoint": 52,
+                                      "mountPoint": "VBHit",
                                       "weaponIndex": 0,
-                                      "weaponMountPoint": 0,
-                                      "offsetDir": 0,
+                                      "weaponMountPoint": "Root",
+                                      "offsetDir": "Self",
                                       "offsetDirRevert": false,
                                       "positionOffset": {
                                         "x": 0.0,
@@ -2112,13 +2112,13 @@
                                       "fxSize": 0.0,
                                       "unpackPosDelayFrame": 0,
                                       "unpackFollowTargetOnRelease": false,
-                                      "rotType": 0,
-                                      "rotRef": 0,
-                                      "directionRef": 2,
+                                      "rotType": "Stationary",
+                                      "rotRef": "Target",
+                                      "directionRef": "SourceToTarget",
                                       "rotUseWeaponMountPoint": false,
-                                      "rotMountPoint": 0,
+                                      "rotMountPoint": "None",
                                       "rotWeaponIndex": 0,
-                                      "rotWeaponMountPoint": 0,
+                                      "rotWeaponMountPoint": "Root",
                                       "revertDir": false,
                                       "selfRotation": {
                                         "x": 0.0,
@@ -2130,11 +2130,11 @@
                                       "unpackFollowTargetRotOnRelease": false,
                                       "weaponVfxKey": "",
                                       "weaponVfxIndex": -1,
-                                      "alertType": 0,
+                                      "alertType": "Decal",
                                       "animateAlert": false,
                                       "alertAnimateDuration": 0.0,
                                       "angle": 0.0,
-                                      "modifyType": 0,
+                                      "modifyType": "StartLifeTime",
                                       "value": 0.0
                                     },
                                     "guardOverrideHitEffect": true,
@@ -2148,7 +2148,7 @@
                                     "gainCost": false,
                                     "costDataList": [
                                       {
-                                        "costType": 0,
+                                        "costType": "UltimateSp",
                                         "costValue": 1.0,
                                         "atbValueThreshold": 0.0
                                       }
@@ -2179,15 +2179,15 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.EnemyHurtAnimAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 33,
                                 "attacker": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2196,22 +2196,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "defender": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "tar",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2220,21 +2220,21 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
-                                "hurtAnim": 15,
+                                "hurtAnim": "StaggerTurn",
                                 "additiveShaking": true,
-                                "shakeIntensity": 0,
+                                "shakeIntensity": "Mild",
                                 "faceToAttacker": true,
-                                "faceDirection": 3,
+                                "faceDirection": "TargetToSource",
                                 "teammateUseWeakenEffect": true,
                                 "weakImmobilizedTime": {
                                   "useBlackboardKey": false,
@@ -2263,15 +2263,15 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.PushBackAction+Data, Gameplay.Beyond",
                                 "isEnable": false,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 34,
                                 "attackerTargetSettings": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2280,22 +2280,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "sourcePointSettings": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2304,22 +2304,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "targetSettings": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "tar",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2328,17 +2328,17 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
-                                "pushBackDirection": 2,
+                                "pushBackDirection": "SourceToTarget",
                                 "pushBackDistance": {
                                   "useBlackboardKey": false,
                                   "value": 2.0,
@@ -2367,7 +2367,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 35,
                                 "conditionAction": {
@@ -2375,15 +2375,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 52,
                                       "checkTarget": {
-                                        "targetSource": 1,
+                                        "targetSource": "Source",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -2392,14 +2392,14 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       }
                                     }
@@ -2419,7 +2419,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 37,
                                 "conditionAction": {
@@ -2427,15 +2427,15 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.Conditions.CheckEntityNum+Data, Gameplay.Beyond",
                                       "isEnable": true,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 54,
                                       "checkTarget": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -2444,19 +2444,19 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
                                       "minNum": 1,
                                       "containsHittableTarget": false,
-                                      "compareType": 3
+                                      "compareType": "GE"
                                     }
                                   ],
                                   "onlyExecuteWhenSourceIsMainChar": false
@@ -2466,7 +2466,7 @@
                                     {
                                       "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
                                       "isEnable": false,
-                                      "priorityLevel": 0,
+                                      "priorityLevel": "Default",
                                       "priorityOffset": 0,
                                       "serverActionIndex": 39,
                                       "_soundEvent": "au_chr_0003_endmin_plunging_attack_hit",
@@ -2475,11 +2475,11 @@
                                       "_canInterruptTimeMs": 0,
                                       "_intrptFadeDurationMs": 100,
                                       "targetSettings": {
-                                        "targetSource": 2,
+                                        "targetSource": "Context",
                                         "targetGroupKey": "tar",
-                                        "selectorOwner": 1,
+                                        "selectorOwner": "ActionOwner",
                                         "ownerContextKey": "",
-                                        "centerType": 0,
+                                        "centerType": "ActionSource",
                                         "centerContextKey": "",
                                         "centerToGround": false,
                                         "selectorData": {
@@ -2488,21 +2488,21 @@
                                         },
                                         "enableAdvancedDirection": false,
                                         "advancedDirection": {
-                                          "directionType": 0,
-                                          "mountPoint": 0,
+                                          "directionType": "SourceForward",
+                                          "mountPoint": "None",
                                           "customSourceAndTarget": false,
                                           "clampToXZ": true,
                                           "invertDirection": false
                                         },
-                                        "selectorDirection": 0,
-                                        "target": 0,
+                                        "selectorDirection": "SourceForward",
+                                        "target": "ActionSource",
                                         "targetContextKey": ""
                                       },
-                                      "mountPoint": 0,
+                                      "mountPoint": "None",
                                       "followMountPoint": false,
                                       "useWeaponMountPoint": false,
                                       "weaponIndex": 0,
-                                      "weaponMountPoint": 0
+                                      "weaponMountPoint": "Root"
                                     }
                                   ],
                                   "onlyExecuteWhenSourceIsMainChar": false
@@ -2526,17 +2526,17 @@
                         {
                           "$type": "Beyond.Gameplay.Core.DamageAction+DamageActionData, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 40,
                           "alwaysNext": true,
-                          "attacker": 0,
+                          "attacker": "ActionSource",
                           "targetSettings": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "tar",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2545,22 +2545,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "effectSource": {
-                            "targetSource": 4,
+                            "targetSource": "Owner",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2569,22 +2569,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "damageUnits": [
                             {
-                              "damageType": 4,
-                              "damageAttributeType": 0,
+                              "damageType": "Cryst",
+                              "damageAttributeType": "Hp",
                               "onlyEnableForMainChar": false,
-                              "damageVisualImportance": 0,
+                              "damageVisualImportance": "Level0",
                               "enableDamageVisualCoalition": false,
                               "damageVisualCoalitionGroupKey": "",
                               "alwaysStartNewCoalition": false,
@@ -2595,8 +2595,8 @@
                               "alwaysEndCoalitionGuard": false,
                               "hidePoiseUIEffect": false,
                               "hideMainCharHpScreenEffect": false,
-                              "damageDecorateMask": 1152,
-                              "ignoreDamageImmuneLevel": -1,
+                              "damageDecorateMask": "NormalAttack, PlungingAttack",
+                              "ignoreDamageImmuneLevel": "None",
                               "simpleCalculation": true,
                               "atkScale": {
                                 "useBlackboardKey": true,
@@ -2614,7 +2614,7 @@
                               "damageProcessors": [],
                               "playHitEffect": true,
                               "effectData": {
-                                "fxType": 0,
+                                "fxType": "Normal",
                                 "effectName": "P_yvonne_attack_05_hit",
                                 "guardEffect": false,
                                 "guardEffectAlpha": 1.0,
@@ -2629,17 +2629,17 @@
                                 "interruptTime": 0.0,
                                 "terrainPrefab": false,
                                 "effectPosData": [],
-                                "moveType": 0,
-                                "positionRef": 0,
+                                "moveType": "Stationary",
+                                "positionRef": "Target",
                                 "grounded": false,
                                 "followHideTarget": false,
                                 "visibleWhenHideTarget": false,
                                 "slotIndex": 0,
                                 "useWeaponMountPoint": false,
-                                "mountPoint": 52,
+                                "mountPoint": "VBHit",
                                 "weaponIndex": 0,
-                                "weaponMountPoint": 0,
-                                "offsetDir": 0,
+                                "weaponMountPoint": "Root",
+                                "offsetDir": "Self",
                                 "offsetDirRevert": false,
                                 "positionOffset": {
                                   "x": 0.0,
@@ -2651,13 +2651,13 @@
                                 "fxSize": 0.0,
                                 "unpackPosDelayFrame": 0,
                                 "unpackFollowTargetOnRelease": false,
-                                "rotType": 0,
-                                "rotRef": 0,
-                                "directionRef": 2,
+                                "rotType": "Stationary",
+                                "rotRef": "Target",
+                                "directionRef": "SourceToTarget",
                                 "rotUseWeaponMountPoint": false,
-                                "rotMountPoint": 0,
+                                "rotMountPoint": "None",
                                 "rotWeaponIndex": 0,
-                                "rotWeaponMountPoint": 0,
+                                "rotWeaponMountPoint": "Root",
                                 "revertDir": false,
                                 "selfRotation": {
                                   "x": 0.0,
@@ -2669,11 +2669,11 @@
                                 "unpackFollowTargetRotOnRelease": false,
                                 "weaponVfxKey": "",
                                 "weaponVfxIndex": -1,
-                                "alertType": 0,
+                                "alertType": "Decal",
                                 "animateAlert": false,
                                 "alertAnimateDuration": 0.0,
                                 "angle": 0.0,
-                                "modifyType": 0,
+                                "modifyType": "StartLifeTime",
                                 "value": 0.0
                               },
                               "guardOverrideHitEffect": true,
@@ -2687,7 +2687,7 @@
                               "gainCost": false,
                               "costDataList": [
                                 {
-                                  "costType": 0,
+                                  "costType": "UltimateSp",
                                   "costValue": 1.0,
                                   "atbValueThreshold": 0.0
                                 }
@@ -2718,15 +2718,15 @@
                         {
                           "$type": "Beyond.Gameplay.Core.EnemyHurtAnimAction+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 41,
                           "attacker": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2735,22 +2735,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "defender": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "tar",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2759,21 +2759,21 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
-                          "hurtAnim": 15,
+                          "hurtAnim": "StaggerTurn",
                           "additiveShaking": true,
-                          "shakeIntensity": 0,
+                          "shakeIntensity": "Mild",
                           "faceToAttacker": true,
-                          "faceDirection": 3,
+                          "faceDirection": "TargetToSource",
                           "teammateUseWeakenEffect": true,
                           "weakImmobilizedTime": {
                             "useBlackboardKey": false,
@@ -2802,15 +2802,15 @@
                         {
                           "$type": "Beyond.Gameplay.Core.PushBackAction+Data, Gameplay.Beyond",
                           "isEnable": false,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 42,
                           "attackerTargetSettings": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2819,22 +2819,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "sourcePointSettings": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2843,22 +2843,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "targetSettings": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "tar",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -2867,17 +2867,17 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
-                          "pushBackDirection": 2,
+                          "pushBackDirection": "SourceToTarget",
                           "pushBackDistance": {
                             "useBlackboardKey": false,
                             "value": 2.0,
@@ -2906,7 +2906,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 43,
                           "conditionAction": {
@@ -2914,15 +2914,15 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 52,
                                 "checkTarget": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "tar",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2931,14 +2931,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 }
                               }
@@ -2958,7 +2958,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 45,
                           "conditionAction": {
@@ -2966,15 +2966,15 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.Conditions.CheckEntityNum+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 54,
                                 "checkTarget": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "tar",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -2983,19 +2983,19 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "minNum": 1,
                                 "containsHittableTarget": false,
-                                "compareType": 3
+                                "compareType": "GE"
                               }
                             ],
                             "onlyExecuteWhenSourceIsMainChar": false
@@ -3005,7 +3005,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
                                 "isEnable": false,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 47,
                                 "_soundEvent": "au_chr_0003_endmin_plunging_attack_hit",
@@ -3014,11 +3014,11 @@
                                 "_canInterruptTimeMs": 0,
                                 "_intrptFadeDurationMs": 100,
                                 "targetSettings": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "tar",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -3027,21 +3027,21 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
-                                "mountPoint": 0,
+                                "mountPoint": "None",
                                 "followMountPoint": false,
                                 "useWeaponMountPoint": false,
                                 "weaponIndex": 0,
-                                "weaponMountPoint": 0
+                                "weaponMountPoint": "Root"
                               }
                             ],
                             "onlyExecuteWhenSourceIsMainChar": false
@@ -3065,17 +3065,17 @@
                   {
                     "$type": "Beyond.Gameplay.Core.DamageAction+DamageActionData, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 48,
                     "alwaysNext": true,
-                    "attacker": 0,
+                    "attacker": "ActionSource",
                     "targetSettings": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "tar",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3084,22 +3084,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "effectSource": {
-                      "targetSource": 4,
+                      "targetSource": "Owner",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3108,22 +3108,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "damageUnits": [
                       {
-                        "damageType": 4,
-                        "damageAttributeType": 0,
+                        "damageType": "Cryst",
+                        "damageAttributeType": "Hp",
                         "onlyEnableForMainChar": false,
-                        "damageVisualImportance": 0,
+                        "damageVisualImportance": "Level0",
                         "enableDamageVisualCoalition": false,
                         "damageVisualCoalitionGroupKey": "",
                         "alwaysStartNewCoalition": false,
@@ -3134,8 +3134,8 @@
                         "alwaysEndCoalitionGuard": false,
                         "hidePoiseUIEffect": false,
                         "hideMainCharHpScreenEffect": false,
-                        "damageDecorateMask": 1152,
-                        "ignoreDamageImmuneLevel": -1,
+                        "damageDecorateMask": "NormalAttack, PlungingAttack",
+                        "ignoreDamageImmuneLevel": "None",
                         "simpleCalculation": true,
                         "atkScale": {
                           "useBlackboardKey": true,
@@ -3153,7 +3153,7 @@
                         "damageProcessors": [],
                         "playHitEffect": true,
                         "effectData": {
-                          "fxType": 0,
+                          "fxType": "Normal",
                           "effectName": "P_yvonne_attack_05_hit",
                           "guardEffect": false,
                           "guardEffectAlpha": 1.0,
@@ -3168,17 +3168,17 @@
                           "interruptTime": 0.0,
                           "terrainPrefab": false,
                           "effectPosData": [],
-                          "moveType": 0,
-                          "positionRef": 0,
+                          "moveType": "Stationary",
+                          "positionRef": "Target",
                           "grounded": false,
                           "followHideTarget": false,
                           "visibleWhenHideTarget": false,
                           "slotIndex": 0,
                           "useWeaponMountPoint": false,
-                          "mountPoint": 52,
+                          "mountPoint": "VBHit",
                           "weaponIndex": 0,
-                          "weaponMountPoint": 0,
-                          "offsetDir": 0,
+                          "weaponMountPoint": "Root",
+                          "offsetDir": "Self",
                           "offsetDirRevert": false,
                           "positionOffset": {
                             "x": 0.0,
@@ -3190,13 +3190,13 @@
                           "fxSize": 0.0,
                           "unpackPosDelayFrame": 0,
                           "unpackFollowTargetOnRelease": false,
-                          "rotType": 0,
-                          "rotRef": 0,
-                          "directionRef": 2,
+                          "rotType": "Stationary",
+                          "rotRef": "Target",
+                          "directionRef": "SourceToTarget",
                           "rotUseWeaponMountPoint": false,
-                          "rotMountPoint": 0,
+                          "rotMountPoint": "None",
                           "rotWeaponIndex": 0,
-                          "rotWeaponMountPoint": 0,
+                          "rotWeaponMountPoint": "Root",
                           "revertDir": false,
                           "selfRotation": {
                             "x": 0.0,
@@ -3208,11 +3208,11 @@
                           "unpackFollowTargetRotOnRelease": false,
                           "weaponVfxKey": "",
                           "weaponVfxIndex": -1,
-                          "alertType": 0,
+                          "alertType": "Decal",
                           "animateAlert": false,
                           "alertAnimateDuration": 0.0,
                           "angle": 0.0,
-                          "modifyType": 0,
+                          "modifyType": "StartLifeTime",
                           "value": 0.0
                         },
                         "guardOverrideHitEffect": true,
@@ -3226,7 +3226,7 @@
                         "gainCost": false,
                         "costDataList": [
                           {
-                            "costType": 0,
+                            "costType": "UltimateSp",
                             "costValue": 1.0,
                             "atbValueThreshold": 0.0
                           }
@@ -3257,15 +3257,15 @@
                   {
                     "$type": "Beyond.Gameplay.Core.EnemyHurtAnimAction+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 49,
                     "attacker": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3274,22 +3274,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "defender": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "tar",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3298,21 +3298,21 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
-                    "hurtAnim": 15,
+                    "hurtAnim": "StaggerTurn",
                     "additiveShaking": true,
-                    "shakeIntensity": 0,
+                    "shakeIntensity": "Mild",
                     "faceToAttacker": true,
-                    "faceDirection": 3,
+                    "faceDirection": "TargetToSource",
                     "teammateUseWeakenEffect": true,
                     "weakImmobilizedTime": {
                       "useBlackboardKey": false,
@@ -3341,15 +3341,15 @@
                   {
                     "$type": "Beyond.Gameplay.Core.PushBackAction+Data, Gameplay.Beyond",
                     "isEnable": false,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 50,
                     "attackerTargetSettings": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3358,22 +3358,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "sourcePointSettings": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3382,22 +3382,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "targetSettings": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "tar",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3406,17 +3406,17 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
-                    "pushBackDirection": 2,
+                    "pushBackDirection": "SourceToTarget",
                     "pushBackDistance": {
                       "useBlackboardKey": false,
                       "value": 2.0,
@@ -3445,7 +3445,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 51,
                     "conditionAction": {
@@ -3453,15 +3453,15 @@
                         {
                           "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 52,
                           "checkTarget": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "tar",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -3470,14 +3470,14 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           }
                         }
@@ -3497,7 +3497,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 53,
                     "conditionAction": {
@@ -3505,15 +3505,15 @@
                         {
                           "$type": "Beyond.Gameplay.Core.Conditions.CheckEntityNum+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 54,
                           "checkTarget": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "tar",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -3522,19 +3522,19 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "minNum": 1,
                           "containsHittableTarget": false,
-                          "compareType": 3
+                          "compareType": "GE"
                         }
                       ],
                       "onlyExecuteWhenSourceIsMainChar": false
@@ -3544,7 +3544,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
                           "isEnable": false,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 55,
                           "_soundEvent": "au_chr_0003_endmin_plunging_attack_hit",
@@ -3553,11 +3553,11 @@
                           "_canInterruptTimeMs": 0,
                           "_intrptFadeDurationMs": 100,
                           "targetSettings": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "tar",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -3566,21 +3566,21 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
-                          "mountPoint": 0,
+                          "mountPoint": "None",
                           "followMountPoint": false,
                           "useWeaponMountPoint": false,
                           "weaponIndex": 0,
-                          "weaponMountPoint": 0
+                          "weaponMountPoint": "Root"
                         }
                       ],
                       "onlyExecuteWhenSourceIsMainChar": false
@@ -3608,7 +3608,7 @@
             {
               "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 56,
               "conditionAction": {
@@ -3616,15 +3616,15 @@
                   {
                     "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 57,
                     "checkTarget": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "tar",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3633,14 +3633,14 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     }
                   }
@@ -3652,15 +3652,15 @@
                   {
                     "$type": "Beyond.Gameplay.Core.CameraImpulseAction+CameraImpulseActionData, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 58,
                     "targetSettings": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -3669,18 +3669,18 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "releaseWhenActionEnds": false,
-                    "_mountPoint": 0,
+                    "_mountPoint": "None",
                     "_boneNode": "",
                     "_positionOffset": {
                       "x": 0.0,
@@ -3691,15 +3691,15 @@
                     "_impulseDefinitionData": {
                       "cameraShake2D": true,
                       "impulseChannel": 1,
-                      "impulseShape": 0,
+                      "impulseShape": "Custom",
                       "customImpulseShape": {},
                       "impulseDuration": 0.2,
-                      "impulseType": 3,
+                      "impulseType": "Legacy",
                       "dissipationRate": 0.0,
                       "rawSignalPath": "Assets/Beyond/DynamicAssets/GameData/SkillData/Curve/NoiseSettings_Skill_3D_LargeY.asset",
                       "amplitudeGain": 0.3,
                       "frequencyGain": 1.0,
-                      "repeatMode": 1,
+                      "repeatMode": "Loop",
                       "randomize": true,
                       "timeEnvelope": {
                         "m_AttackShape": {},
@@ -3711,8 +3711,8 @@
                         "m_HoldForever": false
                       },
                       "impactRadius": 100.0,
-                      "directionMode": 0,
-                      "dissipationMode": 2,
+                      "directionMode": "Fixed",
+                      "dissipationMode": "ExponentialDecay",
                       "dissipationDistance": 100.0,
                       "propagationSpeed": 343.0
                     }
@@ -3738,15 +3738,15 @@
             {
               "$type": "Beyond.Gameplay.Core.SetSuperArmorAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 59,
               "targetSettings": {
-                "targetSource": 1,
+                "targetSource": "Source",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -3755,14 +3755,14 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "superArmorValue": {
@@ -3784,7 +3784,7 @@
             {
               "$type": "Beyond.Gameplay.Core.CharWeaponVisibleAction+CharWeaponVisibleActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 60,
               "weaponIndex": 0,
@@ -3802,7 +3802,7 @@
             {
               "$type": "Beyond.Gameplay.Core.PlaySoundAction+PlaySoundActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 61,
               "_soundEvent": "au_chr_0017_yvonne_plunging_attack_end",
@@ -3811,11 +3811,11 @@
               "_canInterruptTimeMs": 300,
               "_intrptFadeDurationMs": 100,
               "targetSettings": {
-                "targetSource": 4,
+                "targetSource": "Owner",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -3824,21 +3824,21 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
-              "mountPoint": 0,
+              "mountPoint": "None",
               "followMountPoint": false,
               "useWeaponMountPoint": false,
               "weaponIndex": 0,
-              "weaponMountPoint": 0
+              "weaponMountPoint": "Root"
             }
           ],
           "onlyExecuteWhenSourceIsMainChar": false

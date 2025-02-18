@@ -825,8 +825,7 @@ MissionHudCtrl._OnGameModeChange = HL.Method(HL.Table) << function(self, evtData
     self:_RefreshOpenBtn()
 end
 MissionHudCtrl._OnTrackingSns = HL.Method(HL.Any) << function(self, args)
-    local snsDialogId = unpack(args)
-    PhaseManager:OpenPhase(PhaseId.SNS, { snsDialogId })
+    self:Notify(MessageConst.TRY_OPEN_PHASE_SNS, args)
 end
 MissionHudCtrl._OnFacToggleTopView = HL.Method(HL.Boolean) << function(self, isTopView)
     if isTopView then

@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 0,
-  "castType": 0,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Melee",
+  "castType": "Active",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 0,
+    "checkCastDistanceType": "NotCheck",
     "useCustomCastDistance": false,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 360.0,
     "cooldownTime": 10.0,
     "startCdFrame": 0,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,11 +37,11 @@
   "cacheComboFrame": 0,
   "startComboFrame": 0,
   "latestComboFrame": 86,
-  "selectStrategy": 0,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "SelectObject",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetBuffIds": [],
   "smartTargetTagQuery": {
-    "queryType": 0,
+    "queryType": "HasAny",
     "tags": []
   },
   "canDummyCast": true,
@@ -70,15 +70,15 @@
             {
               "$type": "Beyond.Gameplay.Core.AbilityActions.FinishBuffAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 0,
               "buffOwner": {
-                "targetSource": 4,
+                "targetSource": "Owner",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -87,14 +87,14 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "buffIds": [
@@ -121,14 +121,14 @@
             {
               "$type": "Beyond.Gameplay.Core.FindTargetAction+FindTargetActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 1,
               "targetGroupKey": "Pos1",
-              "center": 0,
+              "center": "ActionSource",
               "centerContextKey": "",
               "centerToGround": false,
-              "selectorOwner": 1,
+              "selectorOwner": "ActionOwner",
               "selectorOwnerContextKey": "",
               "selectorData": {
                 "finderData": {
@@ -154,21 +154,21 @@
                 "validatorData": [],
                 "postProcessorData": []
               },
-              "selectorDirection": 0,
-              "target": 0,
+              "selectorDirection": "SourceForward",
+              "target": "ActionSource",
               "contextKey": ""
             },
             {
               "$type": "Beyond.Gameplay.Core.FindTargetAction+FindTargetActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 2,
               "targetGroupKey": "Pos2",
-              "center": 0,
+              "center": "ActionSource",
               "centerContextKey": "",
               "centerToGround": false,
-              "selectorOwner": 1,
+              "selectorOwner": "ActionOwner",
               "selectorOwnerContextKey": "",
               "selectorData": {
                 "finderData": {
@@ -194,21 +194,21 @@
                 "validatorData": [],
                 "postProcessorData": []
               },
-              "selectorDirection": 0,
-              "target": 0,
+              "selectorDirection": "SourceForward",
+              "target": "ActionSource",
               "contextKey": ""
             },
             {
               "$type": "Beyond.Gameplay.Core.FindTargetAction+FindTargetActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 3,
               "targetGroupKey": "Pos3",
-              "center": 0,
+              "center": "ActionSource",
               "centerContextKey": "",
               "centerToGround": false,
-              "selectorOwner": 1,
+              "selectorOwner": "ActionOwner",
               "selectorOwnerContextKey": "",
               "selectorData": {
                 "finderData": {
@@ -234,21 +234,21 @@
                 "validatorData": [],
                 "postProcessorData": []
               },
-              "selectorDirection": 0,
-              "target": 0,
+              "selectorDirection": "SourceForward",
+              "target": "ActionSource",
               "contextKey": ""
             },
             {
               "$type": "Beyond.Gameplay.Core.FindTargetAction+FindTargetActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 4,
               "targetGroupKey": "Pos4",
-              "center": 0,
+              "center": "ActionSource",
               "centerContextKey": "",
               "centerToGround": false,
-              "selectorOwner": 1,
+              "selectorOwner": "ActionOwner",
               "selectorOwnerContextKey": "",
               "selectorData": {
                 "finderData": {
@@ -274,8 +274,8 @@
                 "validatorData": [],
                 "postProcessorData": []
               },
-              "selectorDirection": 0,
-              "target": 0,
+              "selectorDirection": "SourceForward",
+              "target": "ActionSource",
               "contextKey": ""
             }
           ],
@@ -290,7 +290,7 @@
             {
               "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 5,
               "conditionAction": {
@@ -298,7 +298,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.Conditions.Probablity+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 6,
                     "prob": {
@@ -315,7 +315,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 7,
                     "enemyId": "eny_0062_paletent_melee",
@@ -325,11 +325,11 @@
                       "blackboardKey": ""
                     },
                     "summonSource": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -338,22 +338,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornAt": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "Pos1",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -362,14 +362,14 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornPosOffset": {
@@ -378,7 +378,7 @@
                       "z": 0.0
                     },
                     "navmeshSnapRadius": 2.0,
-                    "bornRotation": 3,
+                    "bornRotation": "SameWithSource",
                     "applyBornRotationOffset": false,
                     "bornRotationOffset": {
                       "x": 0.0,
@@ -392,7 +392,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 8,
                     "enemyId": "eny_0062_paletent_melee",
@@ -402,11 +402,11 @@
                       "blackboardKey": ""
                     },
                     "summonSource": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -415,22 +415,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornAt": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "Pos2",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -439,14 +439,14 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornPosOffset": {
@@ -455,7 +455,7 @@
                       "z": 0.0
                     },
                     "navmeshSnapRadius": 2.0,
-                    "bornRotation": 3,
+                    "bornRotation": "SameWithSource",
                     "applyBornRotationOffset": false,
                     "bornRotationOffset": {
                       "x": 0.0,
@@ -469,7 +469,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 9,
                     "enemyId": "eny_0062_paletent_range",
@@ -479,11 +479,11 @@
                       "blackboardKey": ""
                     },
                     "summonSource": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -492,22 +492,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornAt": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "Pos3",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -516,14 +516,14 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornPosOffset": {
@@ -532,7 +532,7 @@
                       "z": 0.0
                     },
                     "navmeshSnapRadius": 2.0,
-                    "bornRotation": 3,
+                    "bornRotation": "SameWithSource",
                     "applyBornRotationOffset": false,
                     "bornRotationOffset": {
                       "x": 0.0,
@@ -546,7 +546,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 10,
                     "enemyId": "eny_0062_paletent_range",
@@ -556,11 +556,11 @@
                       "blackboardKey": ""
                     },
                     "summonSource": {
-                      "targetSource": 1,
+                      "targetSource": "Source",
                       "targetGroupKey": "",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -569,22 +569,22 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornAt": {
-                      "targetSource": 2,
+                      "targetSource": "Context",
                       "targetGroupKey": "Pos4",
-                      "selectorOwner": 1,
+                      "selectorOwner": "ActionOwner",
                       "ownerContextKey": "",
-                      "centerType": 0,
+                      "centerType": "ActionSource",
                       "centerContextKey": "",
                       "centerToGround": false,
                       "selectorData": {
@@ -593,14 +593,14 @@
                       },
                       "enableAdvancedDirection": false,
                       "advancedDirection": {
-                        "directionType": 0,
-                        "mountPoint": 0,
+                        "directionType": "SourceForward",
+                        "mountPoint": "None",
                         "customSourceAndTarget": false,
                         "clampToXZ": true,
                         "invertDirection": false
                       },
-                      "selectorDirection": 0,
-                      "target": 0,
+                      "selectorDirection": "SourceForward",
+                      "target": "ActionSource",
                       "targetContextKey": ""
                     },
                     "bornPosOffset": {
@@ -609,7 +609,7 @@
                       "z": 0.0
                     },
                     "navmeshSnapRadius": 2.0,
-                    "bornRotation": 3,
+                    "bornRotation": "SameWithSource",
                     "applyBornRotationOffset": false,
                     "bornRotationOffset": {
                       "x": 0.0,
@@ -628,7 +628,7 @@
                   {
                     "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                     "isEnable": true,
-                    "priorityLevel": 0,
+                    "priorityLevel": "Default",
                     "priorityOffset": 0,
                     "serverActionIndex": 11,
                     "conditionAction": {
@@ -636,7 +636,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.Conditions.Probablity+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 12,
                           "prob": {
@@ -653,7 +653,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 13,
                           "enemyId": "eny_0062_paletent_melee",
@@ -663,11 +663,11 @@
                             "blackboardKey": ""
                           },
                           "summonSource": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -676,22 +676,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornAt": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "Pos1",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -700,14 +700,14 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornPosOffset": {
@@ -716,7 +716,7 @@
                             "z": 0.0
                           },
                           "navmeshSnapRadius": 2.0,
-                          "bornRotation": 3,
+                          "bornRotation": "SameWithSource",
                           "applyBornRotationOffset": false,
                           "bornRotationOffset": {
                             "x": 0.0,
@@ -730,7 +730,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 14,
                           "enemyId": "eny_0062_paletent_melee",
@@ -740,11 +740,11 @@
                             "blackboardKey": ""
                           },
                           "summonSource": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -753,22 +753,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornAt": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "Pos3",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -777,14 +777,14 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornPosOffset": {
@@ -793,7 +793,7 @@
                             "z": 0.0
                           },
                           "navmeshSnapRadius": 2.0,
-                          "bornRotation": 3,
+                          "bornRotation": "SameWithSource",
                           "applyBornRotationOffset": false,
                           "bornRotationOffset": {
                             "x": 0.0,
@@ -807,7 +807,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 15,
                           "enemyId": "eny_0062_paletent_range",
@@ -817,11 +817,11 @@
                             "blackboardKey": ""
                           },
                           "summonSource": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -830,22 +830,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornAt": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "Pos2",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -854,14 +854,14 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornPosOffset": {
@@ -870,7 +870,7 @@
                             "z": 0.0
                           },
                           "navmeshSnapRadius": 2.0,
-                          "bornRotation": 3,
+                          "bornRotation": "SameWithSource",
                           "applyBornRotationOffset": false,
                           "bornRotationOffset": {
                             "x": 0.0,
@@ -884,7 +884,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 16,
                           "enemyId": "eny_0062_paletent_range",
@@ -894,11 +894,11 @@
                             "blackboardKey": ""
                           },
                           "summonSource": {
-                            "targetSource": 1,
+                            "targetSource": "Source",
                             "targetGroupKey": "",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -907,22 +907,22 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornAt": {
-                            "targetSource": 2,
+                            "targetSource": "Context",
                             "targetGroupKey": "Pos4",
-                            "selectorOwner": 1,
+                            "selectorOwner": "ActionOwner",
                             "ownerContextKey": "",
-                            "centerType": 0,
+                            "centerType": "ActionSource",
                             "centerContextKey": "",
                             "centerToGround": false,
                             "selectorData": {
@@ -931,14 +931,14 @@
                             },
                             "enableAdvancedDirection": false,
                             "advancedDirection": {
-                              "directionType": 0,
-                              "mountPoint": 0,
+                              "directionType": "SourceForward",
+                              "mountPoint": "None",
                               "customSourceAndTarget": false,
                               "clampToXZ": true,
                               "invertDirection": false
                             },
-                            "selectorDirection": 0,
-                            "target": 0,
+                            "selectorDirection": "SourceForward",
+                            "target": "ActionSource",
                             "targetContextKey": ""
                           },
                           "bornPosOffset": {
@@ -947,7 +947,7 @@
                             "z": 0.0
                           },
                           "navmeshSnapRadius": 2.0,
-                          "bornRotation": 3,
+                          "bornRotation": "SameWithSource",
                           "applyBornRotationOffset": false,
                           "bornRotationOffset": {
                             "x": 0.0,
@@ -966,7 +966,7 @@
                         {
                           "$type": "Beyond.Gameplay.Core.IfElseAction+IfElseActionData, Gameplay.Beyond",
                           "isEnable": true,
-                          "priorityLevel": 0,
+                          "priorityLevel": "Default",
                           "priorityOffset": 0,
                           "serverActionIndex": 17,
                           "conditionAction": {
@@ -974,7 +974,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.Conditions.Probablity+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 18,
                                 "prob": {
@@ -991,7 +991,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 19,
                                 "enemyId": "eny_0062_paletent_melee",
@@ -1001,11 +1001,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1014,22 +1014,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos1",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1038,14 +1038,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1054,7 +1054,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1068,7 +1068,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 20,
                                 "enemyId": "eny_0062_paletent_melee",
@@ -1078,11 +1078,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1091,22 +1091,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos4",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1115,14 +1115,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1131,7 +1131,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1145,7 +1145,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 21,
                                 "enemyId": "eny_0062_paletent_range",
@@ -1155,11 +1155,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1168,22 +1168,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos3",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1192,14 +1192,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1208,7 +1208,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1222,7 +1222,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 22,
                                 "enemyId": "eny_0062_paletent_range",
@@ -1232,11 +1232,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1245,22 +1245,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos2",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1269,14 +1269,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1285,7 +1285,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1304,7 +1304,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 23,
                                 "enemyId": "eny_0062_paletent_melee",
@@ -1314,11 +1314,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1327,22 +1327,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos2",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1351,14 +1351,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1367,7 +1367,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1381,7 +1381,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 24,
                                 "enemyId": "eny_0062_paletent_melee",
@@ -1391,11 +1391,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1404,22 +1404,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos3",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1428,14 +1428,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1444,7 +1444,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1458,7 +1458,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 25,
                                 "enemyId": "eny_0062_paletent_range",
@@ -1468,11 +1468,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1481,22 +1481,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos1",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1505,14 +1505,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1521,7 +1521,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,
@@ -1535,7 +1535,7 @@
                               {
                                 "$type": "Beyond.Gameplay.Core.SpawnEnemyAction+Data, Gameplay.Beyond",
                                 "isEnable": true,
-                                "priorityLevel": 0,
+                                "priorityLevel": "Default",
                                 "priorityOffset": 0,
                                 "serverActionIndex": 26,
                                 "enemyId": "eny_0062_paletent_range",
@@ -1545,11 +1545,11 @@
                                   "blackboardKey": ""
                                 },
                                 "summonSource": {
-                                  "targetSource": 1,
+                                  "targetSource": "Source",
                                   "targetGroupKey": "",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1558,22 +1558,22 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornAt": {
-                                  "targetSource": 2,
+                                  "targetSource": "Context",
                                   "targetGroupKey": "Pos4",
-                                  "selectorOwner": 1,
+                                  "selectorOwner": "ActionOwner",
                                   "ownerContextKey": "",
-                                  "centerType": 0,
+                                  "centerType": "ActionSource",
                                   "centerContextKey": "",
                                   "centerToGround": false,
                                   "selectorData": {
@@ -1582,14 +1582,14 @@
                                   },
                                   "enableAdvancedDirection": false,
                                   "advancedDirection": {
-                                    "directionType": 0,
-                                    "mountPoint": 0,
+                                    "directionType": "SourceForward",
+                                    "mountPoint": "None",
                                     "customSourceAndTarget": false,
                                     "clampToXZ": true,
                                     "invertDirection": false
                                   },
-                                  "selectorDirection": 0,
-                                  "target": 0,
+                                  "selectorDirection": "SourceForward",
+                                  "target": "ActionSource",
                                   "targetContextKey": ""
                                 },
                                 "bornPosOffset": {
@@ -1598,7 +1598,7 @@
                                   "z": 0.0
                                 },
                                 "navmeshSnapRadius": 2.0,
-                                "bornRotation": 3,
+                                "bornRotation": "SameWithSource",
                                 "applyBornRotationOffset": false,
                                 "bornRotationOffset": {
                                   "x": 0.0,

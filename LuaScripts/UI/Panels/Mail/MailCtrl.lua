@@ -214,7 +214,7 @@ end
 MailCtrl._ShowContent = HL.Method(HL.Number) << function(self, index)
     local info = self.m_curMails[index]
     self.view.mailName.text = info.mail.title
-    self.view.sendTimeTxt.text = os.date(Language.LUA_MAIL_SEND_TIME_FORMAT, info.sendTime)
+    self.view.sendTimeTxt.text = os.date("!" .. Language.LUA_MAIL_SEND_TIME_FORMAT, info.sendTime + Utils.getServerTimeZoneOffsetSeconds())
     self.view.senderNameTxt.text = string.format(Language.LUA_MAIL_SENDER_FORMAT, info.senderName)
     self.view.contentTxt.text = UIUtils.resolveTextStyle(info.mail:GetContent())
     self.view.contentTxt:ShrinkLinkTags()

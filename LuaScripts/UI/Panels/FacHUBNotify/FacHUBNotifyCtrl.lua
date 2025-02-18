@@ -7,6 +7,6 @@ FacHUBNotifyCtrl.OnCreate = HL.Override(HL.Any) << function(self, arg)
         self:PlayAnimationOutAndClose()
     end)
     local info = GameInstance.player.facSpMachineSystem.offlineInfo
-    self.view.stopTimeTxt.text = os.date(Language.LUA_FAC_OFFLINE_OS_DATE_FORMAT, info.endOfflineCalcTimestamp)
+    self.view.stopTimeTxt.text = os.date("!" .. Language.LUA_FAC_OFFLINE_OS_DATE_FORMAT, info.endOfflineCalcTimestamp + Utils.getServerTimeZoneOffsetSeconds())
 end
 HL.Commit(FacHUBNotifyCtrl)

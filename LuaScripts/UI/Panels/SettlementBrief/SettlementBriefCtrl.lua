@@ -35,7 +35,7 @@ SettlementBriefCtrl.OnCreate = HL.Override(HL.Any) << function(self, arg)
     end)
 end
 SettlementBriefCtrl._RefreshDateCell = HL.Method(HL.Table, HL.Number) << function(self, cell, index)
-    local date = os.date("*t", DateTimeUtils.GetCurrentTimestampBySeconds() - index * 86400 - 3600 * 4)
+    local date = os.date("!*t", DateTimeUtils.GetCurrentTimestampBySeconds() - index * 86400 - 3600 * 4 + Utils.getServerTimeZoneOffsetSeconds())
     cell.monthText.text = tostring(date.month)
     cell.dayText.text = tostring(date.day)
     cell.todayNode.gameObject:SetActiveIfNecessary(index == 0)

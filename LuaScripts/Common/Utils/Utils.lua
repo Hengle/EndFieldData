@@ -318,11 +318,11 @@ function round(num, numDecimalPlaces)
     return math.floor(num * mult + 0.5) / mult
 end
 function timestampToDate(timestamp)
-    local date = os.date("*t", timestamp)
+    local date = os.date("!*t", timestamp + Utils.getServerTimeZoneOffsetSeconds())
     return string.format("%02d/%02d", date.month, date.day)
 end
 function timestampToDateYMDHM(timestamp)
-    local date = os.date("*t", timestamp)
+    local date = os.date("!*t", timestamp + Utils.getServerTimeZoneOffsetSeconds())
     return string.format("%04d/%02d/%02d %02d:%02d", date.year, date.month, date.day, date.hour, date.min)
 end
 function triggerVoice(triggerKey, speakerId)
@@ -534,9 +534,9 @@ function getNextCommonServerRefreshTime()
     local curDate = os.date("!*t", curTime)
     local today4AM = { year = curDate.year, month = curDate.month, day = curDate.day, hour = UIConst.COMMON_SERVER_UPDATE_TIME, }
     if curDate.hour < UIConst.COMMON_SERVER_UPDATE_TIME then
-        return os.time(today4AM)
+        return os.time(today4AM) + _getTimeZoneDiffOfClientAndServer()
     else
-        return os.time(today4AM) + timePerDay
+        return os.time(today4AM) + timePerDay + _getTimeZoneDiffOfClientAndServer()
     end
 end
 function getNextWeeklyServerRefreshTime()
@@ -549,10 +549,13 @@ function getNextWeeklyServerRefreshTime()
         weekDay = 7
     end
     if weekDay == 1 and curDate.hour < UIConst.COMMON_SERVER_UPDATE_TIME then
-        return os.time(today4AM)
+        return os.time(today4AM) + _getTimeZoneDiffOfClientAndServer()
     end
     local deltaDays = 8 - weekDay
-    return os.time(today4AM) + timePerDay * deltaDays
+    return os.time(today4AM) + timePerDay * deltaDays + _getTimeZoneDiffOfClientAndServer()
+end
+function _getTimeZoneDiffOfClientAndServer()
+    return CS.System.TimeZoneInfo.Local:GetUtcOffset(CS.System.DateTime.Now).TotalSeconds - Utils.getServerTimeZoneOffsetSeconds()
 end
 function getNextMonthlyServerRefreshTime()
     local timePerDay = 24 * 60 * 60
@@ -561,11 +564,11 @@ function getNextMonthlyServerRefreshTime()
     local today4AM = { year = curDate.year, month = curDate.month, day = curDate.day, hour = UIConst.COMMON_SERVER_UPDATE_TIME, }
     local monthDay = curDate.day
     if monthDay == 1 and curDate.hour < UIConst.COMMON_SERVER_UPDATE_TIME then
-        return os.time(today4AM)
+        return os.time(today4AM) + _getTimeZoneDiffOfClientAndServer()
     end
     local monthTotalDays = os.date("%d", os.time({ year = curDate.year, month = curDate.month + 1, day = 0, }))
     local deltaDays = monthTotalDays + 1 - monthDay
-    return os.time(today4AM) + timePerDay * deltaDays
+    return os.time(today4AM) + timePerDay * deltaDays + _getTimeZoneDiffOfClientAndServer()
 end
 function appendUTC(timeStr)
     local hour = getServerTimeZoneOffsetHours()

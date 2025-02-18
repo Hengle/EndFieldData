@@ -50,6 +50,9 @@ GachaCharResultTopCtrl._UpdateChar = HL.Method(HL.Number) << function(self, inde
     cell.simpleStateController:SetState(stateName)
 end
 GachaCharResultTopCtrl._OnClickClose = HL.Method() << function(self)
+    if PhaseManager.m_curState ~= Const.PhaseState.Idle then
+        return
+    end
     local onComplete = self.m_args.onComplete
     self:Close()
     onComplete()

@@ -1,7 +1,7 @@
 {
   "id": "int_electric_fence",
   "name": "int_electric_fence",
-  "factionIndex": 4,
+  "factionIndex": "Neutral",
   "bornTag": [
     {
       "tagName": "SelectCategory/UnSkillAutoSelectable",
@@ -36,7 +36,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -47,7 +47,7 @@
         {
           "key": "is_online",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -58,7 +58,7 @@
         {
           "key": "is_terminal",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -69,7 +69,7 @@
         {
           "key": "power_generated",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -80,14 +80,14 @@
         {
           "key": "connected_node_list",
           "value": {
-            "type": 14,
+            "type": "EntityPtrList",
             "valueArray": []
           }
         },
         {
           "key": "power_signal_threshold_list",
           "value": {
-            "type": 4,
+            "type": "IntList",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -106,7 +106,7 @@
         {
           "key": "shape",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -117,7 +117,7 @@
         {
           "key": "radius",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1065353216
@@ -128,7 +128,7 @@
         {
           "key": "center",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -145,7 +145,7 @@
         {
           "key": "size",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1084227584
@@ -162,7 +162,7 @@
         {
           "key": "interactive_direction_check",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -173,7 +173,7 @@
         {
           "key": "check_area_offset",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -190,7 +190,7 @@
         {
           "key": "check_area_radius",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1092616192
@@ -201,7 +201,7 @@
         {
           "key": "check_area_height",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1084227584
@@ -212,7 +212,7 @@
         {
           "key": "check_angle",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1135869952
@@ -223,7 +223,7 @@
         {
           "key": "player_direction_check",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -234,7 +234,7 @@
         {
           "key": "is_important",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -269,13 +269,13 @@
       },
       "battleRootData": {
         "overrideBattleRoot": false,
-        "rootMountPoint": 0
+        "rootMountPoint": "None"
       },
       "poiseBrokenEndTime": 0.0,
       "overrideMarkTargetDistance": false,
       "customMarkTargetDistance": 0.0,
       "battleShapeData": {
-        "_shape": 1,
+        "_shape": "Capsule",
         "_rotationOffset": {
           "x": 0.0,
           "y": 0.0,
@@ -300,7 +300,7 @@
         {
           "key": "shape",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -311,7 +311,7 @@
         {
           "key": "extent",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1065353216
@@ -328,7 +328,7 @@
         {
           "key": "center",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -345,7 +345,7 @@
         {
           "key": "radius",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1056964608
@@ -356,7 +356,7 @@
         {
           "key": "height",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1065353216
@@ -367,7 +367,7 @@
         {
           "key": "load_from_table",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -378,21 +378,21 @@
         {
           "key": "active_skill",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": []
           }
         },
         {
           "key": "passive_skill",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": []
           }
         },
         {
           "key": "skill_blackboard",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": []
           }
         }
@@ -436,7 +436,7 @@
         {
           "key": "shape",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 2
@@ -447,7 +447,7 @@
         {
           "key": "center",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -464,7 +464,7 @@
         {
           "key": "size",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1084227584
@@ -481,7 +481,7 @@
         {
           "key": "radius",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1088421888
@@ -492,7 +492,7 @@
         {
           "key": "guide_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -504,7 +504,7 @@
         {
           "key": "id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -516,7 +516,7 @@
         {
           "key": "wiki_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -528,7 +528,7 @@
         {
           "key": "duration",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1092616192
@@ -537,7 +537,7 @@
           }
         }
       ],
-      "shapeType": 2,
+      "shapeType": "OBB",
       "center": {
         "x": 0.0,
         "y": 2.0,
@@ -567,7 +567,7 @@
     {
       "key": "estate",
       "value": {
-        "type": 1,
+        "type": "Bool",
         "valueArray": [
           {
             "valueBit64": 0,
@@ -581,7 +581,7 @@
     {
       "key": "buff_id",
       "value": {
-        "type": 7,
+        "type": "String",
         "valueArray": [
           {
             "valueBit64": 0,
@@ -593,7 +593,7 @@
     {
       "key": "net_power",
       "value": {
-        "type": 3,
+        "type": "Int",
         "valueArray": [
           {
             "valueBit64": 0
@@ -604,7 +604,7 @@
     {
       "key": "use_electric",
       "value": {
-        "type": 1,
+        "type": "Bool",
         "valueArray": [
           {
             "valueBit64": 1
@@ -615,7 +615,7 @@
     {
       "key": "inverse_output",
       "value": {
-        "type": 1,
+        "type": "Bool",
         "valueArray": [
           {
             "valueBit64": 0
@@ -628,7 +628,7 @@
     {
       "key": "state",
       "value": {
-        "type": 3,
+        "type": "Int",
         "valueArray": [
           {
             "valueBit64": 0
@@ -659,7 +659,7 @@
       },
       "factionIndex": {
         "enabled": false,
-        "value": 4
+        "value": "Neutral"
       },
       "delayToRecycleTime": {
         "enabled": false,
@@ -688,7 +688,7 @@
             {
               "key": "size",
               "value": {
-                "type": 11,
+                "type": "Vector3",
                 "valueArray": [
                   {
                     "valueBit64": 0
@@ -705,7 +705,7 @@
             {
               "key": "height",
               "value": {
-                "type": 5,
+                "type": "Float",
                 "valueArray": [
                   {
                     "valueBit64": 0
@@ -720,7 +720,7 @@
             {
               "key": "center",
               "value": {
-                "type": 11,
+                "type": "Vector3",
                 "valueArray": [
                   {
                     "valueBit64": 0
@@ -737,7 +737,7 @@
             {
               "key": "size",
               "value": {
-                "type": 11,
+                "type": "Vector3",
                 "valueArray": [
                   {
                     "valueBit64": 1084227584

@@ -157,7 +157,7 @@ CheckInCtrl.SwitchPart = HL.Method(HL.Boolean, HL.Opt(HL.Boolean, HL.Boolean, HL
     local activeLayoutTime = self.m_showingSecondPart and self.view.layoutTime02 or self.view.layoutTime01
     local endTime = self.m_activity.endTime
     local curServerTime = DateTimeUtils.GetCurrentTimestampBySeconds()
-    local endDate = os.date("*t", endTime)
+    local endDate = os.date("!*t", endTime + Utils.getServerTimeZoneOffsetSeconds())
     activeLayoutTime.remainingTime.text = string.format(Language.LUA_CHECK_IN_REMAINING_DAYS, math.ceil((endTime - curServerTime) / (3600 * 24)))
     activeLayoutTime.endTime.text = Utils.appendUTC(string.format(Language.LUA_CHECK_IN_END_DATE, endDate.month, endDate.day, endDate.hour, endDate.min))
 end

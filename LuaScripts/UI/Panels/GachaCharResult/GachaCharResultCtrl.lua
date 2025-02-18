@@ -53,6 +53,9 @@ GachaCharResultCtrl.OnClose = HL.Override() << function(self)
     UIManager:ToggleBlockObtainWaysJump("IN_GACHA", false)
 end
 GachaCharResultCtrl._ShowCharInfo = HL.Method(HL.String) << function(self, charId)
+    if not UIManager:IsOpen(PANEL_ID) then
+        return
+    end
     if PhaseManager:IsOpen(PhaseId.CharInfo) then
         Notify(MessageConst.SHOW_TOAST, Language.LUA_GACHA_RESULT_OPEN_CHAR_INFO_FAIL)
         return

@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 0,
-  "castType": 1,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Melee",
+  "castType": "Passive",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 0,
+    "checkCastDistanceType": "NotCheck",
     "useCustomCastDistance": false,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 60.0,
     "cooldownTime": 3.0,
     "startCdFrame": 12,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,11 +37,11 @@
   "cacheComboFrame": 0,
   "startComboFrame": 0,
   "latestComboFrame": 0,
-  "selectStrategy": 2,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "NoTarget",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetBuffIds": [],
   "smartTargetTagQuery": {
-    "queryType": 0,
+    "queryType": "HasAny",
     "tags": []
   },
   "canDummyCast": true,
@@ -64,22 +64,22 @@
     "timelineActions": [],
     "passiveEventActions": [
       {
-        "abilityEvent": 12,
+        "abilityEvent": "OnTakeDamage",
         "actions": [
           {
             "actionData": [
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckTagMatch+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 0,
                 "checkTarget": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -88,18 +88,18 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "query": {
-                  "queryType": 2,
+                  "queryType": "ExceptAny",
                   "tags": [
                     {
                       "tagName": "Skill/Enemy/eny_0045_agtrinit/Agtrinit13bosshit",
@@ -111,15 +111,15 @@
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 1,
                 "checkTarget": {
-                  "targetSource": 0,
+                  "targetSource": "Target",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -128,30 +128,30 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 }
               },
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckDamageDecorateMask+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 2,
-                "checkType": 1,
-                "mask": 141184
+                "checkType": "HasAny",
+                "mask": "NormalAttack, NormalSkill, UltimateSkill, PlungingAttack, ComboSkill, DashAttack"
               },
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 3,
                 "buffs": [
@@ -169,11 +169,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 4,
+                  "targetSource": "Owner",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -182,23 +182,23 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 1,
+                "buffSource": "ActionOwner",
                 "autoFinishByAction": false
               },
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 4,
                 "buffs": [
@@ -216,11 +216,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -229,17 +229,17 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 1,
+                "buffSource": "ActionOwner",
                 "autoFinishByAction": false
               }
             ],
@@ -248,22 +248,22 @@
         ]
       },
       {
-        "abilityEvent": 12,
+        "abilityEvent": "OnTakeDamage",
         "actions": [
           {
             "actionData": [
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckTagMatch+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 5,
                 "checkTarget": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -272,18 +272,18 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "query": {
-                  "queryType": 2,
+                  "queryType": "ExceptAny",
                   "tags": [
                     {
                       "tagName": "Skill/Enemy/eny_0045_agtrinit/Agtrinit13bosshit",
@@ -295,22 +295,22 @@
               {
                 "$type": "Beyond.Gameplay.Core.NotNextCheckAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 6
               },
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckMainCharacterCondition+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 7,
                 "checkTarget": {
-                  "targetSource": 0,
+                  "targetSource": "Target",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -319,30 +319,30 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 }
               },
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckDamageDecorateMask+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 8,
-                "checkType": 1,
-                "mask": 8960
+                "checkType": "HasAny",
+                "mask": "NormalSkill, UltimateSkill, ComboSkill"
               },
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 9,
                 "buffs": [
@@ -360,11 +360,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 4,
+                  "targetSource": "Owner",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -373,23 +373,23 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 1,
+                "buffSource": "ActionOwner",
                 "autoFinishByAction": false
               },
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 10,
                 "buffs": [
@@ -407,11 +407,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -420,17 +420,17 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 1,
+                "buffSource": "ActionOwner",
                 "autoFinishByAction": false
               }
             ],
@@ -439,7 +439,7 @@
         ]
       },
       {
-        "abilityEvent": 21,
+        "abilityEvent": "OnPoiseZero",
         "actions": [
           {
             "actionData": [],

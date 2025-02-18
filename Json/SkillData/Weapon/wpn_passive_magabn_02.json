@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 0,
-  "castType": 1,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Melee",
+  "castType": "Passive",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 0,
+    "checkCastDistanceType": "NotCheck",
     "useCustomCastDistance": false,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 360.0,
     "cooldownTime": 0.0,
     "startCdFrame": 0,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,11 +37,11 @@
   "cacheComboFrame": 0,
   "startComboFrame": 0,
   "latestComboFrame": 0,
-  "selectStrategy": 0,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "SelectObject",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetBuffIds": [],
   "smartTargetTagQuery": {
-    "queryType": 0,
+    "queryType": "HasAny",
     "tags": []
   },
   "canDummyCast": true,
@@ -64,20 +64,20 @@
     "timelineActions": [],
     "passiveEventActions": [
       {
-        "abilityEvent": 102,
+        "abilityEvent": "OnOutputBuff",
         "actions": [
           {
             "actionData": [
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckOnAddedBuffId+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 0,
-                "checkType": 1,
+                "checkType": "Tag",
                 "buffIdList": [],
                 "query": {
-                  "queryType": 0,
+                  "queryType": "HasAny",
                   "tags": [
                     {
                       "tagName": "Skill/Character/Common/SpellStatus",
@@ -90,15 +90,15 @@
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckBuffStackNum+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 1,
                 "checkTarget": {
-                  "targetSource": 4,
+                  "targetSource": "Owner",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -107,20 +107,20 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "buffId": {
                   "buffId": "buff_wpn_passive_magabn_02"
                 },
-                "compareType": 0,
+                "compareType": "LT",
                 "value": {
                   "useBlackboardKey": false,
                   "value": 1.0,
@@ -130,18 +130,18 @@
               {
                 "$type": "Beyond.Gameplay.Core.HealAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 2,
                 "alwaysNext": true,
-                "healType": 0,
-                "healer": 0,
+                "healType": "Normal",
+                "healer": "ActionSource",
                 "target": {
-                  "targetSource": 4,
+                  "targetSource": "Owner",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -150,20 +150,20 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "healCalculation": {
                   "$type": "Beyond.Gameplay.Core.MultiplyAttributeCalculation, Gameplay.Beyond",
-                  "valueSource": 0,
-                  "attributeType": 42,
+                  "valueSource": "AttackerOrHealer",
+                  "attributeType": "Will",
                   "multiplier": {
                     "useBlackboardKey": true,
                     "value": 1.0,
@@ -178,7 +178,7 @@
                 "showHealText": true,
                 "playHealEffect": true,
                 "effectData": {
-                  "fxType": 0,
+                  "fxType": "Normal",
                   "effectName": "P_common_heal_01_start",
                   "guardEffect": false,
                   "guardEffectAlpha": 1.0,
@@ -193,17 +193,17 @@
                   "interruptTime": 0.0,
                   "terrainPrefab": false,
                   "effectPosData": [],
-                  "moveType": 0,
-                  "positionRef": 1,
+                  "moveType": "Stationary",
+                  "positionRef": "Source",
                   "grounded": false,
                   "followHideTarget": false,
                   "visibleWhenHideTarget": false,
                   "slotIndex": 0,
                   "useWeaponMountPoint": false,
-                  "mountPoint": 0,
+                  "mountPoint": "None",
                   "weaponIndex": 0,
-                  "weaponMountPoint": 0,
-                  "offsetDir": 0,
+                  "weaponMountPoint": "Root",
+                  "offsetDir": "Self",
                   "offsetDirRevert": false,
                   "positionOffset": {
                     "x": 0.0,
@@ -215,13 +215,13 @@
                   "fxSize": 0.0,
                   "unpackPosDelayFrame": 0,
                   "unpackFollowTargetOnRelease": false,
-                  "rotType": 0,
-                  "rotRef": 0,
-                  "directionRef": 1,
+                  "rotType": "Stationary",
+                  "rotRef": "Target",
+                  "directionRef": "Source",
                   "rotUseWeaponMountPoint": false,
-                  "rotMountPoint": 0,
+                  "rotMountPoint": "None",
                   "rotWeaponIndex": 0,
-                  "rotWeaponMountPoint": 0,
+                  "rotWeaponMountPoint": "Root",
                   "revertDir": false,
                   "selfRotation": {
                     "x": 0.0,
@@ -233,11 +233,11 @@
                   "unpackFollowTargetRotOnRelease": false,
                   "weaponVfxKey": "",
                   "weaponVfxIndex": -1,
-                  "alertType": 0,
+                  "alertType": "Decal",
                   "animateAlert": false,
                   "alertAnimateDuration": 0.0,
                   "angle": 0.0,
-                  "modifyType": 0,
+                  "modifyType": "StartLifeTime",
                   "value": 0.0
                 },
                 "useHealTags": false,
@@ -248,15 +248,15 @@
               {
                 "$type": "Beyond.Gameplay.Core.SetSkillCdAtOnce+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 3,
                 "target": {
-                  "targetSource": 4,
+                  "targetSource": "Owner",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -265,20 +265,20 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "useSkillType": true,
-                "skillTypeMask": 64,
+                "skillTypeMask": "ComboSkill",
                 "skillId": "",
-                "functionType": 1,
+                "functionType": "Set",
                 "isPercentage": false,
                 "value": {
                   "useBlackboardKey": false,
@@ -289,7 +289,7 @@
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 4,
                 "buffs": [
@@ -314,11 +314,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 4,
+                  "targetSource": "Owner",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -327,17 +327,17 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 0,
+                "buffSource": "ActionSource",
                 "autoFinishByAction": false
               }
             ],

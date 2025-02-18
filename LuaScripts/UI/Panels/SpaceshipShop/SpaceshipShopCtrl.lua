@@ -232,9 +232,7 @@ SpaceshipShopCtrl.RefreshSpaceShipSheetTabs = HL.Method(HL.String, HL.Opt(HL.Str
 end
 SpaceshipShopCtrl._RefreshTimeCountDown = HL.Override() << function(self)
     self.view.timeNode.gameObject:SetActiveIfNecessary(true)
-    self.view.countDownText_1:InitCountDownText(self:_GetMoneyTime(), function()
-        self:_RefreshTimeCountDown()
-    end, function(time)
+    self.view.countDownText_1:InitCountDownText(self:_GetMoneyTime(), nil, function(time)
         return self:_GetMoneyTimeText(time)
     end)
     local nowIndex = 0
@@ -251,9 +249,7 @@ SpaceshipShopCtrl._RefreshTimeCountDown = HL.Override() << function(self)
     self.view.countDownText_2.gameObject:SetActive(nowIndex == groupData.shopIdList.Count - 1 and isUnlockCycleShop)
     self.view.shopLockTips.gameObject:SetActive((nowIndex == groupData.shopIdList.Count - 1 and not isUnlockCycleShop) or (nowIndex ~= groupData.shopIdList.Count - 1))
     self.view.lockProgress.gameObject:SetActive(self.view.shopLockTips.gameObject.activeSelf)
-    self.view.countDownText_2:InitCountDownText(self:_CalculateTargetTime(GEnums.ShopRefreshCycleType.Weekly), function()
-        self:_RefreshTimeCountDown()
-    end, function(time)
+    self.view.countDownText_2:InitCountDownText(self:_CalculateTargetTime(GEnums.ShopRefreshCycleType.Weekly), nil, function(time)
         return string.format(Language.LUA_SPACE_SHOP_REFRESH_COUNTDOWN, UIUtils.getLeftTime(time))
     end)
 end

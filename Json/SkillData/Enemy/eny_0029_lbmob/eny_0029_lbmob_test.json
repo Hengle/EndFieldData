@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 0,
-  "castType": 0,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Melee",
+  "castType": "Active",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 0,
+    "checkCastDistanceType": "NotCheck",
     "useCustomCastDistance": false,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 60.0,
     "cooldownTime": 12.0,
     "startCdFrame": 0,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,11 +37,11 @@
   "cacheComboFrame": 0,
   "startComboFrame": 0,
   "latestComboFrame": 90,
-  "selectStrategy": 0,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "SelectObject",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetBuffIds": [],
   "smartTargetTagQuery": {
-    "queryType": 0,
+    "queryType": "HasAny",
     "tags": []
   },
   "canDummyCast": true,
@@ -70,23 +70,23 @@
             {
               "$type": "Beyond.Gameplay.Core.MoveToAction+Data, Gameplay.Beyond",
               "isEnable": true,
-              "priorityLevel": 0,
+              "priorityLevel": "Default",
               "priorityOffset": 0,
               "serverActionIndex": 0,
-              "moveType": 0,
+              "moveType": "Direction",
               "totalTime": {
                 "useBlackboardKey": false,
                 "value": 2.0,
                 "blackboardKey": ""
               },
               "updateMoveTarget": false,
-              "directionType": 1,
+              "directionType": "OwnerForward",
               "target": {
-                "targetSource": 0,
+                "targetSource": "Target",
                 "targetGroupKey": "",
-                "selectorOwner": 1,
+                "selectorOwner": "ActionOwner",
                 "ownerContextKey": "",
-                "centerType": 0,
+                "centerType": "ActionSource",
                 "centerContextKey": "",
                 "centerToGround": false,
                 "selectorData": {
@@ -95,14 +95,14 @@
                 },
                 "enableAdvancedDirection": false,
                 "advancedDirection": {
-                  "directionType": 0,
-                  "mountPoint": 0,
+                  "directionType": "SourceForward",
+                  "mountPoint": "None",
                   "customSourceAndTarget": false,
                   "clampToXZ": true,
                   "invertDirection": false
                 },
-                "selectorDirection": 0,
-                "target": 0,
+                "selectorDirection": "SourceForward",
+                "target": "ActionSource",
                 "targetContextKey": ""
               },
               "fixAngle": {
@@ -110,7 +110,7 @@
                 "y": 0.0,
                 "z": 0.0
               },
-              "fixDirectionType": 0,
+              "fixDirectionType": "SourceForward",
               "fixPosAngle": {
                 "x": {
                   "useBlackboardKey": false,
@@ -146,7 +146,7 @@
                 "value": 0.0,
                 "blackboardKey": ""
               },
-              "speedType": 0,
+              "speedType": "FixedSpeed",
               "speed": {
                 "useBlackboardKey": false,
                 "value": 1.5,
@@ -163,7 +163,7 @@
               },
               "enableXAxisMove": false,
               "xAxisSpeed": {
-                "speedType": 0,
+                "speedType": "FixedSpeed",
                 "fixedSpeed": {
                   "useBlackboardKey": false,
                   "value": 0.0,
@@ -179,7 +179,7 @@
               },
               "enableYAxisMove": false,
               "yAxisSpeed": {
-                "speedType": 0,
+                "speedType": "FixedSpeed",
                 "fixedSpeed": {
                   "useBlackboardKey": false,
                   "value": 0.0,

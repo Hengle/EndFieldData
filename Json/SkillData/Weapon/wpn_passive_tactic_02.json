@@ -3,12 +3,12 @@
   "level": 1,
   "skillName": "",
   "iconId": "",
-  "iconBgType": 0,
-  "attackRangeType": 0,
-  "castType": 1,
-  "passiveSkillType": 0,
+  "iconBgType": "Physical",
+  "attackRangeType": "Melee",
+  "castType": "Passive",
+  "passiveSkillType": "AddBuff",
   "castData": {
-    "checkCastDistanceType": 0,
+    "checkCastDistanceType": "NotCheck",
     "useCustomCastDistance": false,
     "castDistance": {
       "useBlackboardKey": false,
@@ -21,13 +21,13 @@
       "value": 0.0,
       "blackboardKey": ""
     },
-    "rotateType": 1,
+    "rotateType": "RotateToTarget",
     "castAngle": 360.0,
     "cooldownTime": 0.0,
     "startCdFrame": 0,
     "maxChargeTime": 1,
     "costData": {
-      "costType": 0,
+      "costType": "UltimateSp",
       "costValue": 0.0,
       "atbValueThreshold": 0.0
     }
@@ -37,11 +37,11 @@
   "cacheComboFrame": 0,
   "startComboFrame": 0,
   "latestComboFrame": 0,
-  "selectStrategy": 0,
-  "smartTargetSelectStrategy": 0,
+  "selectStrategy": "SelectObject",
+  "smartTargetSelectStrategy": "SelectComboSkillTarget",
   "smartTargetBuffIds": [],
   "smartTargetTagQuery": {
-    "queryType": 0,
+    "queryType": "HasAny",
     "tags": []
   },
   "canDummyCast": true,
@@ -64,32 +64,32 @@
     "timelineActions": [],
     "passiveEventActions": [
       {
-        "abilityEvent": 143,
+        "abilityEvent": "OnAfterSkillApplyCost",
         "actions": [
           {
             "actionData": [
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckSkillType+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 0,
                 "skillTypeList": [
-                  2
+                  "NormalSkill"
                 ]
               },
               {
                 "$type": "Beyond.Gameplay.Core.Conditions.CheckBuffStackNum+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 1,
                 "checkTarget": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -98,20 +98,20 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "buffId": {
                   "buffId": "buff_wpn_passive_tactic_02_cd"
                 },
-                "compareType": 1,
+                "compareType": "LE",
                 "value": {
                   "useBlackboardKey": false,
                   "value": 0.0,
@@ -121,12 +121,12 @@
               {
                 "$type": "Beyond.Gameplay.Core.ObtainCostAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 2,
-                "costType": 1,
+                "costType": "Atb",
                 "isPercentValue": false,
-                "atbSourceType": 0,
+                "atbSourceType": "Default",
                 "playObtainAtbEffect": true,
                 "playObtainAtbAudio": true,
                 "costValue": {
@@ -135,11 +135,11 @@
                   "blackboardKey": "sp_up"
                 },
                 "source": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -148,22 +148,22 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
                 "target": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -172,21 +172,21 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 }
               },
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 3,
                 "buffs": [
@@ -217,11 +217,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -230,23 +230,23 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 0,
+                "buffSource": "ActionSource",
                 "autoFinishByAction": false
               },
               {
                 "$type": "Beyond.Gameplay.Core.CreateBuffAction+Data, Gameplay.Beyond",
                 "isEnable": true,
-                "priorityLevel": 0,
+                "priorityLevel": "Default",
                 "priorityOffset": 0,
                 "serverActionIndex": 4,
                 "buffs": [
@@ -271,11 +271,11 @@
                   "blackboardKey": ""
                 },
                 "targetSettings": {
-                  "targetSource": 1,
+                  "targetSource": "Source",
                   "targetGroupKey": "",
-                  "selectorOwner": 1,
+                  "selectorOwner": "ActionOwner",
                   "ownerContextKey": "",
-                  "centerType": 0,
+                  "centerType": "ActionSource",
                   "centerContextKey": "",
                   "centerToGround": false,
                   "selectorData": {
@@ -284,17 +284,17 @@
                   },
                   "enableAdvancedDirection": false,
                   "advancedDirection": {
-                    "directionType": 0,
-                    "mountPoint": 0,
+                    "directionType": "SourceForward",
+                    "mountPoint": "None",
                     "customSourceAndTarget": false,
                     "clampToXZ": true,
                     "invertDirection": false
                   },
-                  "selectorDirection": 0,
-                  "target": 0,
+                  "selectorDirection": "SourceForward",
+                  "target": "ActionSource",
                   "targetContextKey": ""
                 },
-                "buffSource": 0,
+                "buffSource": "ActionSource",
                 "autoFinishByAction": false
               }
             ],

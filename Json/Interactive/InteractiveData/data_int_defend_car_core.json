@@ -1,7 +1,7 @@
 {
   "id": "int_defend_car_core",
   "name": "int_defend_car_core",
-  "factionIndex": 2,
+  "factionIndex": "Good",
   "bornTag": [
     {
       "tagName": "SelectCategory/Unmarkable",
@@ -59,13 +59,13 @@
       },
       "battleRootData": {
         "overrideBattleRoot": false,
-        "rootMountPoint": 0
+        "rootMountPoint": "None"
       },
       "poiseBrokenEndTime": 0.0,
       "overrideMarkTargetDistance": false,
       "customMarkTargetDistance": 0.0,
       "battleShapeData": {
-        "_shape": 2,
+        "_shape": "Sphere",
         "_rotationOffset": {
           "x": 0.0,
           "y": 0.0,
@@ -90,7 +90,7 @@
         {
           "key": "shape",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 2
@@ -101,7 +101,7 @@
         {
           "key": "extent",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1065353216
@@ -118,7 +118,7 @@
         {
           "key": "center",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -135,7 +135,7 @@
         {
           "key": "radius",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1090519040
@@ -146,7 +146,7 @@
         {
           "key": "height",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1065353216
@@ -157,7 +157,7 @@
         {
           "key": "load_from_table",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -168,21 +168,21 @@
         {
           "key": "active_skill",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": []
           }
         },
         {
           "key": "passive_skill",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": []
           }
         },
         {
           "key": "skill_blackboard",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": []
           }
         }
@@ -257,7 +257,7 @@
   "hideInDialog": false,
   "mountPoints": [
     {
-      "mountPoint": 1,
+      "mountPoint": "HeadBar",
       "name": "HeadBar"
     }
   ],
@@ -897,7 +897,7 @@
         "$type": "Beyond.Gameplay.Actions.Vector3Compare, Gameplay.Beyond",
         "_ID": 14,
         "_uid": "d2be0b61",
-        "_comparer": 0,
+        "_comparer": "Equal",
         "_valueA": {
           "constValue": {
             "x": 0.0,
@@ -1057,7 +1057,7 @@
         "_ID": 45,
         "_uid": "d2d89825",
         "_comparer": {
-          "constValue": 3
+          "constValue": "GreaterEqual"
         },
         "_valueA": {
           "paramSource": 100,
@@ -1073,7 +1073,7 @@
         "_ID": 46,
         "_uid": "5961edcb",
         "_comparer": {
-          "constValue": 3
+          "constValue": "GreaterEqual"
         },
         "_valueA": {
           "paramSource": 100,
@@ -1089,7 +1089,7 @@
         "_ID": 47,
         "_uid": "f7b0f337",
         "_comparer": {
-          "constValue": 3
+          "constValue": "GreaterEqual"
         },
         "_valueA": {
           "paramSource": 100,
@@ -1105,7 +1105,7 @@
         "_ID": 48,
         "_uid": "47b504be",
         "_comparer": {
-          "constValue": 3
+          "constValue": "GreaterEqual"
         },
         "_valueA": {
           "paramSource": 100,
@@ -1121,7 +1121,7 @@
         "_ID": 49,
         "_uid": "e61b99f0",
         "_comparer": {
-          "constValue": 3
+          "constValue": "GreaterEqual"
         },
         "_valueA": {
           "paramSource": 100,
@@ -1137,7 +1137,7 @@
         "_ID": 64,
         "_uid": "8948a5c7",
         "_comparer": {
-          "constValue": 2
+          "constValue": "GreaterThan"
         },
         "_valueA": {
           "paramSource": 100,
@@ -1154,7 +1154,7 @@
     {
       "key": "ratio",
       "value": {
-        "type": 5,
+        "type": "Float",
         "valueArray": [
           {
             "valueBit64": 0,
@@ -1168,7 +1168,7 @@
     {
       "key": "CoreRadius",
       "value": {
-        "type": 5,
+        "type": "Float",
         "valueArray": [
           {
             "valueBit64": 1090519040
@@ -1179,7 +1179,7 @@
     {
       "key": "target_list",
       "value": {
-        "type": 14,
+        "type": "EntityPtrList",
         "valueArray": []
       }
     }
