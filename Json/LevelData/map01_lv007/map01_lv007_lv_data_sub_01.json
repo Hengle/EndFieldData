@@ -5,7 +5,7 @@
   "enemies": [
     {
       "levelLogicId": 2800020000,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0033_lbhunt",
       "defaultHide": false,
       "position": {
@@ -24,16 +24,16 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 46,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 2800020001,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0029_lbmob",
       "defaultHide": false,
       "position": {
@@ -60,19 +60,19 @@
           "z": 0.0
         },
         "useWorldOffset": false,
-        "loop": 1,
-        "snap": 1,
+        "loop": "Circle",
+        "snap": "Navmesh",
         "inLocalSpace": true,
         "addBornPositionAsCheckpoint": true,
         "useTurnAsWalkEnd": false,
         "enableBornAction": false,
-        "bornMoveStyle": 0,
+        "bornMoveStyle": "Walk",
         "enableBornSpeedOverride": false,
         "bornOverrideSpeed": 4.0,
         "bornPositionWaitDuration": 0.0,
         "actions": [
           {
-            "actionType": 1,
+            "actionType": "Checkpoint",
             "position": {
               "x": 3.8609314,
               "y": -4.946869,
@@ -82,7 +82,7 @@
             "subActions": []
           },
           {
-            "actionType": 1,
+            "actionType": "Checkpoint",
             "position": {
               "x": 11.053894,
               "y": -6.76269531,
@@ -92,7 +92,7 @@
             "subActions": []
           }
         ],
-        "motionType": 0,
+        "motionType": "Lead",
         "waitDistance": 0.0,
         "runAheadRadius": 0.0,
         "runBehindRadius": 0.0,
@@ -101,8 +101,8 @@
         "coolDownBetweenWalkAndStop": 1.0,
         "motionTriggerDis": 10.0,
         "changePlayerMoveStyle": false,
-        "forcePlayerMoveStyleInEscort": 0,
-        "moveStyleWithoutLead": 0,
+        "forcePlayerMoveStyleInEscort": "Walk",
+        "moveStyleWithoutLead": "Walk",
         "turnCheck": false,
         "turnCheckTime": 5.0,
         "turnCheckAngle": 45.0,
@@ -110,16 +110,16 @@
         "turnRadio": 0.8,
         "isUseCatmull": false
       },
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 46,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 2800020002,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0029_lbmob",
       "defaultHide": false,
       "position": {
@@ -138,16 +138,16 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 46,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 2800020003,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0029_lbmob",
       "defaultHide": false,
       "position": {
@@ -174,19 +174,19 @@
           "z": 0.0
         },
         "useWorldOffset": false,
-        "loop": 0,
-        "snap": 1,
+        "loop": "None",
+        "snap": "Navmesh",
         "inLocalSpace": true,
         "addBornPositionAsCheckpoint": false,
         "useTurnAsWalkEnd": false,
         "enableBornAction": false,
-        "bornMoveStyle": 0,
+        "bornMoveStyle": "Walk",
         "enableBornSpeedOverride": false,
         "bornOverrideSpeed": 4.0,
         "bornPositionWaitDuration": 0.0,
         "actions": [
           {
-            "actionType": 1,
+            "actionType": "Checkpoint",
             "position": {
               "x": 0.0,
               "y": 0.0,
@@ -195,7 +195,7 @@
             "subPositions": [],
             "subActions": [
               {
-                "type": 4,
+                "type": "Rest",
                 "duration": 0.0,
                 "rotationY": 0.0,
                 "rotationOffset": 0.0,
@@ -204,19 +204,19 @@
                   "tagName": "",
                   "tagId": 0
                 },
-                "animMaskType": 0,
+                "animMaskType": "Default",
                 "ignoreAnimDis": 0.0,
                 "repeatAnim": false,
                 "rootMotion": false,
-                "actionEndType": 0,
+                "actionEndType": "WaitActionEnd",
                 "waitTime": 0.0,
                 "radioId": "",
-                "eventToLevelType": 0,
+                "eventToLevelType": "None",
                 "eventBBDataPairs": [],
                 "configSnap": false,
-                "snapToGround": 0,
+                "snapToGround": "None",
                 "configMovementStyle": false,
-                "movementStyle": 0,
+                "movementStyle": "Walk",
                 "overrideSpeed": false,
                 "overrideSpeedValue": 0.0,
                 "radius": 0.0
@@ -224,7 +224,7 @@
             ]
           }
         ],
-        "motionType": 0,
+        "motionType": "Lead",
         "waitDistance": 0.0,
         "runAheadRadius": 0.0,
         "runBehindRadius": 0.0,
@@ -233,8 +233,8 @@
         "coolDownBetweenWalkAndStop": 1.0,
         "motionTriggerDis": 10.0,
         "changePlayerMoveStyle": false,
-        "forcePlayerMoveStyleInEscort": 0,
-        "moveStyleWithoutLead": 0,
+        "forcePlayerMoveStyleInEscort": "Walk",
+        "moveStyleWithoutLead": "Walk",
         "turnCheck": false,
         "turnCheckTime": 5.0,
         "turnCheckAngle": 45.0,
@@ -242,16 +242,16 @@
         "turnRadio": 0.8,
         "isUseCatmull": false
       },
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 46,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 2800020004,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0047_firebat",
       "defaultHide": false,
       "position": {
@@ -270,16 +270,16 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 46,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 2800020020,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0050_hound",
       "defaultHide": false,
       "position": {
@@ -298,19 +298,19 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 46,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     }
   ],
   "interactives": [
     {
       "levelLogicId": 2800020007,
       "dependencyGroupId": 20052,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_door_wirefence",
       "defaultHide": false,
       "position": {
@@ -338,7 +338,7 @@
     {
       "levelLogicId": 2800020008,
       "dependencyGroupId": 20052,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_switch_common",
       "defaultHide": false,
       "position": {
@@ -364,7 +364,7 @@
         {
           "key": "target_list",
           "value": {
-            "type": 14,
+            "type": "EntityPtrList",
             "valueArray": [
               {
                 "valueBit64": 2800020007
@@ -377,7 +377,7 @@
     },
     {
       "levelLogicId": 2800020009,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_collection_coin",
       "defaultHide": false,
       "position": {
@@ -405,7 +405,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -418,7 +418,7 @@
           {
             "key": "spline_id",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 20000
@@ -431,7 +431,7 @@
     },
     {
       "levelLogicId": 2800020010,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common",
       "defaultHide": false,
       "position": {
@@ -457,7 +457,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -472,7 +472,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -485,7 +485,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -499,7 +499,7 @@
     {
       "levelLogicId": 2800020012,
       "dependencyGroupId": 20054,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port",
       "defaultHide": false,
       "position": {
@@ -525,7 +525,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1011742467
@@ -542,7 +542,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 2800020014
@@ -553,7 +553,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -564,7 +564,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -581,7 +581,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -598,7 +598,7 @@
         {
           "key": "scale",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1092616192
@@ -609,7 +609,7 @@
         {
           "key": "state",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -623,7 +623,7 @@
     {
       "levelLogicId": 2800020014,
       "dependencyGroupId": 20054,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port_bottom",
       "defaultHide": false,
       "position": {
@@ -649,7 +649,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1011742467
@@ -666,7 +666,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 2800020012
@@ -677,7 +677,7 @@
         {
           "key": "top_rope_port",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -688,7 +688,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -699,7 +699,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -716,7 +716,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -736,7 +736,7 @@
     {
       "levelLogicId": 2800020016,
       "dependencyGroupId": 20053,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port",
       "defaultHide": false,
       "position": {
@@ -762,7 +762,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1012213449
@@ -779,7 +779,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 2800020018
@@ -790,7 +790,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -801,7 +801,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -818,7 +818,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -835,7 +835,7 @@
         {
           "key": "scale",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1095761920
@@ -846,7 +846,7 @@
         {
           "key": "state",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -860,7 +860,7 @@
     {
       "levelLogicId": 2800020018,
       "dependencyGroupId": 20053,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port_bottom",
       "defaultHide": false,
       "position": {
@@ -886,7 +886,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1012213449
@@ -903,7 +903,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 2800020016
@@ -914,7 +914,7 @@
         {
           "key": "top_rope_port",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -925,7 +925,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -936,7 +936,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -953,7 +953,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -973,7 +973,7 @@
     {
       "levelLogicId": 2800020021,
       "dependencyGroupId": 20051,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_door_wirefence",
       "defaultHide": false,
       "position": {
@@ -1001,7 +1001,7 @@
     {
       "levelLogicId": 2800020022,
       "dependencyGroupId": 20051,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_switch_common",
       "defaultHide": false,
       "position": {
@@ -1027,7 +1027,7 @@
         {
           "key": "target_list",
           "value": {
-            "type": 14,
+            "type": "EntityPtrList",
             "valueArray": [
               {
                 "valueBit64": 2800020021
@@ -1041,7 +1041,7 @@
     {
       "levelLogicId": 2800020024,
       "belongLevelScriptId": 2800020003,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_race_finish_goal",
       "defaultHide": true,
       "position": {
@@ -1069,7 +1069,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1082,14 +1082,14 @@
           {
             "key": "position_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           },
           {
             "key": "rotation_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           }
@@ -1099,7 +1099,7 @@
     {
       "levelLogicId": 2800020028,
       "belongLevelScriptId": 2800020003,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_empty",
       "defaultHide": false,
       "position": {
@@ -1127,7 +1127,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1140,14 +1140,14 @@
           {
             "key": "position_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           },
           {
             "key": "rotation_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           }
@@ -1157,7 +1157,7 @@
     {
       "levelLogicId": 2800020032,
       "belongLevelScriptId": 2800020004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_accelerate_buff",
       "defaultHide": true,
       "position": {
@@ -1185,7 +1185,7 @@
     {
       "levelLogicId": 2800020035,
       "belongLevelScriptId": 2800020004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_accelerate_buff",
       "defaultHide": true,
       "position": {
@@ -1218,7 +1218,7 @@
     {
       "levelLogicId": 2800020025,
       "belongLevelScriptId": 2800020003,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionscholar_a_31_g01_map01_lv007_data_sub_01_gameplay_002",
       "defaultHide": true,
       "position": {
@@ -1242,14 +1242,14 @@
       "type": 2,
       "doPatrol": true,
       "defaultActivePatrol": false,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 210006,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -1257,9 +1257,9 @@
           "tagId": 993367102
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1295,7 +1295,7 @@
       ],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1307,7 +1307,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1325,7 +1325,7 @@
     {
       "levelLogicId": 2800020026,
       "belongLevelScriptId": 2800020003,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_tpl_gentleman_unionscholar_a_07_g01_map01_lv007_data_sub_01_gameplay_001",
       "defaultHide": true,
       "position": {
@@ -1349,14 +1349,14 @@
       "type": 2,
       "doPatrol": true,
       "defaultActivePatrol": false,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 20000,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -1364,9 +1364,9 @@
           "tagId": -305596871
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1398,7 +1398,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1410,7 +1410,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1428,7 +1428,7 @@
     {
       "levelLogicId": 2800020027,
       "belongLevelScriptId": 2800020003,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_tpl_gentleman_unionscholar_a_10_g01_map01_lv007_data_sub_01_gameplay_001",
       "defaultHide": true,
       "position": {
@@ -1452,14 +1452,14 @@
       "type": 2,
       "doPatrol": true,
       "defaultActivePatrol": false,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 210002,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -1467,9 +1467,9 @@
           "tagId": -803366056
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1501,7 +1501,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1513,7 +1513,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1535,8 +1535,8 @@
       "scriptId": 2800020001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -1549,11 +1549,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -5.3,
             "y": 202.6667,
@@ -1574,7 +1574,7 @@
       ],
       "startShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -5.3,
             "y": 202.6667,
@@ -1597,7 +1597,7 @@
         {
           "key": "checkpointPos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1027247650
@@ -1614,7 +1614,7 @@
         {
           "key": "checkpointRot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1638,8 +1638,8 @@
       "scriptId": 2800020003,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 1,
-      "endType": 1,
+      "startType": "Manual",
+      "endType": "Manual",
       "refGameId": "world_challenge_race_03",
       "modules": {
         "2800020000": {
@@ -1683,7 +1683,7 @@
             {
               "key": "temp",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -1919,7 +1919,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -2140,7 +2140,7 @@
                 "constValue": false
               },
               "_actionMask": {
-                "constValue": 0
+                "constValue": "None"
               }
             },
             {
@@ -2178,7 +2178,7 @@
                 "constValue": true
               },
               "_actionMask": {
-                "constValue": -1
+                "constValue": "All"
               }
             },
             {
@@ -2233,7 +2233,7 @@
                 "idRef": 51
               },
               "_montageMaskType": {
-                "constValue": 0
+                "constValue": "Default"
               }
             },
             {
@@ -2378,7 +2378,7 @@
               "_uid": "826045b7",
               "useCurrentScope": true,
               "_aiMode": {
-                "constValue": 7
+                "constValue": "Idle"
               },
               "_enable": {
                 "constValue": false
@@ -2536,7 +2536,7 @@
                 "constValue": []
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -2555,7 +2555,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -2571,7 +2571,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -2654,7 +2654,7 @@
               "_uid": "ac2fb90d",
               "useCurrentScope": true,
               "_aiMode": {
-                "constValue": 7
+                "constValue": "Idle"
               },
               "_enable": {
                 "constValue": true
@@ -3047,7 +3047,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 4
+                "constValue": "HardIn"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3232,7 +3232,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 4
+                "constValue": "HardIn"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3401,7 +3401,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -3440,7 +3440,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -3899,7 +3899,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -3930,7 +3930,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -3990,7 +3990,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -4070,7 +4070,7 @@
               "_uid": "6c0ab4b7",
               "useCurrentScope": true,
               "_aiMode": {
-                "constValue": 7
+                "constValue": "Idle"
               },
               "_enable": {
                 "constValue": false
@@ -4648,11 +4648,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -195.398315,
             "y": 165.849762,
@@ -4671,7 +4671,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -250.768311,
             "y": 175.861328,
@@ -4690,7 +4690,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -251.22467,
             "y": 176.310989,
@@ -4709,7 +4709,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -246.462372,
             "y": 176.04718,
@@ -4728,7 +4728,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -243.441589,
             "y": 174.22049,
@@ -4747,7 +4747,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -210.442276,
             "y": 176.46611,
@@ -4771,7 +4771,7 @@
         {
           "key": "@2800020000_state",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -4782,7 +4782,7 @@
         {
           "key": "GoalNPClocation",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -1019197541
@@ -4817,7 +4817,7 @@
         {
           "key": "FinishGoal",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 2800020024
@@ -4828,7 +4828,7 @@
         {
           "key": "NPC",
           "value": {
-            "type": 14,
+            "type": "EntityPtrList",
             "valueArray": [
               {
                 "valueBit64": 2800020025
@@ -4845,7 +4845,7 @@
         {
           "key": "StartNPCLocation",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -1015364432
@@ -4880,7 +4880,7 @@
         {
           "key": "StartNPCRotation",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -4915,7 +4915,7 @@
         {
           "key": "start_dialog",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -4927,7 +4927,7 @@
         {
           "key": "succeed_dialog",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -4939,7 +4939,7 @@
         {
           "key": "failed_dialog",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -4951,7 +4951,7 @@
         {
           "key": "patrolList",
           "value": {
-            "type": 4,
+            "type": "IntList",
             "valueArray": [
               {
                 "valueBit64": 20000,
@@ -4971,7 +4971,7 @@
         {
           "key": "firework_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1018997300
@@ -4988,7 +4988,7 @@
         {
           "key": "player_start_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1015538908
@@ -5005,7 +5005,7 @@
         {
           "key": "player_start_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -5022,7 +5022,7 @@
         {
           "key": "teleport_back_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1015519054
@@ -5039,7 +5039,7 @@
         {
           "key": "race_teammate_pos",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -1015580568
@@ -5074,7 +5074,7 @@
         {
           "key": "challenge_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5086,7 +5086,7 @@
         {
           "key": "teammmate_lookat",
           "value": {
-            "type": 14,
+            "type": "EntityPtrList",
             "valueArray": [
               {
                 "valueBit64": 2800020028
@@ -5103,7 +5103,7 @@
         {
           "key": "goal_camPos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1018730335
@@ -5120,7 +5120,7 @@
         {
           "key": "goal_camRot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1086862335
@@ -5137,7 +5137,7 @@
         {
           "key": "goal_cam_blend_time",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1073741824,
@@ -5149,7 +5149,7 @@
         {
           "key": "NPC_startLine_pos",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -1015301748
@@ -5184,7 +5184,7 @@
         {
           "key": "NPC_startLine_rot",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -5219,7 +5219,7 @@
         {
           "key": "GoalNPCRotation",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -5254,7 +5254,7 @@
         {
           "key": "GoalPlayerLoc",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1019093726
@@ -5271,7 +5271,7 @@
         {
           "key": "GoalPlayerRot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -5288,7 +5288,7 @@
         {
           "key": "goal_camFov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1114636288,
@@ -5300,7 +5300,7 @@
         {
           "key": "Start_music",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5312,7 +5312,7 @@
         {
           "key": "Exit_music",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5324,7 +5324,7 @@
         {
           "key": "Win_music",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5336,7 +5336,7 @@
         {
           "key": "Lose_music",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5348,7 +5348,7 @@
         {
           "key": "ifHideButton",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5360,7 +5360,7 @@
         {
           "key": "lt:p:3b63cb51:78dbb7b1",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -5371,7 +5371,7 @@
         {
           "key": "lt:mp:3b63cb51:78dbb7b1",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 8
@@ -5385,12 +5385,12 @@
           "conditionDict": {
             "78dbb7b1": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.InteractiveCheckInt, Gameplay.Beyond",
                 "uniqueId": "78dbb7b1",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_entityId": {
                   "paramSource": 19,
@@ -5409,12 +5409,12 @@
                   "constValue": 8
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": true
         }
@@ -5459,8 +5459,8 @@
       "scriptId": 2800020004,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -5473,11 +5473,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -225.2,
             "y": 174.1,
@@ -5496,7 +5496,7 @@
           "radius": 0.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -208.501221,
             "y": 166.7628,
@@ -5515,7 +5515,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -243.878723,
             "y": 174.773376,
@@ -5536,7 +5536,7 @@
       ],
       "startShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -225.2,
             "y": 174.1,
@@ -5562,8 +5562,8 @@
       "scriptId": 2800020005,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -5576,11 +5576,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -249.235474,
             "y": 175.973862,
@@ -5601,7 +5601,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -249.235474,
             "y": 175.973862,
@@ -5627,8 +5627,8 @@
       "scriptId": 2800020008,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -5641,7 +5641,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnEntityStart, Gameplay.Beyond",
               "_ID": 25,
               "_nextID": 26,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800020025
@@ -5735,13 +5735,13 @@
                 }
               },
               "_montageMaskType": {
-                "constValue": 0
+                "constValue": "Default"
               },
               "_overrideMontageState": {
                 "constValue": false
               },
               "_montageState": {
-                "constValue": 1
+                "constValue": "Start"
               },
               "_switchDefaultMontageTag": {
                 "constValue": false
@@ -5765,13 +5765,13 @@
                 }
               },
               "_montageMaskType": {
-                "constValue": 0
+                "constValue": "Default"
               },
               "_overrideMontageState": {
                 "constValue": false
               },
               "_montageState": {
-                "constValue": 1
+                "constValue": "Start"
               },
               "_switchDefaultMontageTag": {
                 "constValue": false
@@ -5795,13 +5795,13 @@
                 }
               },
               "_montageMaskType": {
-                "constValue": 0
+                "constValue": "Default"
               },
               "_overrideMontageState": {
                 "constValue": false
               },
               "_montageState": {
-                "constValue": 1
+                "constValue": "Start"
               },
               "_switchDefaultMontageTag": {
                 "constValue": false
@@ -5986,11 +5986,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -252.270386,
             "y": 176.422089,
@@ -6011,7 +6011,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -252.270386,
             "y": 176.422089,
@@ -6037,8 +6037,8 @@
       "scriptId": 2800020014,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -6093,7 +6093,7 @@
               "_uid": "b80ec947",
               "useCurrentScope": true,
               "lookAt1Type": {
-                "constValue": 0
+                "constValue": "Entity"
               },
               "lookAt1": {
                 "constValue": {
@@ -6101,7 +6101,7 @@
                 }
               },
               "lookAt2Type": {
-                "constValue": 0
+                "constValue": "Entity"
               },
               "lookAt2": {
                 "constValue": {
@@ -6127,7 +6127,7 @@
                 "constValue": 1.0
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "blendTime": {
                 "constValue": 1.0
@@ -6181,7 +6181,7 @@
                 "idRef": 0
               },
               "_gait": {
-                "constValue": 0
+                "constValue": "Walk"
               }
             },
             {
@@ -6211,7 +6211,7 @@
                 "constValue": false
               },
               "_blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "_blendTime": {
                 "constValue": 0.2
@@ -6278,11 +6278,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -249.33,
             "y": 175.9635,
@@ -6303,7 +6303,7 @@
       ],
       "startShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -249.33,
             "y": 175.9635,
@@ -6335,19 +6335,19 @@
         "z": 313.15
       },
       "useWorldOffset": false,
-      "loop": 0,
-      "snap": 1,
+      "loop": "None",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -76.2107239,
             "y": -0.538604736,
@@ -6357,7 +6357,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -73.11188,
             "y": -2.65664673,
@@ -6367,7 +6367,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -79.05884,
             "y": -8.13913,
@@ -6377,7 +6377,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -94.5206,
             "y": -11.4678345,
@@ -6387,7 +6387,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -95.86032,
             "y": -11.4369049,
@@ -6397,7 +6397,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -97.84482,
             "y": -11.5000153,
@@ -6407,7 +6407,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -79.45508,
             "y": -9.221085,
@@ -6417,7 +6417,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -73.97461,
             "y": -8.657272,
@@ -6427,7 +6427,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -69.91885,
             "y": -10.6259308,
@@ -6437,7 +6437,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -70.6358948,
             "y": -10.9899292,
@@ -6447,7 +6447,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -64.96567,
             "y": -11.37616,
@@ -6457,7 +6457,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -53.30893,
             "y": -12.2794037,
@@ -6467,7 +6467,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -43.1588745,
             "y": -12.7450562,
@@ -6477,7 +6477,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -22.2919617,
             "y": -10.7796326,
@@ -6487,7 +6487,7 @@
           "subActions": []
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6496,8 +6496,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 24,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Sprint",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -6513,19 +6513,19 @@
         "z": 315.539185
       },
       "useWorldOffset": false,
-      "loop": 0,
-      "snap": 1,
+      "loop": "None",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -71.97739,
             "y": -1.67945862,
@@ -6535,7 +6535,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -61.8398438,
             "y": -3.2809906,
@@ -6545,7 +6545,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -55.3417358,
             "y": -3.07763672,
@@ -6555,7 +6555,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -52.836,
             "y": -3.39364624,
@@ -6565,7 +6565,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -50.1754,
             "y": -3.69335938,
@@ -6575,7 +6575,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -48.4828644,
             "y": -5.07514954,
@@ -6585,7 +6585,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -44.0383759,
             "y": -6.254944,
@@ -6595,7 +6595,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -37.9633942,
             "y": -7.885605,
@@ -6605,7 +6605,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -30.884552,
             "y": -9.419739,
@@ -6615,7 +6615,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -27.87674,
             "y": -8.351166,
@@ -6625,7 +6625,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -23.1819763,
             "y": -7.815933,
@@ -6635,7 +6635,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -20.8883057,
             "y": -8.398315,
@@ -6645,7 +6645,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -19.45581,
             "y": -8.228622,
@@ -6655,7 +6655,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -15.89859,
             "y": -7.805664,
@@ -6665,7 +6665,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -17.03238,
             "y": -9.72744751,
@@ -6675,7 +6675,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -17.0202942,
             "y": -9.992722,
@@ -6685,7 +6685,7 @@
           "subActions": []
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6694,8 +6694,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 24,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Sprint",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -6711,19 +6711,19 @@
         "z": 315.017853
       },
       "useWorldOffset": false,
-      "loop": 0,
-      "snap": 1,
+      "loop": "None",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -71.27997,
             "y": -0.880569458,
@@ -6733,7 +6733,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -69.4819,
             "y": -1.59008789,
@@ -6743,7 +6743,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -51.5438538,
             "y": -2.59413147,
@@ -6753,7 +6753,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -32.3138428,
             "y": -3.929245,
@@ -6763,7 +6763,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -32.76483,
             "y": -3.60131836,
@@ -6773,7 +6773,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -17.6893921,
             "y": -7.387726,
@@ -6783,7 +6783,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -15.0594482,
             "y": -8.951706,
@@ -6793,7 +6793,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -19.7738953,
             "y": -9.034195,
@@ -6803,7 +6803,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -20.6536255,
             "y": -8.473221,
@@ -6813,7 +6813,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -22.4821777,
             "y": -8.52504,
@@ -6823,7 +6823,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -20.2383423,
             "y": -10.4323578,
@@ -6833,7 +6833,7 @@
           "subActions": []
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6842,8 +6842,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 24,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Sprint",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -6909,8 +6909,8 @@
     ],
     "baseData": [
       {
-        "functionType": 3,
-        "shapeType": 0,
+        "functionType": "CameraVolume",
+        "shapeType": "None",
         "index": 0,
         "offset": {
           "x": 0.0,
@@ -6956,7 +6956,7 @@
         "tweenTime": 0.5,
         "duration": 2.0,
         "overrideBlend": false,
-        "blendStyle": 1,
+        "blendStyle": "EaseInOut",
         "useYawCheck": false
       }
     ],

@@ -7,7 +7,7 @@
     {
       "levelLogicId": 2800090019,
       "belongLevelScriptId": 2800090004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_door_wirefence",
       "defaultHide": false,
       "position": {
@@ -35,7 +35,7 @@
     {
       "levelLogicId": 2800090039,
       "belongLevelScriptId": 2800090004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_switch_common",
       "defaultHide": false,
       "position": {
@@ -61,7 +61,7 @@
         {
           "key": "option_disconnected",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -73,7 +73,7 @@
         {
           "key": "target_list",
           "value": {
-            "type": 14,
+            "type": "EntityPtrList",
             "valueArray": [
               {
                 "valueBit64": 2800090019
@@ -84,7 +84,7 @@
         {
           "key": "toast_disconnected",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -96,7 +96,7 @@
         {
           "key": "use_electric",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -110,7 +110,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -130,7 +130,7 @@
     {
       "levelLogicId": 2800090040,
       "belongLevelScriptId": 2800090004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_ewire",
       "defaultHide": false,
       "position": {
@@ -158,7 +158,7 @@
           {
             "key": "connected_node_list",
             "value": {
-              "type": 14,
+              "type": "EntityPtrList",
               "valueArray": [
                 {
                   "valueBit64": 2800090039
@@ -180,8 +180,8 @@
       "scriptId": 2800090004,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -194,11 +194,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -189.19,
             "y": 174.58,
@@ -217,7 +217,7 @@
           "radius": 85.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -189.19,
             "y": 174.58,
@@ -236,7 +236,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -186.234009,
             "y": 174.761917,
@@ -255,7 +255,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -186.657166,
             "y": 174.810669,
@@ -276,7 +276,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -189.19,
             "y": 174.58,

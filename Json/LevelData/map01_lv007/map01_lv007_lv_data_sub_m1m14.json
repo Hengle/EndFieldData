@@ -7,7 +7,7 @@
     {
       "levelLogicId": 2800170000,
       "belongLevelScriptId": 2800170000,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_narrative_common_empty_withoutVfx",
       "defaultHide": false,
       "position": {
@@ -33,7 +33,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -44,7 +44,7 @@
         {
           "key": "option_interact",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -56,7 +56,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -70,7 +70,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1069547520
@@ -81,7 +81,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -101,7 +101,7 @@
     {
       "levelLogicId": 2800170001,
       "belongLevelScriptId": 2800170000,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_narrative_common_empty_withoutVfx",
       "defaultHide": false,
       "position": {
@@ -127,7 +127,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -138,7 +138,7 @@
         {
           "key": "option_interact",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -150,7 +150,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -164,7 +164,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1069547520
@@ -175,7 +175,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -195,7 +195,7 @@
     {
       "levelLogicId": 2800170002,
       "belongLevelScriptId": 2800170000,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_narrative_common_empty_withoutVfx",
       "defaultHide": false,
       "position": {
@@ -221,7 +221,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -232,7 +232,7 @@
         {
           "key": "option_interact",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -244,7 +244,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -258,7 +258,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1069547520
@@ -269,7 +269,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -297,8 +297,8 @@
       "scriptId": 2800170000,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 2,
-      "endType": 2,
+      "startType": "SameWithActive",
+      "endType": "SameWithDeactive",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -307,7 +307,7 @@
             {
               "key": "Effect1",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -319,7 +319,7 @@
             {
               "key": "Effect2",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -331,7 +331,7 @@
             {
               "key": "Effect3",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -348,7 +348,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnInteractiveStateChanged, Gameplay.Beyond",
               "_ID": 2,
               "_nextID": 4,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800170000
@@ -372,7 +372,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnInteractiveStateChanged, Gameplay.Beyond",
               "_ID": 7,
               "_nextID": 9,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800170001
@@ -396,7 +396,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnInteractiveStateChanged, Gameplay.Beyond",
               "_ID": 12,
               "_nextID": 14,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800170002
@@ -420,7 +420,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnUIInteract, Gameplay.Beyond",
               "_ID": 17,
               "_nextID": 18,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800170000
@@ -439,7 +439,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnUIInteract, Gameplay.Beyond",
               "_ID": 20,
               "_nextID": 18,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800170001
@@ -458,7 +458,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnUIInteract, Gameplay.Beyond",
               "_ID": 21,
               "_nextID": 18,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 2800170002
@@ -1321,15 +1321,15 @@
               "_ID": 1,
               "_uid": "1b98339f",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 0
               },
               "_valueB": {
-                "constValue": 2
+                "constValue": "Processing"
               }
             },
             {
@@ -1458,11 +1458,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -258.969116,
             "y": 165.4146,
@@ -1481,7 +1481,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -251.884277,
             "y": 175.639786,
@@ -1500,7 +1500,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -274.337463,
             "y": 168.034134,
@@ -1524,7 +1524,7 @@
         {
           "key": "LocationMarker1",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1014923580
@@ -1541,7 +1541,7 @@
         {
           "key": "LocationMarker2",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1015300908
@@ -1558,7 +1558,7 @@
         {
           "key": "LocationMarker3",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -1014418200
@@ -1646,8 +1646,8 @@
     ],
     "baseData": [
       {
-        "functionType": 4,
-        "shapeType": 2,
+        "functionType": "RadioTriggerZone",
+        "shapeType": "Sphere",
         "index": 0,
         "offset": {
           "x": 0.0,
@@ -1675,8 +1675,8 @@
         "hasCondition": false
       },
       {
-        "functionType": 4,
-        "shapeType": 2,
+        "functionType": "RadioTriggerZone",
+        "shapeType": "Sphere",
         "index": 1,
         "offset": {
           "x": 0.0,
@@ -1704,8 +1704,8 @@
         "hasCondition": false
       },
       {
-        "functionType": 4,
-        "shapeType": 2,
+        "functionType": "RadioTriggerZone",
+        "shapeType": "Sphere",
         "index": 2,
         "offset": {
           "x": 0.0,

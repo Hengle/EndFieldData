@@ -5,7 +5,7 @@
   "enemies": [
     {
       "levelLogicId": 10100020118,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0018_lbtough",
       "defaultHide": false,
       "position": {
@@ -24,17 +24,17 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Levelact",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 10100020119,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0053_hsmob",
       "defaultHide": false,
       "position": {
@@ -61,19 +61,19 @@
           "z": 0.0
         },
         "useWorldOffset": false,
-        "loop": 2,
-        "snap": 1,
+        "loop": "PingPong",
+        "snap": "Navmesh",
         "inLocalSpace": true,
         "addBornPositionAsCheckpoint": true,
         "useTurnAsWalkEnd": false,
         "enableBornAction": false,
-        "bornMoveStyle": 0,
+        "bornMoveStyle": "Walk",
         "enableBornSpeedOverride": false,
         "bornOverrideSpeed": 4.0,
         "bornPositionWaitDuration": 0.0,
         "actions": [
           {
-            "actionType": 1,
+            "actionType": "Checkpoint",
             "position": {
               "x": 0.0,
               "y": 0.0,
@@ -82,7 +82,7 @@
             "subPositions": [],
             "subActions": [
               {
-                "type": 1,
+                "type": "Wait",
                 "duration": 2.0,
                 "rotationY": 0.0,
                 "rotationOffset": 0.0,
@@ -91,19 +91,19 @@
                   "tagName": "",
                   "tagId": 0
                 },
-                "animMaskType": 0,
+                "animMaskType": "Default",
                 "ignoreAnimDis": 0.0,
                 "repeatAnim": false,
                 "rootMotion": false,
-                "actionEndType": 0,
+                "actionEndType": "WaitActionEnd",
                 "waitTime": 0.0,
                 "radioId": "",
-                "eventToLevelType": 0,
+                "eventToLevelType": "None",
                 "eventBBDataPairs": [],
                 "configSnap": false,
-                "snapToGround": 0,
+                "snapToGround": "None",
                 "configMovementStyle": false,
-                "movementStyle": 0,
+                "movementStyle": "Walk",
                 "overrideSpeed": false,
                 "overrideSpeedValue": 4.0,
                 "radius": 0.0
@@ -111,7 +111,7 @@
             ]
           },
           {
-            "actionType": 1,
+            "actionType": "Checkpoint",
             "position": {
               "x": -3.464676,
               "y": 0.137947083,
@@ -120,7 +120,7 @@
             "subPositions": [],
             "subActions": [
               {
-                "type": 1,
+                "type": "Wait",
                 "duration": 2.0,
                 "rotationY": 0.0,
                 "rotationOffset": 0.0,
@@ -129,19 +129,19 @@
                   "tagName": "",
                   "tagId": 0
                 },
-                "animMaskType": 0,
+                "animMaskType": "Default",
                 "ignoreAnimDis": 0.0,
                 "repeatAnim": false,
                 "rootMotion": true,
-                "actionEndType": 0,
+                "actionEndType": "WaitActionEnd",
                 "waitTime": 0.0,
                 "radioId": "",
-                "eventToLevelType": 0,
+                "eventToLevelType": "None",
                 "eventBBDataPairs": [],
                 "configSnap": false,
-                "snapToGround": 0,
+                "snapToGround": "None",
                 "configMovementStyle": false,
-                "movementStyle": 0,
+                "movementStyle": "Walk",
                 "overrideSpeed": false,
                 "overrideSpeedValue": 4.0,
                 "radius": 0.0
@@ -149,7 +149,7 @@
             ]
           },
           {
-            "actionType": 1,
+            "actionType": "Checkpoint",
             "position": {
               "x": -6.02880859,
               "y": -0.0244140625,
@@ -158,7 +158,7 @@
             "subPositions": [],
             "subActions": [
               {
-                "type": 1,
+                "type": "Wait",
                 "duration": 2.0,
                 "rotationY": 0.0,
                 "rotationOffset": 0.0,
@@ -167,19 +167,19 @@
                   "tagName": "",
                   "tagId": 0
                 },
-                "animMaskType": 0,
+                "animMaskType": "Default",
                 "ignoreAnimDis": 0.0,
                 "repeatAnim": false,
                 "rootMotion": true,
-                "actionEndType": 0,
+                "actionEndType": "WaitActionEnd",
                 "waitTime": 0.0,
                 "radioId": "",
-                "eventToLevelType": 0,
+                "eventToLevelType": "None",
                 "eventBBDataPairs": [],
                 "configSnap": false,
-                "snapToGround": 0,
+                "snapToGround": "None",
                 "configMovementStyle": false,
-                "movementStyle": 0,
+                "movementStyle": "Walk",
                 "overrideSpeed": false,
                 "overrideSpeedValue": 4.0,
                 "radius": 0.0
@@ -187,7 +187,7 @@
             ]
           }
         ],
-        "motionType": 3,
+        "motionType": "None",
         "waitDistance": 0.0,
         "runAheadRadius": 0.0,
         "runBehindRadius": 0.0,
@@ -196,8 +196,8 @@
         "coolDownBetweenWalkAndStop": 1.0,
         "motionTriggerDis": 10.0,
         "changePlayerMoveStyle": false,
-        "forcePlayerMoveStyleInEscort": 0,
-        "moveStyleWithoutLead": 0,
+        "forcePlayerMoveStyleInEscort": "Walk",
+        "moveStyleWithoutLead": "Walk",
         "turnCheck": false,
         "turnCheckTime": 5.0,
         "turnCheckAngle": 45.0,
@@ -205,17 +205,17 @@
         "turnRadio": 0.8,
         "isUseCatmull": false
       },
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 10100020122,
       "dependencyGroupId": 20002,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0053_hsmob",
       "defaultHide": false,
       "position": {
@@ -234,17 +234,17 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "enemyGroupId": 20006,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 10100020188,
       "dependencyGroupId": 20002,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0050_hound",
       "defaultHide": false,
       "position": {
@@ -263,16 +263,16 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "enemyGroupId": 20006,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 10100020260,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0050_hound",
       "defaultHide": false,
       "position": {
@@ -291,17 +291,17 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Levelact02",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 10100020279,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0055_hscrane",
       "defaultHide": false,
       "position": {
@@ -320,17 +320,17 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Levelact01",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     },
     {
       "levelLogicId": 10100020281,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0055_hscrane",
       "defaultHide": false,
       "position": {
@@ -349,19 +349,19 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": true,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Rest",
       "enemyGroupId": 0,
-      "patrolCfgType": 0
+      "patrolCfgType": "Patrol"
     }
   ],
   "interactives": [
     {
       "levelLogicId": 10100020108,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common_normal",
       "defaultHide": false,
       "position": {
@@ -387,7 +387,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -402,7 +402,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -415,7 +415,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -428,7 +428,7 @@
     },
     {
       "levelLogicId": 10100020125,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common_normal",
       "defaultHide": false,
       "position": {
@@ -454,7 +454,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -469,7 +469,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -482,7 +482,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -495,7 +495,7 @@
     },
     {
       "levelLogicId": 10100020126,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common_normal",
       "defaultHide": false,
       "position": {
@@ -521,7 +521,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -536,7 +536,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -549,7 +549,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -563,7 +563,7 @@
     {
       "levelLogicId": 10100020127,
       "belongLevelScriptId": 10100020015,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_erosion_core",
       "defaultHide": false,
       "position": {
@@ -589,7 +589,7 @@
         {
           "key": "position_list",
           "value": {
-            "type": 12,
+            "type": "Vector3List",
             "valueArray": [
               {
                 "valueBit64": 1124763566
@@ -786,7 +786,7 @@
         {
           "key": "num_list",
           "value": {
-            "type": 4,
+            "type": "IntList",
             "valueArray": [
               {
                 "valueBit64": 6
@@ -806,7 +806,7 @@
         {
           "key": "variable",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -820,7 +820,7 @@
           {
             "key": "shape",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -831,7 +831,7 @@
           {
             "key": "extent",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 1065353216
@@ -848,7 +848,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -865,7 +865,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -876,7 +876,7 @@
           {
             "key": "height",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1065353216
@@ -887,7 +887,7 @@
           {
             "key": "load_from_table",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -898,21 +898,21 @@
           {
             "key": "active_skill",
             "value": {
-              "type": 8,
+              "type": "StringList",
               "valueArray": []
             }
           },
           {
             "key": "passive_skill",
             "value": {
-              "type": 8,
+              "type": "StringList",
               "valueArray": []
             }
           },
           {
             "key": "skill_blackboard",
             "value": {
-              "type": 8,
+              "type": "StringList",
               "valueArray": []
             }
           }
@@ -921,7 +921,7 @@
     },
     {
       "levelLogicId": 10100020143,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_collection_coin_puzzle",
       "defaultHide": false,
       "position": {
@@ -949,7 +949,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -962,7 +962,7 @@
           {
             "key": "spline_id",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 20000
@@ -973,7 +973,7 @@
           {
             "key": "movable",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -984,7 +984,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1077936128
@@ -995,7 +995,7 @@
           {
             "key": "speed",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1088421888
@@ -1006,7 +1006,7 @@
           {
             "key": "speed_list",
             "value": {
-              "type": 6,
+              "type": "FloatList",
               "valueArray": [
                 {
                   "valueBit64": 1088421888
@@ -1038,7 +1038,7 @@
           {
             "key": "wait_for_nearby_list",
             "value": {
-              "type": 2,
+              "type": "BoolList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1070,7 +1070,7 @@
           {
             "key": "wait_time_list",
             "value": {
-              "type": 6,
+              "type": "FloatList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1102,7 +1102,7 @@
           {
             "key": "use_smooth_speed_list",
             "value": {
-              "type": 2,
+              "type": "BoolList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1137,7 +1137,7 @@
     {
       "levelLogicId": 10100020168,
       "belongLevelScriptId": 10100020012,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_empty",
       "defaultHide": false,
       "position": {
@@ -1165,7 +1165,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1178,14 +1178,14 @@
           {
             "key": "position_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           },
           {
             "key": "rotation_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           }
@@ -1194,7 +1194,7 @@
     },
     {
       "levelLogicId": 10100020173,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_collection_coin_puzzle",
       "defaultHide": false,
       "position": {
@@ -1222,7 +1222,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1235,7 +1235,7 @@
           {
             "key": "spline_id",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 20003
@@ -1246,7 +1246,7 @@
           {
             "key": "movable",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -1257,7 +1257,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1084227584
@@ -1268,7 +1268,7 @@
           {
             "key": "use_same_speed",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1279,7 +1279,7 @@
           {
             "key": "speed",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1092616192
@@ -1290,7 +1290,7 @@
           {
             "key": "speed_list",
             "value": {
-              "type": 6,
+              "type": "FloatList",
               "valueArray": [
                 {
                   "valueBit64": 1097859072
@@ -1310,7 +1310,7 @@
           {
             "key": "wait_for_nearby_list",
             "value": {
-              "type": 2,
+              "type": "BoolList",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -1330,7 +1330,7 @@
           {
             "key": "wait_time_list",
             "value": {
-              "type": 6,
+              "type": "FloatList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1350,7 +1350,7 @@
           {
             "key": "use_smooth_speed_list",
             "value": {
-              "type": 2,
+              "type": "BoolList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1372,7 +1372,7 @@
     },
     {
       "levelLogicId": 10100020181,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_campfire_v2",
       "defaultHide": false,
       "position": {
@@ -1398,7 +1398,7 @@
         {
           "key": "position",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1124252516
@@ -1415,7 +1415,7 @@
         {
           "key": "rotation",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -1434,7 +1434,7 @@
     },
     {
       "levelLogicId": 10100020246,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_dungeon_entry_challenge",
       "defaultHide": false,
       "position": {
@@ -1460,7 +1460,7 @@
         {
           "key": "dungeion_series_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -1475,7 +1475,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1488,7 +1488,7 @@
     },
     {
       "levelLogicId": 10100020247,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_dungeon_entry_challenge",
       "defaultHide": false,
       "position": {
@@ -1514,7 +1514,7 @@
         {
           "key": "dungeion_series_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -1529,7 +1529,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -1543,7 +1543,7 @@
     {
       "levelLogicId": 10100020249,
       "dependencyGroupId": 20004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port",
       "defaultHide": false,
       "position": {
@@ -1569,7 +1569,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1127086912
@@ -1586,7 +1586,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020250
@@ -1597,7 +1597,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -1608,7 +1608,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1625,7 +1625,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1642,7 +1642,7 @@
         {
           "key": "scale",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1092616192
@@ -1653,7 +1653,7 @@
         {
           "key": "state",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -1667,7 +1667,7 @@
     {
       "levelLogicId": 10100020250,
       "dependencyGroupId": 20004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port_bottom",
       "defaultHide": false,
       "position": {
@@ -1693,7 +1693,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1127086912
@@ -1710,7 +1710,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020249
@@ -1721,7 +1721,7 @@
         {
           "key": "top_rope_port",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1732,7 +1732,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -1743,7 +1743,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1760,7 +1760,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1777,7 +1777,7 @@
         {
           "key": "scale",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1092616192
@@ -1791,7 +1791,7 @@
     {
       "levelLogicId": 10100020251,
       "dependencyGroupId": 20005,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port_top_right",
       "defaultHide": false,
       "position": {
@@ -1817,7 +1817,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1127371111
@@ -1834,7 +1834,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020252
@@ -1845,7 +1845,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -1856,7 +1856,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1873,7 +1873,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1890,7 +1890,7 @@
         {
           "key": "scale",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1086324736
@@ -1901,7 +1901,7 @@
         {
           "key": "state",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -1915,7 +1915,7 @@
     {
       "levelLogicId": 10100020252,
       "dependencyGroupId": 20005,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_rope_port_bottom",
       "defaultHide": false,
       "position": {
@@ -1941,7 +1941,7 @@
         {
           "key": "rope_end_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1127371111
@@ -1958,7 +1958,7 @@
         {
           "key": "target",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020251
@@ -1969,7 +1969,7 @@
         {
           "key": "top_rope_port",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1980,7 +1980,7 @@
         {
           "key": "rope_camera_fov",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": -1082130432
@@ -1991,7 +1991,7 @@
         {
           "key": "camera_pos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -2008,7 +2008,7 @@
         {
           "key": "camera_rot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -2025,7 +2025,7 @@
         {
           "key": "scale",
           "value": {
-            "type": 5,
+            "type": "Float",
             "valueArray": [
               {
                 "valueBit64": 1086324736
@@ -2039,7 +2039,7 @@
     {
       "levelLogicId": 10100020256,
       "dependencyGroupId": 20001,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_module_chasingrabbit",
       "defaultHide": false,
       "position": {
@@ -2065,7 +2065,7 @@
         {
           "key": "patrolId",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 20006
@@ -2076,7 +2076,7 @@
         {
           "key": "rabbitNpc",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020253
@@ -2087,7 +2087,7 @@
         {
           "key": "radio_wait_expired",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2102,7 +2102,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1092616192
@@ -2116,7 +2116,7 @@
     {
       "levelLogicId": 10100020258,
       "dependencyGroupId": 20003,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_module_chasingrabbit",
       "defaultHide": false,
       "position": {
@@ -2142,7 +2142,7 @@
         {
           "key": "patrolId",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 20005
@@ -2153,7 +2153,7 @@
         {
           "key": "rabbitNpc",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020257
@@ -2164,7 +2164,7 @@
         {
           "key": "radio_wait_expired",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2179,7 +2179,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1092616192
@@ -2192,7 +2192,7 @@
     },
     {
       "levelLogicId": 10100020261,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_campfire_v2",
       "defaultHide": false,
       "position": {
@@ -2218,7 +2218,7 @@
         {
           "key": "position",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1133709746
@@ -2235,7 +2235,7 @@
         {
           "key": "rotation",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": -2147483648
@@ -2255,7 +2255,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -2268,7 +2268,7 @@
     },
     {
       "levelLogicId": 10100020269,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common",
       "defaultHide": false,
       "position": {
@@ -2294,7 +2294,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2309,7 +2309,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2322,7 +2322,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -2336,7 +2336,7 @@
     {
       "levelLogicId": 10100020273,
       "belongLevelScriptId": 10100020012,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_volume",
       "defaultHide": false,
       "position": {
@@ -2364,7 +2364,7 @@
           {
             "key": "shape",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -2375,7 +2375,7 @@
           {
             "key": "size",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 1109393408
@@ -2392,7 +2392,7 @@
           {
             "key": "interactive_direction_check",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2403,7 +2403,7 @@
           {
             "key": "check_area_offset",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2420,7 +2420,7 @@
           {
             "key": "check_area_radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1092616192
@@ -2431,7 +2431,7 @@
           {
             "key": "check_area_height",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1084227584
@@ -2442,7 +2442,7 @@
           {
             "key": "check_angle",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1135869952
@@ -2453,7 +2453,7 @@
           {
             "key": "player_direction_check",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2464,7 +2464,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2477,7 +2477,7 @@
     },
     {
       "levelLogicId": 10100020274,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common",
       "defaultHide": false,
       "position": {
@@ -2503,7 +2503,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2518,7 +2518,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2531,7 +2531,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -2545,7 +2545,7 @@
     {
       "levelLogicId": 10100020297,
       "belongLevelScriptId": 10100020013,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_challenge_start_point_once",
       "defaultHide": false,
       "position": {
@@ -2571,7 +2571,7 @@
         {
           "key": "id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2583,7 +2583,7 @@
         {
           "key": "label",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2598,7 +2598,7 @@
           {
             "key": "interactive_direction_check",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -2609,7 +2609,7 @@
           {
             "key": "check_area_radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1075838976
@@ -2620,7 +2620,7 @@
           {
             "key": "check_area_height",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1075838976
@@ -2631,7 +2631,7 @@
           {
             "key": "check_angle",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1127481344
@@ -2642,7 +2642,7 @@
           {
             "key": "player_direction_check",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -2655,7 +2655,7 @@
           {
             "key": "position",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": -1224212480
@@ -2672,7 +2672,7 @@
           {
             "key": "rotation",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": -2147483648
@@ -2692,7 +2692,7 @@
     {
       "levelLogicId": 10100020298,
       "belongLevelScriptId": 10100020013,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common_high",
       "defaultHide": true,
       "position": {
@@ -2718,7 +2718,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -2733,7 +2733,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2746,7 +2746,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -2760,7 +2760,7 @@
     {
       "levelLogicId": 10100020310,
       "belongLevelScriptId": 10100020014,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_collection_coin_puzzle",
       "defaultHide": true,
       "position": {
@@ -2788,7 +2788,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2801,7 +2801,7 @@
           {
             "key": "spline_id",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 20007
@@ -2812,7 +2812,7 @@
           {
             "key": "movable",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -2823,7 +2823,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1084227584
@@ -2834,7 +2834,7 @@
           {
             "key": "use_same_speed",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2845,7 +2845,7 @@
           {
             "key": "speed_list",
             "value": {
-              "type": 6,
+              "type": "FloatList",
               "valueArray": [
                 {
                   "valueBit64": 1103626240
@@ -2871,7 +2871,7 @@
           {
             "key": "wait_for_nearby_list",
             "value": {
-              "type": 2,
+              "type": "BoolList",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -2897,7 +2897,7 @@
           {
             "key": "wait_time_list",
             "value": {
-              "type": 6,
+              "type": "FloatList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2923,7 +2923,7 @@
           {
             "key": "use_smooth_speed_list",
             "value": {
-              "type": 2,
+              "type": "BoolList",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2952,7 +2952,7 @@
     {
       "levelLogicId": 10100020335,
       "belongLevelScriptId": 10100020012,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_empty",
       "defaultHide": false,
       "position": {
@@ -2980,7 +2980,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -2993,14 +2993,14 @@
           {
             "key": "position_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           },
           {
             "key": "rotation_list",
             "value": {
-              "type": 12,
+              "type": "Vector3List",
               "valueArray": []
             }
           }
@@ -3014,7 +3014,7 @@
   "npcs": [
     {
       "levelLogicId": 10100020253,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_obj_rabbit_01_g01_map02_lv001_data_sub_01_gameplay_001",
       "defaultHide": false,
       "position": {
@@ -3038,19 +3038,19 @@
       "type": 2,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -3082,7 +3082,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -3094,7 +3094,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -3111,7 +3111,7 @@
     },
     {
       "levelLogicId": 10100020257,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_obj_rabbit_01_g01_map02_lv001_data_sub_01_gameplay_002",
       "defaultHide": false,
       "position": {
@@ -3135,19 +3135,19 @@
       "type": 2,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -3179,7 +3179,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -3191,7 +3191,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -3213,8 +3213,8 @@
       "scriptId": 10100020004,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -3223,7 +3223,7 @@
             {
               "key": "isactive",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -3240,7 +3240,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnInteractiveStateChanged, Gameplay.Beyond",
               "_ID": 16,
               "_nextID": 18,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 10100110001
@@ -3264,7 +3264,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnInteractiveStateChanged, Gameplay.Beyond",
               "_ID": 27,
               "_nextID": 29,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 10100110002
@@ -3378,7 +3378,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3434,7 +3434,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -3506,7 +3506,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3580,7 +3580,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3628,7 +3628,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3676,7 +3676,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3724,7 +3724,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3788,7 +3788,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3813,7 +3813,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -3873,7 +3873,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": true
@@ -3914,7 +3914,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -3930,7 +3930,7 @@
                 "constValue": 5.0
               },
               "_type": {
-                "constValue": 0
+                "constValue": "MediaGuide"
               },
               "_needIgnoreWhenConflict": {
                 "constValue": false
@@ -3957,7 +3957,7 @@
               "_ID": 15,
               "_uid": "13269e55",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": 100,
@@ -3973,7 +3973,7 @@
               "_ID": 17,
               "_uid": "b5c5ab80",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": 100,
@@ -3989,7 +3989,7 @@
               "_ID": 26,
               "_uid": "3be0741b",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": 100,
@@ -4005,7 +4005,7 @@
               "_ID": 28,
               "_uid": "0e610dff",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": 100,
@@ -4019,11 +4019,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": 141.97,
             "y": 92.69159,
@@ -4044,7 +4044,7 @@
       ],
       "startShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": 141.97,
             "y": 92.69159,
@@ -4070,8 +4070,8 @@
       "scriptId": 10100020012,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -4084,7 +4084,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnLeaderEnterTrigger, Gameplay.Beyond",
               "_ID": 0,
               "_nextID": 1,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 10100020273
@@ -4176,7 +4176,7 @@
               "_uid": "f53710f4",
               "useCurrentScope": true,
               "lookAt1Type": {
-                "constValue": 0
+                "constValue": "Entity"
               },
               "lookAt1": {
                 "constValue": {
@@ -4198,7 +4198,7 @@
                 }
               },
               "lookAt2Type": {
-                "constValue": 0
+                "constValue": "Entity"
               },
               "lookAt2": {
                 "constValue": {
@@ -4224,7 +4224,7 @@
                 "constValue": 1.0
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "blendTime": {
                 "constValue": 2.0
@@ -4297,7 +4297,7 @@
                 "idRef": 17
               },
               "_gait": {
-                "constValue": 0
+                "constValue": "Walk"
               }
             },
             {
@@ -4354,7 +4354,7 @@
                 "constValue": true
               },
               "_blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "_blendTime": {
                 "constValue": 1.0
@@ -4391,11 +4391,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 106.0,
             "y": 93.5,
@@ -4414,7 +4414,7 @@
           "radius": 175.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 84.72,
             "y": 122.7,
@@ -4433,7 +4433,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 124.97,
             "y": 97.7,
@@ -4452,7 +4452,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 84.72,
             "y": 97.6,
@@ -4473,7 +4473,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 106.0,
             "y": 93.5,
@@ -4496,7 +4496,7 @@
         {
           "key": "isFirst",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1,
@@ -4514,8 +4514,8 @@
       "scriptId": 10100020013,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 1,
-      "endType": 0,
+      "startType": "Manual",
+      "endType": "ByExitStartShape",
       "refGameId": "world_energy_point_small_map02_lv001_01",
       "modules": {},
       "isEmbedded": true,
@@ -4525,7 +4525,7 @@
             {
               "key": "SpawnEffectID",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -4537,7 +4537,7 @@
             {
               "key": "SpawnEffectID2",
               "value": {
-                "type": 3,
+                "type": "Int",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -4549,7 +4549,7 @@
             {
               "key": "ShowChestFX",
               "value": {
-                "type": 7,
+                "type": "String",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -4608,7 +4608,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnEntityStart, Gameplay.Beyond",
               "_ID": 53,
               "_nextID": 54,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "paramSource": 200,
                 "path": "Chest",
@@ -4709,7 +4709,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4835,7 +4835,7 @@
                 "constValue": true
               },
               "_actionMask": {
-                "constValue": 0
+                "constValue": "None"
               }
             },
             {
@@ -4925,7 +4925,7 @@
                 "constValue": true
               },
               "_actionMask": {
-                "constValue": -1
+                "constValue": "All"
               }
             },
             {
@@ -5206,7 +5206,7 @@
                 "$type": "Beyond.Gameplay.CheckScriptTaskStateEqual, Gameplay.Beyond",
                 "uniqueId": "db281e94",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_levelId": {
                   "paramSource": 1000
@@ -5223,10 +5223,10 @@
                   }
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetValue": {
-                  "constValue": 1
+                  "constValue": "Processing"
                 }
               }
             },
@@ -5243,7 +5243,7 @@
               "_ID": 32,
               "_uid": "4b7b828d",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": 100,
@@ -5310,11 +5310,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 264.84,
             "y": 93.61,
@@ -5333,7 +5333,7 @@
           "radius": 105.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 264.84,
             "y": 93.61,
@@ -5352,7 +5352,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 269.606842,
             "y": 93.61,
@@ -5371,7 +5371,7 @@
           "radius": 75.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 269.606842,
             "y": 93.62,
@@ -5392,7 +5392,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 264.84,
             "y": 93.61,
@@ -5415,7 +5415,7 @@
         {
           "key": "Chest",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020298
@@ -5426,7 +5426,7 @@
         {
           "key": "Entry",
           "value": {
-            "type": 13,
+            "type": "EntityPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020297
@@ -5437,7 +5437,7 @@
         {
           "key": "SpawnerID",
           "value": {
-            "type": 50,
+            "type": "SpawnerPtr",
             "valueArray": [
               {
                 "valueBit64": 10100020001,
@@ -5449,7 +5449,7 @@
         {
           "key": "CameraPos",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1132435158
@@ -5466,7 +5466,7 @@
         {
           "key": "CameraRot",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1100792272
@@ -5483,7 +5483,7 @@
         {
           "key": "ChestPostion",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 1132907949
@@ -5500,7 +5500,7 @@
         {
           "key": "ChestRotation",
           "value": {
-            "type": 11,
+            "type": "Vector3",
             "valueArray": [
               {
                 "valueBit64": 845491939
@@ -5517,7 +5517,7 @@
         {
           "key": "Completed",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5529,7 +5529,7 @@
         {
           "key": "SpawnChest",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -5541,7 +5541,7 @@
         {
           "key": "lt:p:f7291b3c:d268e4ed",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -5552,7 +5552,7 @@
         {
           "key": "lt:mp:f7291b3c:d268e4ed",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -5566,12 +5566,12 @@
           "conditionDict": {
             "d268e4ed": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckLevelScriptPropertyBool, Gameplay.Beyond",
                 "uniqueId": "d268e4ed",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_mapId": {
                   "paramSource": 1000
@@ -5589,12 +5589,12 @@
                   "constValue": true
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": true
         }
@@ -5617,8 +5617,8 @@
       "scriptId": 10100020014,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -5631,11 +5631,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 85.22152,
             "y": 143.740021,
@@ -5654,7 +5654,7 @@
           "radius": 155.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 118.389656,
             "y": 95.1100159,
@@ -5675,7 +5675,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 85.22152,
             "y": 143.740021,
@@ -5701,8 +5701,8 @@
       "scriptId": 10100020015,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -5715,11 +5715,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 142.075882,
             "y": 93.03739,
@@ -5738,7 +5738,7 @@
           "radius": 125.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 138.53,
             "y": 84.84,
@@ -5759,7 +5759,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 142.075882,
             "y": 93.03739,
@@ -5791,19 +5791,19 @@
         "z": 0.0
       },
       "useWorldOffset": false,
-      "loop": 2,
-      "snap": 1,
+      "loop": "PingPong",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 2.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 213.230209,
             "y": 0.788787842,
@@ -5812,7 +5812,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -5821,19 +5821,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -5841,7 +5841,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 223.830231,
             "y": 0.7641525,
@@ -5850,7 +5850,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -5859,19 +5859,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -5879,7 +5879,7 @@
           ]
         }
       ],
-      "motionType": 0,
+      "motionType": "Lead",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -5888,8 +5888,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 0,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Walk",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -5905,19 +5905,19 @@
         "z": 0.0
       },
       "useWorldOffset": false,
-      "loop": 1,
-      "snap": 1,
+      "loop": "Circle",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 2.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 206.25267,
             "y": 0.701423645,
@@ -5926,7 +5926,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -5935,19 +5935,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -5955,7 +5955,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 202.55658,
             "y": 0.78956604,
@@ -5964,7 +5964,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -5973,19 +5973,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -5993,7 +5993,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 199.723541,
             "y": 0.8070755,
@@ -6002,7 +6002,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6011,19 +6011,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6031,7 +6031,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 195.688782,
             "y": 1.02720642,
@@ -6040,7 +6040,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6049,19 +6049,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6069,7 +6069,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 202.06192,
             "y": 0.85710144,
@@ -6078,7 +6078,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 1,
+              "type": "Wait",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6087,19 +6087,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6107,7 +6107,7 @@
           ]
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6116,8 +6116,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 0,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Walk",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -6133,19 +6133,19 @@
         "z": -594.0928
       },
       "useWorldOffset": false,
-      "loop": 2,
-      "snap": 1,
+      "loop": "PingPong",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 1.50160217,
             "y": -0.06771088,
@@ -6155,7 +6155,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 2.95144653,
             "y": 0.0531082153,
@@ -6165,7 +6165,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 5.21311951,
             "y": 0.09681702,
@@ -6175,7 +6175,7 @@
           "subActions": []
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6184,8 +6184,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 0,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Walk",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -6201,19 +6201,19 @@
         "z": -611.103149
       },
       "useWorldOffset": false,
-      "loop": 0,
-      "snap": 1,
+      "loop": "None",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 13.8632355,
             "y": 0.474594116,
@@ -6222,7 +6222,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6231,19 +6231,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6251,7 +6251,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 9.14884949,
             "y": 0.9408035,
@@ -6260,7 +6260,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6269,19 +6269,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 16,
+              "movementStyle": "Run",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6289,7 +6289,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 2.82008362,
             "y": 0.497833252,
@@ -6298,7 +6298,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6307,19 +6307,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 16,
+              "movementStyle": "Run",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6327,7 +6327,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 1.12359619,
             "y": 0.225616455,
@@ -6336,7 +6336,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6345,19 +6345,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 16,
+              "movementStyle": "Run",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6365,7 +6365,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 3.33291626,
             "y": 0.159088135,
@@ -6374,7 +6374,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 7,
+              "type": "EventToLevel",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6383,25 +6383,25 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 1001002,
+              "eventToLevelType": "ChasingRabbit_FinishPoint",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
             },
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6410,19 +6410,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 24,
+              "movementStyle": "Sprint",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6430,7 +6430,7 @@
           ]
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6439,8 +6439,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 0,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Walk",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -6456,19 +6456,19 @@
         "z": -611.103149
       },
       "useWorldOffset": false,
-      "loop": 0,
-      "snap": 1,
+      "loop": "None",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 4.79318237,
             "y": 0.850296,
@@ -6477,7 +6477,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6486,19 +6486,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6506,7 +6506,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 5.473694,
             "y": 0.8987808,
@@ -6515,7 +6515,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6524,19 +6524,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 16,
+              "movementStyle": "Run",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6544,7 +6544,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 4.104248,
             "y": 0.739769,
@@ -6553,7 +6553,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6562,19 +6562,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 16,
+              "movementStyle": "Run",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6582,7 +6582,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 0.867248535,
             "y": 0.9487381,
@@ -6591,7 +6591,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6600,19 +6600,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 16,
+              "movementStyle": "Run",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6620,7 +6620,7 @@
           ]
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -0.786819458,
             "y": 0.0292053223,
@@ -6629,7 +6629,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 7,
+              "type": "EventToLevel",
               "duration": 2.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6638,25 +6638,25 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 1001002,
+              "eventToLevelType": "ChasingRabbit_FinishPoint",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
             },
             {
-              "type": 8,
+              "type": "ConfigMovement",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -6665,19 +6665,19 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": true,
-              "movementStyle": 24,
+              "movementStyle": "Sprint",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -6685,7 +6685,7 @@
           ]
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -6694,8 +6694,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 0,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Walk",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,
@@ -7383,8 +7383,8 @@
     ],
     "baseData": [
       {
-        "functionType": 2,
-        "shapeType": 3,
+        "functionType": "ShowSceneToast",
+        "shapeType": "PolyLine",
         "index": 0,
         "offset": {
           "x": 0.0,
@@ -7494,8 +7494,8 @@
         "hasCondition": false
       },
       {
-        "functionType": 2,
-        "shapeType": 3,
+        "functionType": "ShowSceneToast",
+        "shapeType": "PolyLine",
         "index": 1,
         "offset": {
           "x": 0.0,
@@ -7573,8 +7573,8 @@
         "hasCondition": false
       },
       {
-        "functionType": 2,
-        "shapeType": 1,
+        "functionType": "ShowSceneToast",
+        "shapeType": "Box",
         "index": 2,
         "offset": {
           "x": 0.0,
@@ -7620,7 +7620,7 @@
         "depthText": {
           "key": "scene_map02_lv001_sub01_location_tips_2_1"
         },
-        "priority": 1,
+        "priority": "Override",
         "saveId": 60
       },
       {
@@ -7633,7 +7633,7 @@
         "depthText": {
           "key": "scene_map02_lv001_sub01_location_tips_1_1"
         },
-        "priority": 1,
+        "priority": "Override",
         "saveId": 61
       },
       {
@@ -7646,7 +7646,7 @@
         "depthText": {
           "key": ""
         },
-        "priority": 0,
+        "priority": "Base",
         "saveId": 120
       }
     ],

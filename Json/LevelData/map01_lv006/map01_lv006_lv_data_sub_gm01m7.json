@@ -6,7 +6,7 @@
   "interactives": [
     {
       "levelLogicId": 3500120003,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_terminal_reading",
       "defaultHide": false,
       "position": {
@@ -32,7 +32,7 @@
         {
           "key": "terminal_id_list",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -47,7 +47,7 @@
           {
             "key": "shape",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -58,7 +58,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -75,7 +75,7 @@
           {
             "key": "size",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 1065353216
@@ -92,7 +92,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -105,7 +105,7 @@
           {
             "key": "animation_key",
             "value": {
-              "type": 7,
+              "type": "String",
               "valueArray": [
                 {
                   "valueBit64": 0,
@@ -117,7 +117,7 @@
           {
             "key": "position",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -134,7 +134,7 @@
           {
             "key": "rotation",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -151,7 +151,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1072064102
@@ -164,7 +164,7 @@
     },
     {
       "levelLogicId": 3500120005,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_dnarrative_notebook",
       "defaultHide": false,
       "position": {
@@ -190,7 +190,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -201,7 +201,7 @@
         {
           "key": "type_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -215,7 +215,7 @@
     },
     {
       "levelLogicId": 3500120006,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_dnarrative_billboard",
       "defaultHide": false,
       "position": {
@@ -241,7 +241,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -252,7 +252,7 @@
         {
           "key": "type_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -266,7 +266,7 @@
     },
     {
       "levelLogicId": 3500120014,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_invisible_collider",
       "defaultHide": false,
       "position": {
@@ -295,7 +295,7 @@
   "interactiveLockData": [
     {
       "logicIdGlobal": 3500120003,
-      "unlockType": 2,
+      "unlockType": "MiniGame",
       "submitId": "",
       "skipSubmitBoard": false,
       "miniGameIds": [
@@ -324,7 +324,7 @@
   "npcs": [
     {
       "levelLogicId": 3500120010,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionscholar_a_18_g01_map01_lv006_gm01m7_002",
       "defaultHide": true,
       "position": {
@@ -348,14 +348,14 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/chesthugging2",
         "tagId": -569665934
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -363,9 +363,9 @@
           "tagId": 888404364
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -397,7 +397,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -409,7 +409,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -426,7 +426,7 @@
     },
     {
       "levelLogicId": 3500120011,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionscholar_a_18_g01_map01_lv006_gm01m7_001",
       "defaultHide": true,
       "position": {
@@ -450,19 +450,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -494,7 +494,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -506,7 +506,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -528,8 +528,8 @@
       "scriptId": 3500120001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -560,7 +560,7 @@
                 "constValue": "gm01m14_q#5"
               },
               "_filtedNewState": {
-                "constValue": 2
+                "constValue": "Processing"
               }
             },
             {
@@ -594,7 +594,7 @@
                 "constValue": "gm01m14_q#9"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             }
           ],
@@ -692,15 +692,15 @@
               "_ID": 8,
               "_uid": "7a579eaa",
               "_comparer": {
-                "constValue": 1
+                "constValue": "NotEqual"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 7
               },
               "_valueB": {
-                "constValue": 1
+                "constValue": "Available"
               }
             },
             {
@@ -716,15 +716,15 @@
               "_ID": 12,
               "_uid": "69501d86",
               "_comparer": {
-                "constValue": 1
+                "constValue": "NotEqual"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 11
               },
               "_valueB": {
-                "constValue": 0
+                "constValue": "None"
               }
             },
             {
@@ -740,15 +740,15 @@
               "_ID": 10,
               "_uid": "4b941629",
               "_comparer": {
-                "constValue": 1
+                "constValue": "NotEqual"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 9
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -762,11 +762,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 481.619019,
             "y": 21.8528938,
@@ -787,7 +787,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 481.619019,
             "y": 21.8528938,
@@ -819,19 +819,19 @@
         "z": 60.83666
       },
       "useWorldOffset": false,
-      "loop": 0,
-      "snap": 1,
+      "loop": "None",
+      "snap": "Navmesh",
       "inLocalSpace": true,
       "addBornPositionAsCheckpoint": true,
       "useTurnAsWalkEnd": false,
       "enableBornAction": false,
-      "bornMoveStyle": 0,
+      "bornMoveStyle": "Walk",
       "enableBornSpeedOverride": false,
       "bornOverrideSpeed": 4.0,
       "bornPositionWaitDuration": 0.0,
       "actions": [
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -16.2079468,
             "y": 0.0,
@@ -841,7 +841,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -7.630554,
             "y": -1.90734863E-06,
@@ -851,7 +851,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": -2.36483765,
             "y": 0.0,
@@ -861,7 +861,7 @@
           "subActions": []
         },
         {
-          "actionType": 1,
+          "actionType": "Checkpoint",
           "position": {
             "x": 0.2371521,
             "y": 0.0,
@@ -870,7 +870,7 @@
           "subPositions": [],
           "subActions": [
             {
-              "type": 2,
+              "type": "TurnTo",
               "duration": 0.0,
               "rotationY": 95.0,
               "rotationOffset": 0.0,
@@ -879,25 +879,25 @@
                 "tagName": "",
                 "tagId": 0
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
             },
             {
-              "type": 3,
+              "type": "PlayAnimation",
               "duration": 0.0,
               "rotationY": 0.0,
               "rotationOffset": 0.0,
@@ -906,19 +906,19 @@
                 "tagName": "Montage/NPC/Humanoid/Gentleman/Common/think1",
                 "tagId": 888404364
               },
-              "animMaskType": 0,
+              "animMaskType": "Default",
               "ignoreAnimDis": 0.0,
               "repeatAnim": false,
               "rootMotion": true,
-              "actionEndType": 0,
+              "actionEndType": "WaitActionEnd",
               "waitTime": 0.0,
               "radioId": "",
-              "eventToLevelType": 0,
+              "eventToLevelType": "None",
               "eventBBDataPairs": [],
               "configSnap": false,
-              "snapToGround": 0,
+              "snapToGround": "None",
               "configMovementStyle": false,
-              "movementStyle": 0,
+              "movementStyle": "Walk",
               "overrideSpeed": false,
               "overrideSpeedValue": 4.0,
               "radius": 0.0
@@ -926,7 +926,7 @@
           ]
         }
       ],
-      "motionType": 3,
+      "motionType": "None",
       "waitDistance": 0.0,
       "runAheadRadius": 0.0,
       "runBehindRadius": 0.0,
@@ -935,8 +935,8 @@
       "coolDownBetweenWalkAndStop": 1.0,
       "motionTriggerDis": 10.0,
       "changePlayerMoveStyle": false,
-      "forcePlayerMoveStyleInEscort": 0,
-      "moveStyleWithoutLead": 0,
+      "forcePlayerMoveStyleInEscort": "Walk",
+      "moveStyleWithoutLead": "Walk",
       "turnCheck": false,
       "turnCheckTime": 5.0,
       "turnCheckAngle": 45.0,

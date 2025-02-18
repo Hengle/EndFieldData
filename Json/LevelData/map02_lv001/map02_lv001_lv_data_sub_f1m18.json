@@ -5,7 +5,7 @@
   "enemies": [
     {
       "levelLogicId": 10100170004,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0029_lbmob",
       "defaultHide": true,
       "position": {
@@ -24,13 +24,13 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Talk02",
       "enemyGroupId": 0,
-      "patrolCfgType": 0,
+      "patrolCfgType": "Patrol",
       "overrideAIAttrData": {
         "longSightRange": 12.0,
         "shortSightRange": 3.0,
@@ -39,7 +39,7 @@
     },
     {
       "levelLogicId": 10100170005,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0029_lbmob",
       "defaultHide": true,
       "position": {
@@ -58,13 +58,13 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Talk01",
       "enemyGroupId": 0,
-      "patrolCfgType": 0,
+      "patrolCfgType": "Patrol",
       "overrideAIAttrData": {
         "longSightRange": 12.0,
         "shortSightRange": 3.0,
@@ -73,7 +73,7 @@
     },
     {
       "levelLogicId": 10100170006,
-      "entityType": 16,
+      "entityType": "Enemy",
       "entityDataIdKey": "eny_0029_lbmob",
       "defaultHide": true,
       "position": {
@@ -92,13 +92,13 @@
         "z": 1.0
       },
       "forceLoad": false,
-      "patrolGait": 0,
+      "patrolGait": "Walk",
       "respawnable": false,
       "level": 50,
       "overrideAIConfig": "",
       "bornTemplateId": "Levelact05",
       "enemyGroupId": 0,
-      "patrolCfgType": 0,
+      "patrolCfgType": "Patrol",
       "overrideAIAttrData": {
         "longSightRange": 12.0,
         "shortSightRange": 3.0,
@@ -109,7 +109,7 @@
   "interactives": [
     {
       "levelLogicId": 10100170058,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_narrative_common_empty_withoutVfx",
       "defaultHide": true,
       "position": {
@@ -135,7 +135,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -146,7 +146,7 @@
         {
           "key": "option_interact",
           "value": {
-            "type": 28,
+            "type": "LangKey",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -158,7 +158,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -172,7 +172,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1090519040
@@ -190,7 +190,7 @@
   "npcs": [
     {
       "levelLogicId": 10100170000,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_001",
       "defaultHide": true,
       "position": {
@@ -214,14 +214,14 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/dizzy",
         "tagId": -614670661
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -229,9 +229,9 @@
           "tagId": -614670661
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -263,7 +263,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -275,7 +275,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -292,7 +292,7 @@
     },
     {
       "levelLogicId": 10100170001,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_grandpa_hsfarmer_a_04_g01_map02_lv001_f1m18_001",
       "defaultHide": true,
       "position": {
@@ -316,19 +316,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -360,7 +360,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -372,7 +372,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -389,7 +389,7 @@
     },
     {
       "levelLogicId": 10100170002,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_002",
       "defaultHide": true,
       "position": {
@@ -413,14 +413,14 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/dizzy",
         "tagId": -614670661
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -428,9 +428,9 @@
           "tagId": -1990112339
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -462,7 +462,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -474,7 +474,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -491,7 +491,7 @@
     },
     {
       "levelLogicId": 10100170003,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_003",
       "defaultHide": true,
       "position": {
@@ -515,19 +515,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/dizzy",
         "tagId": -614670661
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -559,7 +559,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -571,7 +571,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -588,7 +588,7 @@
     },
     {
       "levelLogicId": 10100170045,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_grandpa_hsfarmer_a_04_g01_map02_lv001_f1m18_002",
       "defaultHide": true,
       "position": {
@@ -612,19 +612,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -656,7 +656,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -668,7 +668,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -685,7 +685,7 @@
     },
     {
       "levelLogicId": 10100170046,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_tpl_gentleman_unionminer_a_06_g01_map02_lv001_f1m18_003",
       "defaultHide": true,
       "position": {
@@ -709,19 +709,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -753,7 +753,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -765,7 +765,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -782,7 +782,7 @@
     },
     {
       "levelLogicId": 10100170047,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_tpl_gentleman_unionminer_a_06_g01_map02_lv001_f1m18_004",
       "defaultHide": true,
       "position": {
@@ -806,19 +806,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 0,
+      "patrolCfgType": "ActionSequenceId",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -850,7 +850,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -862,7 +862,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -879,7 +879,7 @@
     },
     {
       "levelLogicId": 10100170048,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_grandpa_hsfarmer_a_04_g01_map02_lv001_f1m18_003",
       "defaultHide": true,
       "position": {
@@ -903,19 +903,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -947,7 +947,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -959,7 +959,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -976,7 +976,7 @@
     },
     {
       "levelLogicId": 10100170050,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_004",
       "defaultHide": true,
       "position": {
@@ -1000,19 +1000,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "",
         "tagId": 0
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1044,7 +1044,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1056,7 +1056,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1073,7 +1073,7 @@
     },
     {
       "levelLogicId": 10100170053,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_005",
       "defaultHide": true,
       "position": {
@@ -1097,19 +1097,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/injured",
         "tagId": 1037189869
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1141,7 +1141,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1153,7 +1153,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1170,7 +1170,7 @@
     },
     {
       "levelLogicId": 10100170054,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_tpl_gentleman_unionminer_a_06_g01_map02_lv001_f1m18_001",
       "defaultHide": true,
       "position": {
@@ -1194,19 +1194,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/afraid",
         "tagId": 2108392607
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1238,7 +1238,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1250,7 +1250,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1267,7 +1267,7 @@
     },
     {
       "levelLogicId": 10100170056,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_obj_livstock_hs_01_g01_map02_lv001_data_sub_f1m18_atmospheric_001",
       "defaultHide": false,
       "position": {
@@ -1291,19 +1291,19 @@
       "type": 3,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Generic/livstockhs01/drink_01",
         "tagId": 103573126
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "",
@@ -1335,7 +1335,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1347,7 +1347,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1364,7 +1364,7 @@
     },
     {
       "levelLogicId": 10100170057,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_obj_livstock_hs_01_g01_map02_lv001_data_sub_f1m18_atmospheric_002",
       "defaultHide": false,
       "position": {
@@ -1388,19 +1388,19 @@
       "type": 3,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Generic/livstockhs01/drink_01",
         "tagId": 103573126
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1432,7 +1432,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1444,7 +1444,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1461,7 +1461,7 @@
     },
     {
       "levelLogicId": 10100170059,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_006",
       "defaultHide": true,
       "position": {
@@ -1485,14 +1485,14 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/scratchface",
         "tagId": -1622236223
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -1500,9 +1500,9 @@
           "tagId": -1622236223
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1534,7 +1534,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1546,7 +1546,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1563,7 +1563,7 @@
     },
     {
       "levelLogicId": 10100170060,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_tpl_gentleman_unionminer_a_06_g01_map02_lv001_f1m18_002",
       "defaultHide": true,
       "position": {
@@ -1587,19 +1587,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/afraid",
         "tagId": 2108392607
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1631,7 +1631,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1643,7 +1643,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1660,7 +1660,7 @@
     },
     {
       "levelLogicId": 10100170061,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_007",
       "defaultHide": true,
       "position": {
@@ -1684,19 +1684,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/injured",
         "tagId": 1037189869
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1728,7 +1728,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1740,7 +1740,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1757,7 +1757,7 @@
     },
     {
       "levelLogicId": 10100170062,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_008",
       "defaultHide": true,
       "position": {
@@ -1781,19 +1781,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/think1",
         "tagId": -1066045112
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1825,7 +1825,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1837,7 +1837,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1854,7 +1854,7 @@
     },
     {
       "levelLogicId": 10100170063,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_boy_hsfarmer_a_01_g01_map02_lv001_f1m18_009",
       "defaultHide": true,
       "position": {
@@ -1878,14 +1878,14 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/dizzy",
         "tagId": -614670661
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -1893,9 +1893,9 @@
           "tagId": -614670661
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -1927,7 +1927,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -1939,7 +1939,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -1956,7 +1956,7 @@
     },
     {
       "levelLogicId": 10100170064,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_liuchengyan_f1m18",
       "defaultHide": false,
       "position": {
@@ -1980,14 +1980,14 @@
       "type": 1,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Boy/Common/think2",
         "tagId": 1501307122
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [
         {
@@ -1995,9 +1995,9 @@
           "tagId": 1501307122
         }
       ],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -2027,7 +2027,7 @@
       "npcDialogSelector": "",
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -2039,7 +2039,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -2061,8 +2061,8 @@
       "scriptId": 10100170001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -2071,7 +2071,7 @@
             {
               "key": "level1Finish",
               "value": {
-                "type": 1,
+                "type": "Bool",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -2083,7 +2083,7 @@
             {
               "key": "level2Finish",
               "value": {
-                "type": 1,
+                "type": "Bool",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -2095,7 +2095,7 @@
             {
               "key": "level3Finish",
               "value": {
-                "type": 1,
+                "type": "Bool",
                 "valueArray": [
                   {
                     "valueBit64": 0,
@@ -2157,7 +2157,7 @@
                 "constValue": "f1m18_q#15"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2191,7 +2191,7 @@
                 "constValue": "f1m18_q#27"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2255,7 +2255,7 @@
                 "constValue": "f1m18_q#13"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2343,7 +2343,7 @@
                 "constValue": "f1m18_q#30"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2377,7 +2377,7 @@
                 "constValue": "f1m18_q#15"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2426,7 +2426,7 @@
                 "constValue": "f1m18_q#30"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2460,7 +2460,7 @@
                 "constValue": "f1m18_q#1"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2494,7 +2494,7 @@
                 "constValue": "f1m18_q#7"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -2545,7 +2545,7 @@
                 "constValue": "f1m18_q#25"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             }
           ],
@@ -2627,7 +2627,7 @@
                 ]
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -2679,7 +2679,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -2727,7 +2727,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -2775,7 +2775,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -2823,7 +2823,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -2871,7 +2871,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -2919,7 +2919,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -2967,7 +2967,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3247,7 +3247,7 @@
                 ]
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -3299,7 +3299,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3347,7 +3347,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3395,7 +3395,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3443,7 +3443,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3491,7 +3491,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3539,7 +3539,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3587,7 +3587,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3759,7 +3759,7 @@
                 ]
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -3811,7 +3811,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3859,7 +3859,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3907,7 +3907,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -3955,7 +3955,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4003,7 +4003,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4051,7 +4051,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4099,7 +4099,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4258,7 +4258,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4306,7 +4306,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4354,7 +4354,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4402,7 +4402,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4450,7 +4450,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4498,7 +4498,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4546,7 +4546,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4594,7 +4594,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4642,7 +4642,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4670,7 +4670,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -4686,7 +4686,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -4788,7 +4788,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4836,7 +4836,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4884,7 +4884,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4932,7 +4932,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -4980,7 +4980,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5028,7 +5028,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5076,7 +5076,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5124,7 +5124,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5172,7 +5172,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5200,7 +5200,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -5216,7 +5216,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -5318,7 +5318,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5366,7 +5366,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5414,7 +5414,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5462,7 +5462,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5510,7 +5510,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5558,7 +5558,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5606,7 +5606,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5654,7 +5654,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5702,7 +5702,7 @@
                 "constValue": true
               },
               "blendStyle": {
-                "constValue": 6
+                "constValue": "Linear"
               },
               "useYawCheck": {
                 "constValue": false
@@ -5730,7 +5730,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -5746,7 +5746,7 @@
                 "constValue": false
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               }
             },
             {
@@ -6022,15 +6022,15 @@
               "_ID": 186,
               "_uid": "2c7b1355",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 185
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6046,15 +6046,15 @@
               "_ID": 188,
               "_uid": "37632403",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 187
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6070,15 +6070,15 @@
               "_ID": 190,
               "_uid": "b26973c8",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 189
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6094,15 +6094,15 @@
               "_ID": 39,
               "_uid": "db772ffb",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 38
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6118,15 +6118,15 @@
               "_ID": 45,
               "_uid": "1ab3ff8e",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 44
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6142,15 +6142,15 @@
               "_ID": 101,
               "_uid": "a6bc85cc",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 100
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6166,15 +6166,15 @@
               "_ID": 159,
               "_uid": "e56138a6",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 158
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6190,15 +6190,15 @@
               "_ID": 166,
               "_uid": "c678db90",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 165
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6214,15 +6214,15 @@
               "_ID": 174,
               "_uid": "6372a86a",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 173
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6238,15 +6238,15 @@
               "_ID": 180,
               "_uid": "c85f6a89",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 179
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6262,15 +6262,15 @@
               "_ID": 205,
               "_uid": "43629e72",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 204
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -6286,15 +6286,15 @@
               "_ID": 207,
               "_uid": "d7302281",
               "_comparer": {
-                "constValue": 0
+                "constValue": "Equal"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 206
               },
               "_valueB": {
-                "constValue": 2
+                "constValue": "Processing"
               }
             },
             {
@@ -6308,11 +6308,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -406.7,
             "y": 113.022339,
@@ -6333,7 +6333,7 @@
       ],
       "startShapeList": [
         {
-          "type": 1,
+          "type": "BOX",
           "offset": {
             "x": -406.7,
             "y": 113.022339,
@@ -6356,7 +6356,7 @@
         {
           "key": "1stNotFinish",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1,
@@ -6368,7 +6368,7 @@
         {
           "key": "2ndtNotFinish",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1,
@@ -6380,7 +6380,7 @@
         {
           "key": "3rdNotFinish",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1,
@@ -6392,7 +6392,7 @@
         {
           "key": "Spawned",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -6404,7 +6404,7 @@
         {
           "key": "FinalLevelUpCompleted",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -6416,7 +6416,7 @@
         {
           "key": "lt:p:fd836cba:d579842c",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -6427,7 +6427,7 @@
         {
           "key": "lt:mp:fd836cba:d579842c",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -6441,26 +6441,26 @@
           "conditionDict": {
             "d579842c": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckQuestState, Gameplay.Beyond",
                 "uniqueId": "d579842c",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_questId": {
                   "constValue": "f1m18_q#10"
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetQuestState": {
-                  "constValue": 3
+                  "constValue": "Completed"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         }
@@ -6479,8 +6479,8 @@
       "scriptId": 10100170005,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 2,
-      "endType": 1,
+      "startType": "SameWithActive",
+      "endType": "Manual",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -6546,15 +6546,15 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 1,
-      "resetModeWhenEnd": 1,
+      "resetModeWhenActive": "ResetAll",
+      "resetModeWhenEnd": "ResetAll",
       "activeShapeList": [],
       "startShapeList": [],
       "properties": [
         {
           "key": "lt:p:c7ba41a9:22889cfd",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -6565,7 +6565,7 @@
         {
           "key": "lt:p:6c42f292:329e79c9",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -6576,7 +6576,7 @@
         {
           "key": "lt:mp:c7ba41a9:22889cfd",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -6587,7 +6587,7 @@
         {
           "key": "lt:mp:6c42f292:329e79c9",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -6601,26 +6601,26 @@
           "conditionDict": {
             "329e79c9": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckQuestState, Gameplay.Beyond",
                 "uniqueId": "329e79c9",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_questId": {
                   "constValue": "f1m18_q#30"
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetQuestState": {
-                  "constValue": 3
+                  "constValue": "Completed"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         },
@@ -6628,26 +6628,26 @@
           "conditionDict": {
             "22889cfd": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckQuestState, Gameplay.Beyond",
                 "uniqueId": "22889cfd",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_questId": {
                   "constValue": "f1m18_q#10"
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetQuestState": {
-                  "constValue": 3
+                  "constValue": "Completed"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         }

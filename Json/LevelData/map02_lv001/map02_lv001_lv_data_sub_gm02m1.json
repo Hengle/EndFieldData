@@ -6,7 +6,7 @@
   "interactives": [
     {
       "levelLogicId": 10100100004,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trchest_common_high",
       "defaultHide": true,
       "position": {
@@ -32,7 +32,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -47,7 +47,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -60,7 +60,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1056964608
@@ -73,7 +73,7 @@
     },
     {
       "levelLogicId": 10100100007,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_dnarrative_expensivebook",
       "defaultHide": true,
       "position": {
@@ -99,7 +99,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -110,7 +110,7 @@
         {
           "key": "prts_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -122,7 +122,7 @@
         {
           "key": "type_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -141,7 +141,7 @@
   "npcs": [
     {
       "levelLogicId": 10100100006,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_grandpa_hsfarmer_a_01_g01_map02_lv001_gm02m1_001",
       "defaultHide": true,
       "position": {
@@ -165,19 +165,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Grand/Common/tea",
         "tagId": -1243084823
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -209,7 +209,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -221,7 +221,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -238,7 +238,7 @@
     },
     {
       "levelLogicId": 10100100009,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_grandpa_hsfarmer_a_01_g01_map02_lv001_gm02m1_002",
       "defaultHide": true,
       "position": {
@@ -262,19 +262,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Grand/Common/nod",
         "tagId": 786185546
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -306,7 +306,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -318,7 +318,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -340,8 +340,8 @@
       "scriptId": 10100100001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -390,7 +390,7 @@
               "_uid": "205af124",
               "useCurrentScope": true,
               "lookAt1Type": {
-                "constValue": 0
+                "constValue": "Entity"
               },
               "lookAt1": {
                 "constValue": {
@@ -398,7 +398,7 @@
                 }
               },
               "lookAt2Type": {
-                "constValue": 0
+                "constValue": "Entity"
               },
               "lookAt2": {
                 "constValue": {
@@ -424,7 +424,7 @@
                 "constValue": 1.0
               },
               "blendStyle": {
-                "constValue": 1
+                "constValue": "EaseInOut"
               },
               "blendTime": {
                 "constValue": 1.0
@@ -493,7 +493,7 @@
                 "constValue": false
               },
               "_blendStyle": {
-                "constValue": 0
+                "constValue": "Cut"
               },
               "_blendTime": {
                 "constValue": 0.2
@@ -538,11 +538,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 3,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "ResetAllWhenNotDone",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -109.49,
             "y": 91.4256744,
@@ -563,7 +563,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -109.49,
             "y": 91.4256744,
@@ -586,7 +586,7 @@
         {
           "key": "show_person",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,

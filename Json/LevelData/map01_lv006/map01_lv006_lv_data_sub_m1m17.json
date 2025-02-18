@@ -7,7 +7,7 @@
     {
       "levelLogicId": 3500230001,
       "belongLevelScriptId": 3500230002,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_fixable_robot",
       "defaultHide": false,
       "position": {
@@ -33,7 +33,7 @@
         {
           "key": "exit_type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -44,7 +44,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -60,7 +60,7 @@
   "interactiveLockData": [
     {
       "logicIdGlobal": 3500230001,
-      "unlockType": 2,
+      "unlockType": "MiniGame",
       "submitId": "",
       "skipSubmitBoard": false,
       "miniGameIds": [
@@ -94,8 +94,8 @@
       "scriptId": 3500230002,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -108,11 +108,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 245.386215,
             "y": 82.47722,
@@ -131,7 +131,7 @@
           "radius": 85.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 245.670761,
             "y": 82.49553,
@@ -152,7 +152,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 245.386215,
             "y": 82.47722,
@@ -217,8 +217,8 @@
     ],
     "baseData": [
       {
-        "functionType": 4,
-        "shapeType": 2,
+        "functionType": "RadioTriggerZone",
+        "shapeType": "Sphere",
         "index": 0,
         "offset": {
           "x": 0.0,

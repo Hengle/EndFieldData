@@ -6,7 +6,7 @@
   "interactives": [
     {
       "levelLogicId": 2800070000,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_terminal_reading",
       "defaultHide": false,
       "position": {
@@ -32,7 +32,7 @@
         {
           "key": "terminal_id_list",
           "value": {
-            "type": 8,
+            "type": "StringList",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -44,7 +44,7 @@
         {
           "key": "state",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -58,7 +58,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -71,7 +71,7 @@
           {
             "key": "animation_key",
             "value": {
-              "type": 7,
+              "type": "String",
               "valueArray": [
                 {
                   "valueBit64": 0,
@@ -83,7 +83,7 @@
           {
             "key": "position",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -100,7 +100,7 @@
           {
             "key": "rotation",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -117,7 +117,7 @@
           {
             "key": "wait_time",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1072064102
@@ -130,7 +130,7 @@
     },
     {
       "levelLogicId": 2800070002,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_dnarrative_billboard",
       "defaultHide": false,
       "position": {
@@ -156,7 +156,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -167,7 +167,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -178,7 +178,7 @@
         {
           "key": "type_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -192,7 +192,7 @@
     },
     {
       "levelLogicId": 2800070003,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_narrative_common",
       "defaultHide": false,
       "position": {
@@ -218,7 +218,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -229,7 +229,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -240,7 +240,7 @@
         {
           "key": "type_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -256,7 +256,7 @@
   "interactiveLockData": [
     {
       "logicIdGlobal": 2800070000,
-      "unlockType": 2,
+      "unlockType": "MiniGame",
       "submitId": "",
       "skipSubmitBoard": false,
       "miniGameIds": [
@@ -285,7 +285,7 @@
   "npcs": [
     {
       "levelLogicId": 2800070001,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionscholar_a_18_g01_map01_lv007_gm01m15_001",
       "defaultHide": true,
       "position": {
@@ -309,19 +309,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/tired",
         "tagId": 1238298576
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -353,7 +353,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -365,7 +365,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -387,8 +387,8 @@
       "scriptId": 2800070000,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -419,7 +419,7 @@
                 "constValue": "gm01m15_q#13"
               },
               "_filtedNewState": {
-                "constValue": 2
+                "constValue": "Processing"
               }
             },
             {
@@ -453,7 +453,7 @@
                 "constValue": "gm01m15_q#3"
               },
               "_filtedNewState": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             }
           ],
@@ -530,15 +530,15 @@
               "_ID": 7,
               "_uid": "c0ab88eb",
               "_comparer": {
-                "constValue": 1
+                "constValue": "NotEqual"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 6
               },
               "_valueB": {
-                "constValue": 1
+                "constValue": "Available"
               }
             },
             {
@@ -554,15 +554,15 @@
               "_ID": 9,
               "_uid": "3a8f3d46",
               "_comparer": {
-                "constValue": 1
+                "constValue": "NotEqual"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 8
               },
               "_valueB": {
-                "constValue": 0
+                "constValue": "None"
               }
             },
             {
@@ -578,15 +578,15 @@
               "_ID": 11,
               "_uid": "59dbf59f",
               "_comparer": {
-                "constValue": 1
+                "constValue": "NotEqual"
               },
               "_valueA": {
                 "paramSource": -1,
-                "constValue": 0,
+                "constValue": "None",
                 "idRef": 10
               },
               "_valueB": {
-                "constValue": 3
+                "constValue": "Completed"
               }
             },
             {
@@ -600,11 +600,11 @@
           ]
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 68.64395,
             "y": 189.59404,
@@ -625,7 +625,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 68.64395,
             "y": 189.59404,

@@ -7,7 +7,7 @@
     {
       "levelLogicId": 10100190000,
       "belongLevelScriptId": 10100190001,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_fixable_robot",
       "defaultHide": false,
       "position": {
@@ -33,7 +33,7 @@
         {
           "key": "exit_type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -44,7 +44,7 @@
         {
           "key": "reward_id",
           "value": {
-            "type": 7,
+            "type": "String",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -60,7 +60,7 @@
   "interactiveLockData": [
     {
       "logicIdGlobal": 10100190000,
-      "unlockType": 2,
+      "unlockType": "MiniGame",
       "submitId": "",
       "skipSubmitBoard": false,
       "miniGameIds": [
@@ -94,8 +94,8 @@
       "scriptId": 10100190001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 2,
-      "endType": 2,
+      "startType": "SameWithActive",
+      "endType": "SameWithDeactive",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -108,11 +108,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -223.066956,
             "y": 124.361832,
@@ -178,8 +178,8 @@
     ],
     "baseData": [
       {
-        "functionType": 4,
-        "shapeType": 2,
+        "functionType": "RadioTriggerZone",
+        "shapeType": "Sphere",
         "index": 0,
         "offset": {
           "x": 0.0,

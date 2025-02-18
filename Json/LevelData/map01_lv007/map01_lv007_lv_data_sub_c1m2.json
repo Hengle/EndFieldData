@@ -10,7 +10,7 @@
   "npcs": [
     {
       "levelLogicId": 2800110002,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_chr_0006_wolfgd_g01_map01_lv007_c1m2_001",
       "defaultHide": true,
       "position": {
@@ -34,19 +34,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/chesthugging3",
         "tagId": -1458788636
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -78,7 +78,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -90,7 +90,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -107,7 +107,7 @@
     },
     {
       "levelLogicId": 2800110003,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_spl_georege_01_g01_map01_lv007_c1m2_001",
       "defaultHide": true,
       "position": {
@@ -131,19 +131,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/akimbo2",
         "tagId": 1958848387
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -175,7 +175,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -187,7 +187,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -209,8 +209,8 @@
       "scriptId": 2800110000,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 2,
-      "endType": 2,
+      "startType": "SameWithActive",
+      "endType": "SameWithDeactive",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -304,15 +304,15 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [],
       "startShapeList": [],
       "properties": [
         {
           "key": "lt:p:6eea60d0:e8682a35",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -323,7 +323,7 @@
         {
           "key": "lt:p:28d22284:ff371b96",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -334,7 +334,7 @@
         {
           "key": "lt:mp:6eea60d0:e8682a35",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -345,7 +345,7 @@
         {
           "key": "lt:mp:28d22284:ff371b96",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -359,26 +359,26 @@
           "conditionDict": {
             "ff371b96": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckMissionState, Gameplay.Beyond",
                 "uniqueId": "ff371b96",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_missionId": {
                   "constValue": "c1m2"
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetMissionState": {
-                  "constValue": 2
+                  "constValue": "Processing"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         },
@@ -386,12 +386,12 @@
           "conditionDict": {
             "e8682a35": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckLevelScriptPropertyBool, Gameplay.Beyond",
                 "uniqueId": "e8682a35",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_mapId": {
                   "paramSource": 1000
@@ -408,12 +408,12 @@
                   "constValue": true
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         }
@@ -429,8 +429,8 @@
       "scriptId": 2800110001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -496,7 +496,7 @@
                 "constValue": true
               },
               "_muteType": {
-                "constValue": 13
+                "constValue": "ALL_BUT_MUSIC"
               }
             },
             {
@@ -517,11 +517,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 3,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "ResetAllWhenNotDone",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -355.786957,
             "y": 167.191986,
@@ -542,7 +542,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": -355.786957,
             "y": 167.191986,
@@ -565,7 +565,7 @@
         {
           "key": "isFinished",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 0,
@@ -577,7 +577,7 @@
         {
           "key": "lt:p:8e9e94c6:c7542b99",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -588,7 +588,7 @@
         {
           "key": "lt:mp:8e9e94c6:c7542b99",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -602,12 +602,12 @@
           "conditionDict": {
             "c7542b99": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckTalkOptionFinish, Gameplay.Beyond",
                 "uniqueId": "c7542b99",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_dialogId": {
                   "constValue": "dlg_c1m2_3"
@@ -619,7 +619,7 @@
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         }
@@ -673,8 +673,8 @@
     ],
     "baseData": [
       {
-        "functionType": 8,
-        "shapeType": 1,
+        "functionType": "StorySafeZone",
+        "shapeType": "Box",
         "index": 0,
         "offset": {
           "x": 0.0,
@@ -711,7 +711,7 @@
     "storySafeZones": [
       {
         "defaultOn": false,
-        "triggerType": 2,
+        "triggerType": "ENTER_AND_EXIT",
         "relatedUniqueId": 0
       }
     ],

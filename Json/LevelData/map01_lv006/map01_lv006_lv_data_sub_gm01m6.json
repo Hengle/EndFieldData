@@ -6,7 +6,7 @@
   "interactives": [
     {
       "levelLogicId": 3500140009,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_dnarrative_bag",
       "defaultHide": false,
       "position": {
@@ -32,7 +32,7 @@
         {
           "key": "max_count",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -43,7 +43,7 @@
         {
           "key": "type",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": -1
@@ -54,7 +54,7 @@
         {
           "key": "used_for_quest",
           "value": {
-            "type": 1,
+            "type": "Bool",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -68,7 +68,7 @@
           {
             "key": "shape",
             "value": {
-              "type": 3,
+              "type": "Int",
               "valueArray": [
                 {
                   "valueBit64": 1
@@ -79,7 +79,7 @@
           {
             "key": "center",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -96,7 +96,7 @@
           {
             "key": "size",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 1073741824
@@ -116,7 +116,7 @@
     {
       "levelLogicId": 3500140010,
       "belongLevelScriptId": 3500140001,
-      "entityType": 32,
+      "entityType": "Interactive",
       "entityDataIdKey": "int_trigger_volume",
       "defaultHide": false,
       "position": {
@@ -144,7 +144,7 @@
           {
             "key": "radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1098907648
@@ -155,7 +155,7 @@
           {
             "key": "interactive_direction_check",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -166,7 +166,7 @@
           {
             "key": "check_area_offset",
             "value": {
-              "type": 11,
+              "type": "Vector3",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -183,7 +183,7 @@
           {
             "key": "check_area_radius",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1092616192
@@ -194,7 +194,7 @@
           {
             "key": "check_area_height",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1084227584
@@ -205,7 +205,7 @@
           {
             "key": "check_angle",
             "value": {
-              "type": 5,
+              "type": "Float",
               "valueArray": [
                 {
                   "valueBit64": 1135869952
@@ -216,7 +216,7 @@
           {
             "key": "player_direction_check",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -227,7 +227,7 @@
           {
             "key": "is_important",
             "value": {
-              "type": 1,
+              "type": "Bool",
               "valueArray": [
                 {
                   "valueBit64": 0
@@ -245,7 +245,7 @@
   "npcs": [
     {
       "levelLogicId": 3500140017,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionminer_a_23_g01_map01_lv006_gm01m6_001",
       "defaultHide": true,
       "position": {
@@ -269,19 +269,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/chesthugging2",
         "tagId": -569665934
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -313,7 +313,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -325,7 +325,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -342,7 +342,7 @@
     },
     {
       "levelLogicId": 3500140018,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionminer_a_23_g01_map01_lv006_gm01m6_002",
       "defaultHide": true,
       "position": {
@@ -366,19 +366,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": false,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/liedownsit",
         "tagId": -803366056
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -410,7 +410,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -422,7 +422,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -439,7 +439,7 @@
     },
     {
       "levelLogicId": 3500140019,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_strongm_unionminer_a_05_g01_map01_lv006_gm01m6_001",
       "defaultHide": true,
       "position": {
@@ -463,19 +463,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Strong/Common/chesthugging1",
         "tagId": 1622208450
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -507,7 +507,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -519,7 +519,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -536,7 +536,7 @@
     },
     {
       "levelLogicId": 3500140020,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_gentleman_unionminer_a_23_g01_map01_lv006_gm01m6_003",
       "defaultHide": true,
       "position": {
@@ -560,19 +560,19 @@
       "type": 0,
       "doPatrol": false,
       "defaultActivePatrol": false,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Gentleman/Common/liedownsit",
         "tagId": -803366056
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -604,7 +604,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -616,7 +616,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -633,7 +633,7 @@
     },
     {
       "levelLogicId": 3500140021,
-      "entityType": 256,
+      "entityType": "Npc",
       "entityDataIdKey": "npc_strongm_unionminer_a_05_g01_map01_lv006_gm01m6_002",
       "defaultHide": true,
       "position": {
@@ -657,19 +657,19 @@
       "type": 0,
       "doPatrol": true,
       "defaultActivePatrol": true,
-      "patrolCfgType": 1,
+      "patrolCfgType": "Animation",
       "patrolId": 0,
       "defaultMontage": {
         "tagName": "Montage/NPC/Humanoid/Strong/Common/chesthugging1",
         "tagId": 1622208450
       },
       "overrideMontageState": false,
-      "montageState": 1,
+      "montageState": "Start",
       "autoPreloadMontages": false,
       "preloadMontages": [],
-      "defaultMontageMaskType": 0,
+      "defaultMontageMaskType": "Default",
       "collisionEnable": false,
-      "interactRangeType": 0,
+      "interactRangeType": "Default",
       "disableEmotion": false,
       "defaultEmotion": {
         "tagName": "FacialMorph/Emotion/normal01",
@@ -701,7 +701,7 @@
       "envTalkOdd": [],
       "hitData": {
         "canBeHit": false,
-        "shape": 1,
+        "shape": "Capsule",
         "center": {
           "x": 0.0,
           "y": 0.0,
@@ -713,7 +713,7 @@
           "z": 1.0
         },
         "height": 1.0,
-        "direction": 1,
+        "direction": "Y",
         "radius": 0.5,
         "hitEffect": ""
       },
@@ -735,8 +735,8 @@
       "scriptId": 3500140001,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -749,7 +749,7 @@
               "$type": "Beyond.Gameplay.Actions.EntityEvent.OnLeaderEnterTrigger, Gameplay.Beyond",
               "_ID": 0,
               "_nextID": 1,
-              "_triggerTarget": 1,
+              "_triggerTarget": "SPECIFY_ENTITY",
               "_targetEntity": {
                 "constValue": {
                   "logicId": 3500140010
@@ -800,11 +800,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 3,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "ResetAllWhenNotDone",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 428.88,
             "y": 28.493927,
@@ -823,7 +823,7 @@
           "radius": 107.0
         },
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 431.35,
             "y": 27.9795628,
@@ -844,7 +844,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 428.88,
             "y": 28.493927,
@@ -870,8 +870,8 @@
       "scriptId": 3500140006,
       "allowTick": false,
       "allowStartOnTravelPole": false,
-      "startType": 0,
-      "endType": 0,
+      "startType": "ByEnterStartShape",
+      "endType": "ByExitStartShape",
       "modules": {},
       "isEmbedded": true,
       "actionMap": {
@@ -934,11 +934,11 @@
           "getterList": []
         }
       },
-      "resetModeWhenActive": 0,
-      "resetModeWhenEnd": 0,
+      "resetModeWhenActive": "None",
+      "resetModeWhenEnd": "None",
       "activeShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 494.182861,
             "y": 37.3120575,
@@ -959,7 +959,7 @@
       ],
       "startShapeList": [
         {
-          "type": 2,
+          "type": "SPHERE",
           "offset": {
             "x": 494.182861,
             "y": 37.3120575,
@@ -982,7 +982,7 @@
         {
           "key": "lt:p:69ba7337:2051e775",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -993,7 +993,7 @@
         {
           "key": "lt:p:c8bcfdde:0748c1cf",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 0
@@ -1004,7 +1004,7 @@
         {
           "key": "lt:mp:69ba7337:2051e775",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -1015,7 +1015,7 @@
         {
           "key": "lt:mp:c8bcfdde:0748c1cf",
           "value": {
-            "type": 3,
+            "type": "Int",
             "valueArray": [
               {
                 "valueBit64": 1
@@ -1029,26 +1029,26 @@
           "conditionDict": {
             "2051e775": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckQuestState, Gameplay.Beyond",
                 "uniqueId": "2051e775",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_questId": {
                   "constValue": "gm01m6_q#9"
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetQuestState": {
-                  "constValue": 2
+                  "constValue": "Processing"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         },
@@ -1056,26 +1056,26 @@
           "conditionDict": {
             "0748c1cf": {
               "isMainObjective": true,
-              "objectiveEnum": 0,
+              "objectiveEnum": "Objective1",
               "condition": {
                 "$type": "Beyond.Gameplay.CheckQuestState, Gameplay.Beyond",
                 "uniqueId": "0748c1cf",
                 "useCurrentScope": false,
-                "scopeMask": 1,
+                "scopeMask": "Main",
                 "useGraphScope": true,
                 "_questId": {
                   "constValue": "gm01m6_q#9"
                 },
                 "_comparer": {
-                  "constValue": 0
+                  "constValue": "Equal"
                 },
                 "_targetQuestState": {
-                  "constValue": 3
+                  "constValue": "Completed"
                 }
               }
             }
           },
-          "taskType": 0,
+          "taskType": "None",
           "needManualCheck": false,
           "canBeTracked": false
         }
